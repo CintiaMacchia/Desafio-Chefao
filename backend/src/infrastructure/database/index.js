@@ -4,7 +4,7 @@ const Sequelize = require("sequelize");
 
 const DB_NAME = process.env.DB_NAME;
 const DB_USER = process.env.DB_USER;
-const DB_PASS = "";
+const DB_PASS = process.env.DB_PASSWORD;
 const DB_CONFIG = {
     dialect: process.env.DB_DIALECT,
     host: process.env.DB_HOST,
@@ -33,3 +33,4 @@ Object.assign(db, {
 });
 
 module.exports = db;
+24574971904   +   17550139392   +   1739632640   +    45056   +   3381678080   +   2843906048   +   11219726336   +   145014784  
