@@ -20,10 +20,7 @@ export const Produtos = db.define(
     },
     categoria_id: {
       type: DataTypes.INTEGER,
-    },
-    idadeescolar_id: {
-      type: DataTypes.INTEGER,
-    },
+    },   
     usuario_id: {
       type: DataTypes.INTEGER,
     },
