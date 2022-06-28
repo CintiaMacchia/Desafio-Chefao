@@ -1,32 +1,32 @@
-import { Categorias } from './categorias'
+// import { Categorias } from './categorias'
 
-module.exports = {
-    Categorias,
-};
+// module.exports = {
+//     Categorias,
+// };
 
-import { Enderecos } from './enderecos'
+// import { Enderecos } from './enderecos'
 
-module.exports = {
-    Enderecos,
-};
+// module.exports = {
+//     Enderecos,
+// };
 
-import { Listas } from './listas'
+// import { Listas } from './listas'
 
-module.exports = {
-    Listas,
-};
+// module.exports = {
+//     Listas,
+// };
 
-import { Produtos } from './produtos'
+// import { Produtos } from './produtos'
 
-module.exports = {
-    Produtos,
-};
+// module.exports = {
+//     Produtos,
+// };
 
-import { Usuarios } from './usuarios'
+// import { Usuarios } from './usuarios'
 
-module.exports = {
-    Usuarios,
-};
+// module.exports = {
+//     Usuarios,
+// };
 
 
 

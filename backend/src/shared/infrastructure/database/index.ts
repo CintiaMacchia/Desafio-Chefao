@@ -32,3 +32,4 @@ Object.assign(db, {
 });
 
 export = db;
+
