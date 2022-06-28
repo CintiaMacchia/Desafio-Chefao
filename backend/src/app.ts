@@ -1,7 +1,9 @@
-const express = require('express');
+import express from 'express'
+import db from './shared/infrastructure/database'
 
 const app = express();
+db.hasConection()
 
 app.use(express.json());
 
-module.exports = app;
+export default app
