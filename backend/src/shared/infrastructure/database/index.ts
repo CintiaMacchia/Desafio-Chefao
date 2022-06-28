@@ -1,17 +1,16 @@
-require('dotenv').config()
+const Sequelize = require("sequelize")
+require("dotenv").config()
 
-const Sequelize = require("sequelize");
-
-const DB_NAME = process.env.DB_NAME;
-const DB_USER = process.env.DB_USER;
-const DB_PASS = process.env.DB_PASSWORD;
+const DB_NAME = process.env.DB_NAME
+const DB_USER = process.env.DB_USER
+const DB_PASS = process.env.DB_PASSWORD
 const DB_CONFIG = {
     dialect: process.env.DB_DIALECT,
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
-};
+}
 
-let db = {};
+let db: any = {};
 
 try {
     db = new Sequelize(DB_NAME, DB_USER, DB_PASS, DB_CONFIG);
@@ -24,7 +23,7 @@ async function hasConection() {
         await db.authenticate();
         console.log("Banco dados conectado!");
     } catch (error) {
-        console.error("Erro ao tentar se conectar ao banco de dados1");
+        console.error("Erro ao tentar se conectar ao banco de dados");
     }
 }
 
@@ -32,5 +31,4 @@ Object.assign(db, {
     hasConection,
 });
 
-module.exports = db;
-24574971904   +   17550139392   +   1739632640   +    45056   +   3381678080   +   2843906048   +   11219726336   +   145014784  
+export = db;

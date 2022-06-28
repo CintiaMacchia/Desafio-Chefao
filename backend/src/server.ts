@@ -1,5 +1,5 @@
-const app = require('./app.js')
+import app from './app'
 
-app.listen(3000, () => {
+app.listen(3550, () => {
     console.log('Servidor conectado')
 });
