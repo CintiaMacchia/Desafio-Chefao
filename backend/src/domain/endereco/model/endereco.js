@@ -22,5 +22,3 @@ module.exports = (sequelize, DataTypes) => {
     });
     return endereco;
 };
-
-module.exports = endereco
