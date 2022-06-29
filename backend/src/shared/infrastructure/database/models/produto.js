@@ -1,27 +1,32 @@
 'use strict';
+const usuarios = require('./usuarios');
+const categoria = require('./categoria')
+
 const {
-  Model
+    Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class produto extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
+    class produto extends Model {
+
+        static associate({ models }) {
+            // define association here
+            usuarios.hasMany(models.produto, { foreignKey: 'usuario_id', as: 'usuarios' })
+        }
+        static associate({ models }) {
+            // define association here
+            categoria.hasMany(models.produto, { foreignKey: 'categoria_id', as: 'categoria' })
+        }
+
     }
-  }
-  produto.init({
-    descricao: DataTypes.STRING,
-    valor: DataTypes.DOUBLE,
-    foto: DataTypes.STRING,
-    categoria_id: DataTypes.INTEGER,
-    usuario_id: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'produto',
-  });
-  return produto;
+    produto.init({
+        descricao: DataTypes.STRING,
+        valor: DataTypes.DOUBLE,
+        foto: DataTypes.STRING,
+        categoria_id: DataTypes.INTEGER,
+        usuario_id: DataTypes.INTEGER
+    }, {
+        sequelize,
+        modelName: 'produto',
+    });
+    return produto;
 };
