@@ -24,19 +24,19 @@ module.exports = {
             },
             categoria_id: {
                 type: Sequelize.INTEGER,
-                references: {
-                    model: 'categoria',
-                    key: 'id'
-                },
-                allowNull: false,
+                // references: {
+                //     model: 'categoria',
+                //     key: 'id'
+                // },
+                // allowNull: false,
             },
             usuario_id: {
                 type: Sequelize.INTEGER,
-                references: {
-                    model: 'usuarios',
-                    key: 'id'
-                },
-                allowNull: false,
+                // references: {
+                //     model: 'usuarios',
+                //     key: 'id'
+                // },
+                // allowNull: false,
             },
             createdAt: {
                 allowNull: false,

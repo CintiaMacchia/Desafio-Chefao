@@ -21,11 +21,11 @@ module.exports = {
             },
             endereco_id: {
                 type: Sequelize.STRING,
-                references: {
-                    model: 'endereco',
-                    key: 'id'
-                },
-                allowNull: false,
+                // references: {
+                //     model: 'endereco',
+                //     key: 'id'
+                // },
+                // allowNull: false,
             },
             createdAt: {
                 allowNull: false,

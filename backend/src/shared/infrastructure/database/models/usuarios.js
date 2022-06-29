@@ -1,5 +1,5 @@
 'use strict';
-const endereco = require('./endereco').default
+//const endereco = require('./endereco').default
 
 const {
     Model
@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
 
         static associate(models) {
             // define association here
-            usuarios.hasMany(models.endereco, { foreignKey: 'endereco_id', as: 'id' })
+            // usuarios.hasMany(models.endereco, { foreignKey: 'endereco_id', as: 'id' })
 
 
         }
@@ -25,5 +25,3 @@ module.exports = (sequelize, DataTypes) => {
     });
     return usuarios;
 };
-
-module.exports = usuarios

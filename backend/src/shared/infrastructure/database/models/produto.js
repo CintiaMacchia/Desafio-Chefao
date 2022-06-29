@@ -1,6 +1,6 @@
 'use strict';
-const usuarios = require('./usuarios');
-const categoria = require('./categoria')
+//const usuarios = require('./usuarios');
+//const categoria = require('./categoria')
 
 const {
     Model
@@ -8,14 +8,14 @@ const {
 module.exports = (sequelize, DataTypes) => {
     class produto extends Model {
 
-        static associate({ models }) {
-            // define association here
-            usuarios.hasMany(models.produto, { foreignKey: 'usuario_id', as: 'usuarios' })
-        }
-        static associate({ models }) {
-            // define association here
-            categoria.hasMany(models.produto, { foreignKey: 'categoria_id', as: 'categoria' })
-        }
+        static associate(models) {
+                // define association here
+                // usuarios.hasMany(models.produto, { foreignKey: 'usuario_id', as: 'usuarios' })
+            }
+            // static associate({ models }) {
+            //     // define association here
+            //     categoria.hasMany(models.produto, { foreignKey: 'categoria_id', as: 'categoria' })
+            // }
 
     }
     produto.init({
