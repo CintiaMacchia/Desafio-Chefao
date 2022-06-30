@@ -1,7 +1,7 @@
 'use strict';
 
-const usuarios = require('../models/usuarios');
-const categoria = require('../models/categoria')
+//const usuarios = require('../models/usuarios');
+//const categoria = require('../models/categoria')
 
 
 module.exports = {
@@ -23,20 +23,25 @@ module.exports = {
                 type: Sequelize.STRING
             },
             categoria_id: {
+                allowNull: false,
                 type: Sequelize.INTEGER,
-                // references: {
-                //     model: 'categoria',
-                //     key: 'id'
-                // },
-                // allowNull: false,
+                foreignKey: true,
+                references: {
+                    model: 'categoria',
+                    key: 'id'
+                },
+
             },
             usuario_id: {
+                allowNull: false,
                 type: Sequelize.INTEGER,
-                // references: {
-                //     model: 'usuarios',
-                //     key: 'id'
-                // },
-                // allowNull: false,
+                foreignKey: true,
+                type: Sequelize.INTEGER,
+                references: {
+                    model: 'usuarios',
+                    key: 'id'
+                },
+
             },
             createdAt: {
                 allowNull: false,

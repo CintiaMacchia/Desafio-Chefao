@@ -20,12 +20,15 @@ module.exports = {
                 type: Sequelize.STRING
             },
             endereco_id: {
-                type: Sequelize.STRING,
-                // references: {
-                //     model: 'endereco',
-                //     key: 'id'
-                // },
-                // allowNull: false,
+                allowNull: false,
+                type: Sequelize.INTEGER,
+                field: 'endereco_id',
+                foreignKey: true,
+                references: {
+                    model: 'endereco',
+                    key: 'id'
+                },
+
             },
             createdAt: {
                 allowNull: false,

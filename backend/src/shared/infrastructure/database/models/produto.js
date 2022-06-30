@@ -1,24 +1,25 @@
 'use strict';
-//const usuarios = require('./usuarios');
+//const produtos = require('./usuarios');
 //const categoria = require('./categoria')
 
 const {
     Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-    class produto extends Model {
+    class produtos extends Model {
 
-        static associate(models) {
+        static associate({ models }) {
                 // define association here
-                // usuarios.hasMany(models.produto, { foreignKey: 'usuario_id', as: 'usuarios' })
+                produtos.hasMany(models.usuarios, { foreignKey: 'usuario_id', as: 'id' }),
+                    produtos.hasMany(models.categoria, { foreignKey: 'categoria_id', as: 'id' })
             }
             // static associate({ models }) {
             //     // define association here
-            //     categoria.hasMany(models.produto, { foreignKey: 'categoria_id', as: 'categoria' })
-            // }
+
+        // }
 
     }
-    produto.init({
+    produtos.init({
         descricao: DataTypes.STRING,
         valor: DataTypes.DOUBLE,
         foto: DataTypes.STRING,
@@ -26,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
         usuario_id: DataTypes.INTEGER
     }, {
         sequelize,
-        modelName: 'produto',
+        modelName: 'produtos',
     });
-    return produto;
+    return produtos;
 };
