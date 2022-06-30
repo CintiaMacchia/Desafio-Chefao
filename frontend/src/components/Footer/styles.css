@@ -1,0 +1,140 @@
+
+footer {
+  font-family: 'Questrial', sans-serif ;
+}
+ .copy{
+  font-family: 'Questrial', sans-serif ;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+  
+ }
+
+ .buton-enviar{
+  margin-left:-27px;
+
+ }
+ .categorias{
+ 
+  font-style: normal;
+  font-weight: 300;
+ }
+ 
+
+
+a{
+  text-decoration: none;
+  color: #fff!important;
+} 
+.undeline{
+  font-family:Questrial;
+
+font-weight: 300;
+   font-size:16ps ;
+ position: relative;
+ pading-buttom:8px ;
+ margin:8px 0;
+ color: #fff; 
+  }
+ 
+.undeline::before,
+ .underline::after{
+   content: '';
+   position: absolute;
+   bottom: -.2rem;
+   height: 2px;
+   background-color: #fff;  
+ }
+
+ 
+ .underlinMais::before{
+ rigth: 100%;
+ }
+ .underlinMais::after{
+ left: 100%;
+ }
+ .underlinMais:hover::before,
+ .underlinMais:hover::after{
+ animation:
+  add-underlinMais 1s 0.1s forwards;
+ }
+ 
+ .underlinMais:not(:hover)::before,
+ .underlinMais:not(:hover)::after{
+ animation:
+  remove-underlinMais 1s 0s forwards;
+ }
+   
+ @keyframes add-underlinMais{
+   from{width: 0%;}
+   to{width: 100%;}
+ }
+ @keyframes remove-underlinMais{
+   from{width: 100%;}
+   to{width: 0%;}
+ }
+ 
+ @media (max-width: 589px) {
+
+
+  .buton-enviar {
+    position: relative;
+    left: 479px;
+    top: -38px;
+}
+.container{
+  justify-content: center;
+}
+  }
+ @media (max-width: 540px) {
+  .buton-enviar {
+   
+    left: 460px;
+ 
+}
+  }
+
+    
+ @media (max-width: 525px) {
+  .buton-enviar {
+   
+    left: 420px;
+ 
+}
+  }
+ @media (max-width:487px) {
+  .buton-enviar {   
+    left: 379px;
+ 
+}
+  }
+ @media (max-width:360px) {
+  .buton-enviar {   
+    left: 282px;
+  }
+ 
+}
+ @media (max-width:390px) {
+  .buton-enviar {   
+    left: 250px;
+  }
+ 
+}
+
+ @media (max-width:375px) {
+  .buton-enviar {   
+    left: 287px;
+  }
+ 
+}
+ @media (max-width:320px) {
+  .buton-enviar {   
+    left: 243px;
+  }
+ 
+}
+  
+
+    
+  
+
