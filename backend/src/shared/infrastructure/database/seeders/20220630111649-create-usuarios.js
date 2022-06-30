@@ -8,7 +8,7 @@ for (let i = 0; i <= 5; i++) {
         nome: faker.name.findName(),
         email: faker.internet.email(),
         senha: faker.random.alphaNumeric(8),
-        //endereco_id: '2',
+        endereco_id: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
     })

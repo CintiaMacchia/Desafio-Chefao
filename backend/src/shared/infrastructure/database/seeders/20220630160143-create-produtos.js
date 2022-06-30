@@ -8,8 +8,8 @@ for (let i = 0; i <= 5; i++) {
         descricao: faker.lorem.words(10),
         valor: faker.finance.amount(),
         foto: faker.image.abstract(),
-        //categoria_id: 2,
-        //usuario_id: 1,
+        categoria_id: 2,
+        usuario_id: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
     })
