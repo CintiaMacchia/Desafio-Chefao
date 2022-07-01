@@ -13,6 +13,9 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
+            nome: {
+                type: Sequelize.STRING
+            },
             descricao: {
                 type: Sequelize.STRING
             },
@@ -28,6 +31,16 @@ module.exports = {
                 foreignKey: true,
                 references: {
                     model: 'categoria',
+                    key: 'id'
+                },
+
+            },
+            condicao_id: {
+                allowNull: false,
+                type: Sequelize.INTEGER,
+                foreignKey: true,
+                references: {
+                    model: 'condicao',
                     key: 'id'
                 },
 
