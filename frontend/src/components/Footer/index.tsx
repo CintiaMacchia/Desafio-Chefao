@@ -1,5 +1,5 @@
 
-
+import logo from '../../components/assets/images/logo.png';
 import { FaTwitter } from 'react-icons/fa';
 import { AiFillInstagram } from 'react-icons/ai';
 import { GrFacebookOption } from 'react-icons/gr';
@@ -15,7 +15,7 @@ import './styles.css';
 
 
 
-import logo from '../../components/assets/images/logo.png';
+
 import { Button, Col, Form, Row } from 'react-bootstrap';
 export function Footer() {
   return (

@@ -24,56 +24,34 @@ footer {
 
 a{
   text-decoration: none;
-  color: #fff!important;
+  color: #fff;
+ 
 } 
 .undeline{
-  font-family:Questrial;
-
-font-weight: 300;
-   font-size:16ps ;
- position: relative;
- pading-buttom:8px ;
- margin:8px 0;
- color: #fff; 
-  }
- 
-.undeline::before,
- .underline::after{
-   content: '';
-   position: absolute;
-   bottom: -.2rem;
-   height: 2px;
-   background-color: #fff;  
+  font-size: .8em;
+  font-style: 0.2rem;
+  color: #fff !important;
+  position: relative;
+}
+.undeline::after{
+ position: absolute;
+ content: "";
+ width: 0%;
+ height: 2px;
+ background-color: #fff;
+ left:50%;
+ bottom: -5px;
+ transform: all 1s ease-in-out;
+}
+.undeline:hover{
+  cursor: pointer;
+}
+.undeline:hover::after{
+cursor: pointer;
+width: 100%;
+left: 0;
  }
 
- 
- .underlinMais::before{
- rigth: 100%;
- }
- .underlinMais::after{
- left: 100%;
- }
- .underlinMais:hover::before,
- .underlinMais:hover::after{
- animation:
-  add-underlinMais 1s 0.1s forwards;
- }
- 
- .underlinMais:not(:hover)::before,
- .underlinMais:not(:hover)::after{
- animation:
-  remove-underlinMais 1s 0s forwards;
- }
-   
- @keyframes add-underlinMais{
-   from{width: 0%;}
-   to{width: 100%;}
- }
- @keyframes remove-underlinMais{
-   from{width: 100%;}
-   to{width: 0%;}
- }
- 
  @media (max-width: 589px) {
 
 
