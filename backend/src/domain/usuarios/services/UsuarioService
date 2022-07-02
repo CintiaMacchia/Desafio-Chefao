@@ -1,4 +1,4 @@
-import { usuarios } from "../../../shared/infrastructure/database/models/usuario/index";
+import usuarios from "../../../shared/infrastructure/database/models/usuario/index";
 import bcrypt from "bcryptjs";
 
 
