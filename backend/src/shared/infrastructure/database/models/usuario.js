@@ -1,5 +1,4 @@
 'use strict';
-const endereco = require('../endereco')
 
 const {
     Model
@@ -8,20 +7,22 @@ module.exports = (sequelize, DataTypes) => {
     class usuarios extends Model {
 
         static associate({ models }) {
-            // define association here
-            endereco.hasMany(models.usuarios, { foreignKey: 'endereco_id', as: 'id' })
+                // define association here
+                
+            }
+            // static associate({ models }) {
+            //     // define association here
 
+        // }
 
-        }
     }
     usuarios.init({
         nome: DataTypes.STRING,
         email: DataTypes.STRING,
         senha: DataTypes.STRING,
-        endereco_id: DataTypes.INTEGER
     }, {
         sequelize,
-        modelName: 'usuarios',
+        modelName: 'usuario',
     });
     return usuarios;
 };

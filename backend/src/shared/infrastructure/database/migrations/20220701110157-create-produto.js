@@ -33,7 +33,6 @@ module.exports = {
                     model: 'categoria',
                     key: 'id'
                 },
-
             },
             condicao_id: {
                 allowNull: false,

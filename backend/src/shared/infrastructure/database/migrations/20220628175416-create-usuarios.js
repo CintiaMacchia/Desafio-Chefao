@@ -1,31 +1,25 @@
 'use strict';
+//const endereco = require('../models/endereco')
+
 module.exports = {
     async up(queryInterface, Sequelize) {
-        await queryInterface.createTable('endereco', {
+        await queryInterface.createTable('usuarios', {
             id: {
                 allowNull: false,
                 autoIncrement: true,
                 primaryKey: true,
-                type: Sequelize.INTEGER
+                type: Sequelize.INTEGER 
             },
-            rua: {
+            nome: {
                 type: Sequelize.STRING
             },
-            numero: {
-                type: Sequelize.INTEGER
-            },
-            complemento: {
+            email: {
                 type: Sequelize.STRING
             },
-            cidade: {
+            senha: {
                 type: Sequelize.STRING
             },
-            estado: {
-                type: Sequelize.STRING
-            },
-            CEP: {
-                type: Sequelize.STRING
-            },
+            
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE
@@ -36,7 +30,7 @@ module.exports = {
             }
         });
     },
-    async down(queryInterface, Sequelize) {
-        await queryInterface.dropTable('endereco');
+    async down(queryInterface) {
+        await queryInterface.dropTable('usuarios');
     }
 };

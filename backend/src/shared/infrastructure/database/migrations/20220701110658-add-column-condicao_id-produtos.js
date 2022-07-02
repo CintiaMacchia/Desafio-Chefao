@@ -21,7 +21,7 @@ module.exports = {
 
 
 
-        await queryInterface.removeColomn(
+        await queryInterface.removeColumn(
             'produtos',
             'condicao_id'
         );

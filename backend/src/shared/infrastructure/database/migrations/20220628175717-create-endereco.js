@@ -1,44 +1,40 @@
-'use strict'
-
-const { Sequelize, DataTypes, Model } = require('sequelize');
-
-
-class usuarios extends Model {
-
-    static associate({ endereco }) {
-        // console.log(Users);
-        // define association here
-        usuarios.belongsTo(endereco, { foreignKey: 'endereco_id', as: 'endereco' })
-    }
-
-
-    static initialize(sequelize, DataTypes) {
-        usuarios.init({
+'use strict';
+module.exports = {
+    async up(queryInterface, Sequelize) {
+        await queryInterface.createTable('endereco', {
             id: {
                 allowNull: false,
                 autoIncrement: true,
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
-            nome: {
+            rua: {
                 type: Sequelize.STRING
             },
-            email: {
+            numero: {
+                type: Sequelize.INTEGER
+            },
+            complemento: {
                 type: Sequelize.STRING
             },
-            senha: {
+            cidade: {
                 type: Sequelize.STRING
             },
-            endereco_id: {
+            estado: {
+                type: Sequelize.STRING
+            },
+            CEP: {
+                type: Sequelize.STRING
+            },
+             user_id: {
                 allowNull: false,
                 type: Sequelize.INTEGER,
-                field: 'endereco_id',
+                field: 'user_id',
                 foreignKey: true,
                 references: {
-                    model: 'endereco',
+                    model: 'usuarios',
                     key: 'id'
-                },
-
+                }
             },
             createdAt: {
                 allowNull: false,
@@ -48,12 +44,9 @@ class usuarios extends Model {
                 allowNull: false,
                 type: Sequelize.DATE
             }
-        }, {
-            sequelize,
-            tableName: 'usuarios',
-            modelName: 'usuarios'
         });
+    },
+    async down(queryInterface, Sequelize) {
+        await queryInterface.dropTable('endereco');
     }
-}
-
-module.exports = usuarios
+};
