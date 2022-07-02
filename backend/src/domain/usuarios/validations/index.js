@@ -3,7 +3,7 @@ import { getOne } from "./usuarios/getOne";
 import { destroy}  from "./usuarios/destroy";
 import { update } from "./usuarios/update";
 
-export const UserValidation = {
+export const UsuarioValidation = {
   create,
   getOne,
   destroy,
