@@ -6,19 +6,19 @@ module.exports = {
     async up(queryInterface, Sequelize) {
 
         await queryInterface.bulkInsert('condicao', [{
-                novo: faker.datatype.boolean(),
+                condicao: 'Novo',
                 createdAt: new Date(),
                 updatedAt: new Date(),
             },
             {
-                semi_novo: faker.datatype.boolean(),
+                condicao: 'Semi-Novo',
                 createdAt: new Date(),
                 updatedAt: new Date(),
             }, {
-                usado: faker.datatype.boolean(),
+                condicao: 'Usado',
                 createdAt: new Date(),
                 updatedAt: new Date(),
-            },
+            }, 
         ], {});
 
     },

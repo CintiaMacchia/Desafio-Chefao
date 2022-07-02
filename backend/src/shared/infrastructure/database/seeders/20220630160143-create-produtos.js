@@ -11,7 +11,7 @@ for (let i = 0; i <= 5; i++) {
         foto: faker.image.abstract(),
         categoria_id: 2,
         usuario_id: 1,
-        condicao_id: 2,
+        condicao_id: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
     })

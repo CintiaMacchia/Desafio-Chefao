@@ -26,10 +26,10 @@ module.exports = {
             CEP: {
                 type: Sequelize.STRING
             },
-             user_id: {
+             usuario_id: {
                 allowNull: false,
                 type: Sequelize.INTEGER,
-                field: 'user_id',
+                field: 'usuario_id',
                 foreignKey: true,
                 references: {
                     model: 'usuarios',

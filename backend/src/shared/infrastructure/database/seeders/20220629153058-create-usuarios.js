@@ -3,12 +3,11 @@ const { faker } = require('@faker-js/faker');
 
 let arrayFaker = [];
 
-for (let i = 0; i <= 5; i++) {
+for (let i = 0; i <= 10; i++) {
     arrayFaker.push({
         nome: faker.name.findName(),
         email: faker.internet.email(),
-        senha: faker.random.alphaNumeric(8),
-        endereco_id: 1,
+        senha: faker.random.alphaNumeric(10),        
         createdAt: new Date(),
         updatedAt: new Date(),
     })

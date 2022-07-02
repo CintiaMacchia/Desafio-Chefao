@@ -12,6 +12,7 @@ for (let i = 0; i <= 5; i++) {
         cidade: faker.address.cityName(),
         estado: faker.address.state(),
         CEP: faker.address.zipCode(),
+        usuario_id: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
     })

@@ -24,6 +24,10 @@ module.exports = {
                 categoria: 'Papelaria',
                 createdAt: new Date(),
                 updatedAt: new Date(),
+            }, {
+                categoria: 'Lista Escolar',
+                createdAt: new Date(),
+                updatedAt: new Date(),
             },
         ], {});
 
