@@ -1,9 +1,7 @@
 import { Request, Response } from "express";
 import { usuarioService } from "../services";
 
-interface AuthRequest extends Request{
-  auth: any
-}
+
 
 
 export const UsuarioController = {
@@ -22,7 +20,7 @@ export const UsuarioController = {
   //   }
   // },
 
-  async create(req: Request, res: Response) {
+  async create(req, res) {
     try {
       const novoUsuario = await usuarioService.cadastrarUsuario(req.body);
       return res.status(201).json(novoUsuario);
@@ -32,7 +30,7 @@ export const UsuarioController = {
     }
   },
   
-  async update(req: AuthRequest, res: Response) {
+  async update(req, res) {
     try {
       const usuarioAlterado = await usuarioService.alterarUsuario(req.body, req.params, req.auth);
       return res.status(200).json(usuarioAlterado);
@@ -41,7 +39,7 @@ export const UsuarioController = {
     }
   },
 
-  async delete(req: AuthRequest, res: Response) {
+  async delete(req, res) {
     try {      
       await usuarioService.excluirUsuario(req.params, req.auth);
       return res.sendStatus(204);
@@ -51,7 +49,7 @@ export const UsuarioController = {
   },
 
   
-  async getAll(req: AuthRequest, res: Response) {
+  async getAll(req, res) {
     try {
       const usuarios = await usuarioService.todosUsuarios();
       return res.json(usuarios);
@@ -60,7 +58,7 @@ export const UsuarioController = {
       return res.status(500).json(error);
     }
   },
-  async getOne(req: AuthRequest, res: Response) {
+  async getOne(req, res) {
     try {
       const usuario = await usuarioService.umUsuario(req.params);
       return res.json(usuario);

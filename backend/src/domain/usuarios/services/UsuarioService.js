@@ -1,4 +1,4 @@
-import usuarios from "../../../shared/infrastructure/database/models/usuario/index";
+import usuarios from "../models/usuario";
 import bcrypt from "bcryptjs";
 
 
@@ -29,7 +29,7 @@ export class UsuarioService {
     //     return token;
     // }
 
-    async cadastrarUsuario(data: any) {
+    async cadastrarUsuario(data) {
         const { senha } = data;
         const novaSenha = bcrypt.hashSync(senha, 10);
 
@@ -42,7 +42,7 @@ export class UsuarioService {
     }
 
     
-    async alterarUsuario(data: any, params: any, auth: any ) {
+    async alterarUsuario(data, params, auth ) {
         const { id } = params;
         const { senha } = data;
         const payloadUpdate = {};
@@ -68,7 +68,7 @@ export class UsuarioService {
         return usuario;
     }
 
-    async excluirUsuario(params: any, auth: any) {
+    async excluirUsuario(params, auth) {
         const { id } = params;
 
         if(auth.id != id){
@@ -88,7 +88,7 @@ export class UsuarioService {
         return todosOsUsuarios;
     }
 
-    async umUsuario(params: any) {
+    async umUsuario(params) {
         const { id } = params;
         const usuarioUnico = await usuarios.findByPk(id);
         return usuarioUnico;
