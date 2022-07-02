@@ -5,6 +5,6 @@ export const create = validate({
     nome: Joi.string().required(),
     email: Joi.string().email().required(),
     senha: Joi.string().required(),
-    endereco_id: Joi.number().required(),    
+        
   }),
 });

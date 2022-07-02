@@ -8,6 +8,6 @@ export const update = validate({
     nome: Joi.string(),
     email: Joi.string().email(),
     senha: Joi.string(),
-    endereco_id: Joi.number()
+    
   }),
 });

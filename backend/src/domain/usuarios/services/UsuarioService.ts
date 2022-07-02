@@ -22,27 +22,27 @@ export class UsuarioService {
     //         email: usuario.email,
     //         name: usuario.nome,
     //         senha: usuario.senha,
-    //         endereco_id: usuario.endereco_id,
+    //         
     //     },
     //     process.env.SECRET_KEY
     //     );
     //     return token;
     // }
 
-    async registerUsuario(data: any) {
+    async cadastrarUsuario(data: any) {
         const { senha } = data;
         const novaSenha = bcrypt.hashSync(senha, 10);
 
-        const registeredUsuario = await usuarios.create({
+        const novoUsuario = await usuarios.create({
             ...data,
             senha: novaSenha
             
         });
-        return registeredUsuario;
+        return novoUsuario;
     }
 
     
-    async alterUsuario(data: any, params: any, auth: any ) {
+    async alterarUsuario(data: any, params: any, auth: any ) {
         const { id } = params;
         const { senha } = data;
         const payloadUpdate = {};
