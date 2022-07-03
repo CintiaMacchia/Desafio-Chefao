@@ -1,12 +1,14 @@
-
+import styled from 'styled-components';
 footer {
   font-family: 'Questrial', sans-serif ;
+  background: rgba(53, 53, 53, 0.05);
+  font-size: 12px;
 }
  .copy{
   font-family: 'Questrial', sans-serif ;
     font-style: normal;
     font-weight: 400;
-    font-size: 8px;
+    font-size: 12px;
   
  }
 
@@ -20,6 +22,9 @@ footer {
   font-weight: 300;
  }
  
+ .mt-2  {
+  width: 200px;
+ }
 
 
 a{
@@ -28,9 +33,10 @@ a{
  
 } 
 .undeline{
-  font-size: .8em;
+  width: 100%;
+  font-size: 16px;
   font-style: 0.2rem;
-  color: #fff !important;
+  color: #353535!important;
   position: relative;
 }
 .undeline::after{
@@ -38,19 +44,22 @@ a{
  content: "";
  width: 0%;
  height: 2px;
- background-color: #fff;
+ background-color:#353535;
  left:50%;
- bottom: -5px;
+ bottom: -4px;
  transform: all 1s ease-in-out;
 }
 .undeline:hover{
   cursor: pointer;
+  
 }
 .undeline:hover::after{
 cursor: pointer;
 width: 100%;
 left: 0;
  }
+
+
 
  @media (max-width: 589px) {
 

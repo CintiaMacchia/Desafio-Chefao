@@ -1,76 +1,67 @@
-.underline{
-  font-size: .9em;
+.underline {
+  font-size: 0.9em;
   font-style: 0.2rem;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   position: relative;
 }
-.underline::after{
- position: absolute;
- content: "";
- width: 0%;
- height: 2px;
- color: rgba(53, 53, 53, 0.9);
- left:50%;
- bottom: -5px;
- transform: all 1s ease-in-out;
+.underline::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 2px;
+  color: rgba(53, 53, 53, 0.9);
+  left: 50%;
+  bottom: -5px;
+  transform: all 1s ease-in-out;
 }
-.underline:hover{
+.underline:hover {
   cursor: pointer;
   color: #000;
   text-decoration: underline;
 }
-.underline:hover::after{
-cursor: pointer;
-width: 100%;
-left: 0;
- }
+.underline:hover::after {
+  cursor: pointer;
+  width: 100%;
+  left: 0;
+}
 
-
- .barra-de-pesquisa{
-  width:700px ;
+.barra-de-pesquisa {
+  width: 40rem;
   outline: none;
- height: 45px;
-  border-radius:50px 0px 0px 50px;
+  height: 45px;
+  border-radius: 10px 0px 0px 10px;
   padding: 0px 16px;
- 
-  border: 1px solid rgba(53, 53, 53, 0.15);
-  background: #FFFFFF;
-box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
-  
- }
- .icon-header{
-  color: #FF8B20;
- }
 
- .icon-search{
+  border: 1px solid rgba(53, 53, 53, 0.15);
+  background: #ffffff;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+}
+.icon-header {
+  color: #ff8b20;
+}
+
+.icon-search {
   position: relative;
-  background: #FF8B20;
-  padding : 5px 5px;
-width: 60px;
-height: 45px;
-display: flex;
+  background: #ff8b20;
+  padding: 5px 5px;
+  width: 60px;
+  height: 45px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFFFFF;
-  border-radius:0px 50px 50px 0px;
+  color: #ffffff;
+  border-radius: 0px 10px 10px 0px;
   cursor: pointer;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
- }
- .categorias{
+}
+.categorias {
   margin-top: 20px;
-  background: #FF8B20;
+  background: #ff8b20;
   overflow: hidden;
   height: 45px;
   align-items: center;
   width: 100%;
   margin: 0 auto;
- }
-
-. boton-favorito-publicar{
-  
 }
-
-
-
