@@ -1,17 +1,12 @@
-import Navbar  from '../../components/Menu';
+
 import { Footer } from '../../components/Footer';
-import Menu from '../../components/Menu';
-
-
-
-// import { Container } from './styles';
+import Header from '../../components/Header';
 
 const Home = () => {
-
   return (
     <>
-    <Menu/>
- <Footer/>
+      <Header />
+      <Footer />
     </>
 
   )

@@ -5,6 +5,7 @@ const FormContainer: React.FC = () => {
 
     return (
         <S.Body>
+        
             <S.Container>  
                 <h2>Já possui cadastro? Faça o Login!</h2>
                 <S.StyledButton>Login</S.StyledButton>
