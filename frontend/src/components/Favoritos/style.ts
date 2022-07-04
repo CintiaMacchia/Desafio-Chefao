@@ -4,9 +4,10 @@ export const CircleContainer = styled.div`
     display: grid;
     justify-content: center;
     align-items: center;
-    border: 1px solid #C6C6C6;
+    background-color: #FFF;
     width: 2.75rem;
     height: 2.75rem;
+    border: 1px solid #C6C6C6;
     border-radius: 50%;
 `
 export const SvgContainer = styled.div `
@@ -21,7 +22,7 @@ export const SvgContainer = styled.div `
 
     svg {
         overflow: visible;
-        width: 1rem;
+        width: 1.2rem;
     }
 
     path {
