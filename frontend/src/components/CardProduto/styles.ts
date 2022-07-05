@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const StyledBody = styled.div`
+    display: flex;
+    justify-content: center;
+`
+
 export const StyledContainer = styled.div`
     position: relative;
     align-self: center;
@@ -8,9 +13,10 @@ export const StyledContainer = styled.div`
     justify-content: center;
     align-content: center;
     background-color: #FFF;
+    margin: 1rem;
     width: 16rem;
     height: 25.625rem;
-    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.03), 0px -1px 10px rgba(0, 0, 0, 0.03), 0px 8px 38px rgba(22, 22, 22, 0.05);
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.03), 0px -1px 10px rgba(0, 0, 0, 0.03), 0px 8px 10px rgba(22, 22, 22, 0.05);
     border-radius: 20px;
 
     .icon {
@@ -22,7 +28,7 @@ export const StyledContainer = styled.div`
 
 export const ImageContainer = styled.img`
     display: block;
-    width: 257px;
+    width: 256px;
     height: 246px;
     border-radius: 16px 16px 0 0;
 `
