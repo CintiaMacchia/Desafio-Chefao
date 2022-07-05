@@ -1,11 +1,12 @@
-import Home from "./pages/Home"
+
+
+import "./app.css";
+import AppRoutes from "./routes"
 
 
 function App() {
- 
-
   return (
-   <Home/>
+    <AppRoutes />
   )
 }
 

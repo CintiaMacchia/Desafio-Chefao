@@ -1,6 +1,10 @@
 import React from 'react';
 import { BrowserRouter , Routes, Route,  } from 'react-router-dom'
+import Cadastro from './pages/Cadastro';
 import Home from './pages/Home';
+import Recipes from './pages/produtos';
+import RecipesDetail from './pages/RecipesDetail';
+
 
 
 
@@ -16,6 +20,10 @@ const AppRoutes: React.FC = () => {
       <Routes>
 
         <Route path="/" element={<Home/>} />
+        <Route path="/singUp" element={< Cadastro/>} />
+        <Route path="/receitas" element={<Recipes/>}>
+                <Route path=":id" element={<RecipesDetail />} />
+            </Route> 
        
       </Routes>
     </BrowserRouter>
