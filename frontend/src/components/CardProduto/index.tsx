@@ -10,6 +10,7 @@ interface CardProdutoProps {
 
 const CardProduto = (props:CardProdutoProps) => {
     return (
+        <S.StyledBody>
             <S.StyledContainer>
                 <FavoriteIcon className='icon'/>
                 <S.ImageContainer src={mochilaImg}/>
@@ -19,6 +20,7 @@ const CardProduto = (props:CardProdutoProps) => {
                     <h5>{`R$ ${props.preco}`}</h5>
                 </S.DescriptionContainer>
             </S.StyledContainer>
+        </S.StyledBody>
     )
 }
 
