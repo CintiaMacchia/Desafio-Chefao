@@ -1,14 +1,4 @@
 import styled from 'styled-components';
-import FavoriteIcon from "../Favoritos";
-
-export const StyledBody = styled.div`
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-content: center;
-`
 
 export const StyledContainer = styled.div`
     position: relative;
