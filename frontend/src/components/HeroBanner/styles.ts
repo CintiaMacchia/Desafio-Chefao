@@ -91,6 +91,6 @@ export const HeroImageContainer = styled.div`
     }
 
     @media (min-width: 1441px) {
-        max-width: 740px;
+        max-width: 800px;
     }
 `

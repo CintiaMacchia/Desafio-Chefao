@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const StyledBody = styled.div`
     display: flex;
     justify-content: center;
+    font-family: Poppins, sans-serif;
 `
 
 export const StyledContainer = styled.div`

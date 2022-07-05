@@ -9,7 +9,7 @@ import { Navigation } from "swiper";
 import CardProduto from '../CardProduto';
 import * as S from './styles';
 
-const CarouselProduto = () => {
+const ProdutosCarrossel = () => {
     return (
         <S.Container>
         <Swiper
@@ -19,7 +19,7 @@ const CarouselProduto = () => {
             loopFillGroupWithBlank={true}
             navigation={true}
             modules={[Navigation]}
-            spaceBetween={0}
+            spaceBetween={40}
             className="mySwiper"
             breakpoints={{
                 // when window width is >= 640px
@@ -51,4 +51,4 @@ const CarouselProduto = () => {
     )
 }
 
-export default CarouselProduto;
+export default ProdutosCarrossel;
