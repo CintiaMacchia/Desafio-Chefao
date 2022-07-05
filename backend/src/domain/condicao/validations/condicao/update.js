@@ -5,6 +5,6 @@ export const update = validate({
         id: Joi.number().required(),
     }),
     body: Joi.object({
-        condicao: Joi.string().required()
+        condicao: Joi.string(),
     })
 })
