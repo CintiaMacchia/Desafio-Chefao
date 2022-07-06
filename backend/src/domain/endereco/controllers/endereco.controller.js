@@ -15,17 +15,17 @@ export const EnderecoController = {
 
     async update(req, res) {
         try {
-            const alterarEndereco = await enderecoService.alterarEndereco(req.body, req.params.req.auth);
+            const alterarEndereco = await enderecoService.alterarEndereco(req.body, req.params, req.auth);
             return res.status(200).json(alterarEndereco);
         } catch (error) {
             return res.status(500).json(error);
         }
     },
 
-    async deletarEndereco(req, res) {
+    async delete(req, res) {
         try {
-            await enderecoService.excluirEndereco(req.params, req.auth);
-            return res.sendStatus(204);
+            const deletarEndereco = await enderecoService.excluirEndereco(req.params, req.auth);
+            return res.sendStatus(204).json(deletarEndereco);;
         } catch (error) {
             return res.status(500).json(error);
         }
@@ -49,4 +49,4 @@ export const EnderecoController = {
         }
     }
 
-}
+};

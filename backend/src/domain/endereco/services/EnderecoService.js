@@ -1,9 +1,17 @@
 import endereco from '../models/endereco';
 
 export class EnderecoService {
-    async cadastrarEndereco(data) {
+    async cadastrarEndereco(data, params, auth) {
+        const { usuario_id } = params;
+        if (auth.usuario_id != usuario_id) {
+            return
+        }
+
         const novoEndereco = await endereco.create({
             ...data,
+            where: {
+                usuario_id
+            }
         });
         return novoEndereco;
     }
