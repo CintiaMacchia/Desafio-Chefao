@@ -15,7 +15,7 @@ export const HeroContainer = styled.div`
     }
 
     @media (min-width: 1100px) {
-        height: 75vh;
+        height: 65vh;
     }
 `
 
