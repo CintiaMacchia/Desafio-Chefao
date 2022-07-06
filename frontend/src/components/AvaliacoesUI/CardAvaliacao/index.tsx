@@ -1,6 +1,6 @@
 import * as S from './styles';
-import DoubleQuoteIcon from '../assets/images/double-quote.svg';
-import Stars from '../assets/images/stars.svg';
+import DoubleQuoteIcon from '../../assets/images/double-quote.svg';
+import Stars from '../../assets/images/stars.svg';
 
 interface CardAvaliacaoProps {
     titulo: string,
