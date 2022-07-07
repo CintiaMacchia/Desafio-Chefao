@@ -1,7 +1,8 @@
 import { Request, Response } from "express";
 import { usuarioService } from "../services";
+import { Usuarios } from "../models/usuario";
 
-
+//interface AuthRequest extends Request{ auth: any}
 
 
 export const UsuarioController = {
@@ -20,7 +21,7 @@ export const UsuarioController = {
     }
   },
 
-  async create(req: Request, res: Response) {
+  async create(req:Request, res:Response) {
     try {
       const novoUsuario = await usuarioService.cadastrarUsuario(req.body);
       return res.status(201).json(novoUsuario);
@@ -30,16 +31,16 @@ export const UsuarioController = {
     }
   },
   
-  async update(req: Request, res: Response):Promise<Response> {
+  async update(req: Request, res: Response) {
     try {
-      const usuarioAlterado = await usuarioService.alterarUsuario(req.body , req.params, req.body.auth);
+      const usuarioAlterado = await usuarioService.alterarUsuario(req.body, req.params, req.body.auth);
       return res.status(200).json(usuarioAlterado);
     } catch (error) {
       return res.status(500).json(error);
     }
   },
 
-  async delete(req: Request, res: Response) {
+  async delete(req:Request, res:Response) {
     try {      
       await usuarioService.excluirUsuario(req.params, req.body.auth);
       return res.sendStatus(204);
@@ -49,7 +50,7 @@ export const UsuarioController = {
   },
 
   
-  async getAll(req: Request, res: Response) {
+  async getAll(req:Request, res:Response) {
     try {
       const usuarios = await usuarioService.todosUsuarios();
       return res.json(usuarios);
@@ -58,7 +59,7 @@ export const UsuarioController = {
       return res.status(500).json(error);
     }
   },
-  async getOne(req: Request, res: Response) {
+  async getOne(req:Request, res:Response) {
     try {
       const usuario = await usuarioService.umUsuario(req.params);
       return res.json(usuario);

@@ -1,10 +1,12 @@
-import Usuarios from "../models";
-import bcrypt from "bcryptjs";
+import { Usuarios } from "../models/usuario";
+import bcrypt from "bcrypt";
 import jwt from 'jsonwebtoken'
-require("dotenv").config()
-
+import * as dotenv from "dotenv"
+dotenv.config()
 
 export class UsuarioService {
+
+    
 
     async loginUsuario(data: any) {
         const { email, senha } = data;
@@ -26,7 +28,7 @@ export class UsuarioService {
             senha: usuario.senha,
             
         },
-        process.env.SECRET_KEY
+            process.env.SECRET_KEY as string
         );
         return token;
     }

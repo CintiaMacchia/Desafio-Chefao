@@ -2,7 +2,7 @@ import express from 'express'
 import db from './shared/infrastructure/database'
 import handleMiddleware from './shared/middlewares/hendleMiddleware'
 import routes from './shared/routes/index'
-const upload = require('./shared/infrastructure/config')
+import upload from './shared/infrastructure/config/upload'
 
 const app = express();
 

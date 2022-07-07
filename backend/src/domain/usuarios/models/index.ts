@@ -1,3 +1,5 @@
-import { Usuarios } from './usuario'
+import { Usuarios } from "./usuario";
 
-export default Usuarios
+module.exports={
+    Usuarios,
+}
