@@ -1,14 +1,14 @@
-import condicao from '../models/condicao';
+import { Condicao } from "../models/condicao";
 
 export class CondicaoService {
-    async cadastrarCondicao(data) {
-        const novaCondicao = await condicao.create({
+    async cadastrarCondicao(data: any) {
+        const novaCondicao = await Condicao.create({
             ...data,
         })
         return novaCondicao;
     }
 
-    async alterarCondicao(data, params, auth) {
+    async alterarCondicao(data: any, params: any, auth: any) {
         const { id } = params;
         const payloadUpdate = {};
 
@@ -18,26 +18,26 @@ export class CondicaoService {
 
         Object.assign(payloadUpdate, data);
 
-        await condicao.update({
+        await Condicao.update({
             ...payloadUpdate,
         }, {
             where: {
                 id,
             }
         })
-        const condicao = await condicao.findByPk(id);
+        const condicao = await Condicao.findByPk(id);
         return condicao
 
     }
 
-    async excluirCondicao(params, auth) {
+    async excluirCondicao(params: any, auth: any) {
         const { id } = params;
 
         if (auth.id != id) {
             return
         }
 
-        await condicao.destroy({
+        await Condicao.destroy({
             where: {
                 id,
             }
@@ -46,13 +46,13 @@ export class CondicaoService {
     }
 
     async todasCondicoes() {
-        const todasCondicoes = await condicao.findAll();
+        const todasCondicoes = await Condicao.findAll();
         return todasCondicoes;
     }
 
-    async umaCondicao(params) {
+    async umaCondicao(params: any) {
         const { id } = params;
-        const umaCondicao = await condicao.findByPk(id);
+        const umaCondicao = await Condicao.findByPk(id);
         return umaCondicao
     }
 
