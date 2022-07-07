@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { usuarioService } from "../services";
-import { Usuarios } from "../models/usuario";
+import { Usuarios } from "../models/usuario"
 
 //interface AuthRequest extends Request{ auth: any}
 
@@ -45,6 +45,7 @@ export const UsuarioController = {
       await usuarioService.excluirUsuario(req.params, req.body.auth);
       return res.sendStatus(204);
     } catch (error) {
+      console.log(error)
       return res.status(500).json(error);
     }
   },
@@ -64,6 +65,7 @@ export const UsuarioController = {
       const usuario = await usuarioService.umUsuario(req.params);
       return res.json(usuario);
     } catch (error) {
+      console.log(error)
       return res.status(500).json(error);
     }
   },
