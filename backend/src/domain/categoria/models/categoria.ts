@@ -11,7 +11,13 @@ export const Categoria = db.define(
           },
           categoria: {
             type: DataTypes.STRING,
-          }
+          },
+          createdAt: {
+            type: DataTypes.DATE,
+          },
+          updatedAt: {
+            type: DataTypes.DATE,
+          },
     },
     {
         tablename:"categoria"
