@@ -9,7 +9,7 @@ const validations_1 = require("../../domain/usuarios/validations");
 //const UsuarioValidation = require('../../domain/usuarios/validations')
 const usuariosControler_1 = require("../../domain/usuarios/controllers/usuariosControler");
 //const UsuarioController = require('../../domain/usuarios/controllers/usuariosControler');
-const categoria_1 = require("../../domain/categoria/controllers/categoriaController");
+//const categoria_1 = require("../../domain/categoria/controllers/categoriaController");
 
 
 routes.post("/login", usuariosControler_1.UsuarioController.login);
@@ -19,7 +19,7 @@ routes.get("/users/:id", validations_1.UsuarioValidation.getOne, usuariosControl
 //routes.put("/users/:id", UsuarioValidation.update, UsuarioController.update);
 //routes.delete("/users/:id", UsuarioValidation.destroy, UsuarioController.delete);
 
-routes.get("/categoria/:id", categoria_1.CategoriaController.getOne)
+//routes.get("/categoria/:id", categoria_1.CategoriaController.getOne)
 
 
 
