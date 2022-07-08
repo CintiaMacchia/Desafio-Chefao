@@ -38,14 +38,14 @@ const ProdutosCarrossel = () => {
                 },
             }}
         >
-            <SwiperSlide><CardProduto nome='Mochila Infantil do Batman 1' estado='Usado' preco='99'/></SwiperSlide>
-            <SwiperSlide><CardProduto nome='Mochila Infantil do Batman 2' estado='Usado' preco='99'/></SwiperSlide>
-            <SwiperSlide><CardProduto nome='Mochila Infantil do Batman 3' estado='Usado' preco='99'/></SwiperSlide>
-            <SwiperSlide><CardProduto nome='Mochila Infantil do Batman 4' estado='Usado' preco='99'/></SwiperSlide>
-            <SwiperSlide><CardProduto nome='Mochila Infantil do Batman 5' estado='Usado' preco='99'/></SwiperSlide>
-            <SwiperSlide><CardProduto nome='Mochila Infantil do Batman 6' estado='Usado' preco='99'/></SwiperSlide>
-            <SwiperSlide><CardProduto nome='Mochila Infantil do Batman 7' estado='Usado' preco='99'/></SwiperSlide>
-            <SwiperSlide><CardProduto nome='Mochila Infantil do Batman 8' estado='Usado' preco='99'/></SwiperSlide>
+            <SwiperSlide><CardProduto titulo='Mochila Infantil do Batman 1' estado='Usado' valor='99'/></SwiperSlide>
+            <SwiperSlide><CardProduto titulo='Mochila Infantil do Batman 2' estado='Usado' valor='99'/></SwiperSlide>
+            <SwiperSlide><CardProduto titulo='Mochila Infantil do Batman 3' estado='Usado' valor='99'/></SwiperSlide>
+            <SwiperSlide><CardProduto titulo='Mochila Infantil do Batman 4' estado='Usado' valor='99'/></SwiperSlide>
+            <SwiperSlide><CardProduto titulo='Mochila Infantil do Batman 5' estado='Usado' valor='99'/></SwiperSlide>
+            <SwiperSlide><CardProduto titulo='Mochila Infantil do Batman 6' estado='Usado' valor='99'/></SwiperSlide>
+            <SwiperSlide><CardProduto titulo='Mochila Infantil do Batman 7' estado='Usado' valor='99'/></SwiperSlide>
+            <SwiperSlide><CardProduto titulo='Mochila Infantil do Batman 8' estado='Usado' valor='99'/></SwiperSlide>
         </Swiper>
     </S.Container>
     )
