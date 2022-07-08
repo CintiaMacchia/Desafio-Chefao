@@ -23,7 +23,7 @@ export function Footer() {
   return (
     <footer >
 
-      <div className="container-lg">
+      <div className="container-lg mt-5">
         <div className="row">
           <div className="col-md-12">
 
@@ -37,16 +37,16 @@ export function Footer() {
                   {/* div contatos */}
                   <div className="mt-3 ">
                     <div>
-                      <a href="#" className="text-dark"></a>
+                      <a href="#" ></a>
                     </div>
                     <div>
-                      <a className="text-dark" href="#"> CNPJ: XX. XXX. XXX/0001-XX  <br />Endereço: Rua XXXXX, numero XX, <br /> Bairro XXXX, Cep: 0XXXX-X0  </a>
+                      <span > CNPJ: XX. XXX. XXX/0001-XX  <br />Endereço: Rua XXXXX, numero XX, <br /> Bairro XXXX, Cep: 0XXXX-X0  </span>
                     </div>
 
 
-                    <a className="text-decoration-none text-white undeline  underlinMais " href="tel:000000002">  Telefone: +55 (XX) XXXX-XXXX</a>
+                    <a href="tel:000000002">  Telefone: +55 (XX) XXXX-XXXX</a>
                     <div className="mt-3 text-light">
-                      <a className="text-decoration-none text-white undeline  underlinMais "
+                      <a 
                         href="http://Mailto:#">atendimento@empresa.com.br</a>
                     </div>
                     <div>
@@ -93,31 +93,31 @@ export function Footer() {
                         </a>
                         </div>
                         <div className='mt-2'>
-                        <a className='undeline '
+                        <a 
                           id=' '
                           href="#"> Lancheiras
                         </a>
                         </div>
                         <div className='mt-2'>
-                        <a className='undeline '
+                        <a 
                           id=' '
                           href="#">Lancheiras
                         </a>
                         </div>
                         <div className='mt-2'>
-                        <a className='undeline '
+                        <a 
                           id=' '
                           href="#"> Livros
                         </a>
                         </div>
                         <div className='mt-2'>
-                        <a className='undeline '
+                        <a 
                           id=' '
                           href="#"> Mochilas
                         </a>
                         </div>
                         <div className='mt-2'>
-                        <a className='undeline '
+                        <a 
                           id=' '
                           href="#">Papelaria
                         </a>
@@ -126,7 +126,7 @@ export function Footer() {
 
                         </div>
                         <div className='mt-2'>
-                        <a className='underline mt-2 '
+                        <a className='mt-2 '
                           id=' '
                           href="#">Uniformes
                         </a>
