@@ -17,4 +17,6 @@ export default function (err: Error, req: Request, res: Response, next: NextFunc
         });
      }
     return res.status(500).json(err)
+
+    
 }

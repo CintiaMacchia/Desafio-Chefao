@@ -12,11 +12,11 @@ export class CategoriaService{
         return novaCategoria;
     }
 
-    async updateCategoria(data: any, params: any, auth: any){
+    async updateCategoria(data: any, params: any){
         const { id } = params;
         const payloadUpdate = {};
 
-        if(auth.id != id){
+        if(!id ===id ){
             return
         }
         Object.assign(payloadUpdate, data);
@@ -49,7 +49,7 @@ export class CategoriaService{
     }
 
     async umaCategoria(params: any){
-        const { id} = params;
+        const { id } = params;
         const umaCategoria = await Categoria.findByPk(id);
         return umaCategoria;
     }
