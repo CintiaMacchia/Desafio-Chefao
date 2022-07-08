@@ -5,7 +5,7 @@ const { faker } = require('@faker-js/faker');
 module.exports = {
     async up(queryInterface, Sequelize) {
 
-        await queryInterface.bulkInsert('condicao', [{
+        await queryInterface.bulkInsert('condicoes', [{
                 condicao: 'Novo',
                 createdAt: new Date(),
                 updatedAt: new Date(),
@@ -25,7 +25,7 @@ module.exports = {
 
     async down(queryInterface, Sequelize) {
 
-        await queryInterface.bulkDelete('condicao');
+        await queryInterface.bulkDelete('condicoes');
 
     }
 };
