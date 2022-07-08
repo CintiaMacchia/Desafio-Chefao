@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import { categoriaService } from "../services";
-import { Categoria } from "../models/categoria";
+//import { Categoria } from "../models/categoria";
 
-//interface AuthRequest extends Request{ auth: any } 
+interface AuthRequest extends Request{ auth: any } 
 
 export const CategoriaController = {
 
@@ -24,9 +24,9 @@ return res.status(200).json(alterarCategoria)
         }
     },
 
-    async delet(req:Request, res:Response){
+    async delet(req:AuthRequest, res:Response){
         try {
-            await categoriaService.excluirCategoria(req.params, req.body.auth);
+            await categoriaService.excluirCategoria(req.params, req.auth);
             return res.sendStatus(204);
         } catch (error) {
             return res.status(500).json(error)

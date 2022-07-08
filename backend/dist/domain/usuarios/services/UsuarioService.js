@@ -104,6 +104,36 @@ class UsuarioService {
             return;
         });
     }
+    //     async encontraUsuarioId(params: any){
+    //         const { id } = params;
+    // const buscaUsuario = await Usuarios.count({
+    //     where: {
+    //         id : id
+    //     }
+    //     });
+    //        return buscaUsuario
+    //  }
+    //     async excluirUsuario(params: any){
+    //         try {
+    //             const { id } = params;
+    //             // const existeId = await Usuarios.findByPk(id)({
+    //             //     where: { 
+    //             //         id: id
+    //             //      }
+    //             // });
+    //             if (!id === id){
+    //                 return 
+    //             }
+    //             await Usuarios.update({
+    //                 where: {
+    //                     id: id
+    //                 }
+    //             })
+    // console.log("deu certo")
+    //         } catch (error) {
+    //             return console.log(error)
+    //         }
+    //     }
     todosUsuarios() {
         return __awaiter(this, void 0, void 0, function* () {
             const todosOsUsuarios = yield usuario_1.Usuarios.findAll();

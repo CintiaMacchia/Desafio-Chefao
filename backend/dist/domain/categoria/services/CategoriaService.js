@@ -45,11 +45,11 @@ class CategoriaService {
             return novaCategoria;
         });
     }
-    updateCategoria(data, params, auth) {
+    updateCategoria(data, params) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = params;
             const payloadUpdate = {};
-            if (auth.id != id) {
+            if (!id === id) {
                 return;
             }
             Object.assign(payloadUpdate, data);
