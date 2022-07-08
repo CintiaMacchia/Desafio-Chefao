@@ -3,6 +3,7 @@ import bcrypt from "bcrypt";
 import jwt from 'jsonwebtoken'
 import * as dotenv from "dotenv"
 dotenv.config()
+import { Request, Response} from 'express'
 
 export class UsuarioService {
 
@@ -72,57 +73,23 @@ export class UsuarioService {
         return usuario;
     }
 
-    async excluirUsuario(params: any, auth: any) {
-        const { id } = params;
+    // async excluirUsuario(params: any, auth: any) {
+    //     const { id } = params;
 
-        if(auth.id != id){
-            return
-        }
+    //     if(auth.id != id){
+    //         return
+    //     }
               
-        await Usuarios.destroy({
-            where: {
-                id,
-            },
-        });
-        return
-    }
+    //     await Usuarios.destroy({
+    //         where: {
+    //             id,
+    //         },
+    //     });
+    //     return
+    // }
 
-//     async encontraUsuarioId(params: any){
-//         const { id } = params;
-// const buscaUsuario = await Usuarios.count({
-//     where: {
-//         id : id
-//     }
-//     });
-//        return buscaUsuario
-//  }
 
-//     async excluirUsuario(params: any){
-//         try {
-//             const { id } = params;
-
-//             // const existeId = await Usuarios.findByPk(id)({
-//             //     where: { 
-//             //         id: id
-//             //      }
-//             // });
-//             if (!id === id){
-//                 return 
-//             }
-
-//             await Usuarios.update({
-
-//                 where: {
-//                     id: id
-//                 }
-//             })
-// console.log("deu certo")
-
-//         } catch (error) {
-//             return console.log(error)
-//         }
-//     }
-
+    
     async todosUsuarios() {
         const todosOsUsuarios = await Usuarios.findAll();
         return todosOsUsuarios;
