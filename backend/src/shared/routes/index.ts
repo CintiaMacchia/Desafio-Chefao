@@ -5,7 +5,9 @@ import { UsuarioValidation } from '../../domain/usuarios/validations';
 //const UsuarioValidation = require('../../domain/usuarios/validations')
 import { UsuarioController } from '../../domain/usuarios/controllers/usuariosControler'
 //const UsuarioController = require('../../domain/usuarios/controllers/usuariosControler')
+import { CreateProdutoController} from '../../domain/produto/controllers/create/CreateProdutoController'
 
+routes.post("/produto", CreateProdutoController.create);
 
 routes.post("/login", UsuarioController.login);
 routes.post("/users", UsuarioController.create);
