@@ -1,8 +1,8 @@
 import db from '../../../shared/infrastructure/database'
-import { DataTypes } from "sequelize"
+import { DataTypes } from 'sequelize'
 
 export const Condicao = db.define(
-  "condicao",
+  "condicoes",
   { id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -18,7 +18,4 @@ export const Condicao = db.define(
       type: DataTypes.DATE,
     },
   },
-  {
-      tablename:"condicao"
-  }
 )

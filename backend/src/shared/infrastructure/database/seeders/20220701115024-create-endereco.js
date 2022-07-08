@@ -23,11 +23,11 @@ module.exports = {
     async up(queryInterface, Sequelize) {
 
 
-        await queryInterface.bulkInsert('endereco', arrayFaker)
+        await queryInterface.bulkInsert('enderecos', arrayFaker)
     },
 
     async down(queryInterface, Sequelize) {
 
-        await queryInterface.bulkDelete('endereco');
+        await queryInterface.bulkDelete('enderecos');
     }
 };

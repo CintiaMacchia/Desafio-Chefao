@@ -3,6 +3,7 @@ import bcrypt from "bcrypt";
 import jwt from 'jsonwebtoken'
 import * as dotenv from "dotenv"
 dotenv.config()
+import { Request, Response} from 'express'
 
 export class UsuarioService {
 
@@ -72,21 +73,23 @@ export class UsuarioService {
         return usuario;
     }
 
-    async excluirUsuario(params: any, auth: any) {
-        const { id } = params;
+    // async excluirUsuario(params: any, auth: any) {
+    //     const { id } = params;
 
-        if(auth.id != id){
-            return
-        }
+    //     if(auth.id != id){
+    //         return
+    //     }
               
-        await Usuarios.destroy({
-            where: {
-                id,
-            },
-        });
-        return
-    }
+    //     await Usuarios.destroy({
+    //         where: {
+    //             id,
+    //         },
+    //     });
+    //     return
+    // }
 
+
+    
     async todosUsuarios() {
         const todosOsUsuarios = await Usuarios.findAll();
         return todosOsUsuarios;

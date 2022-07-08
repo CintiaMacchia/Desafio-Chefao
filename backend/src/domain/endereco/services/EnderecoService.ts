@@ -1,4 +1,6 @@
-import { Endereco } from '../models';
+import { endereco } from "../models/endereco";
+import * as dotenv from "dotenv";
+dotenv.config();
 
 export class EnderecoService {
     async cadastrarEndereco(data: any, params: any, auth: any) {
@@ -7,7 +9,7 @@ export class EnderecoService {
             return
         }
 
-        const novoEndereco = await Endereco.create({
+        const novoEndereco = await endereco.create({
             ...data,
             where: {
                 usuario_id
@@ -25,7 +27,7 @@ export class EnderecoService {
         }
         Object.assign(payloadUpdate, data);
 
-        await Endereco.update({
+        await endereco.update({
             ...payloadUpdate,
         }, {
             where: {
@@ -34,8 +36,8 @@ export class EnderecoService {
             }
 
         })
-        const endereco = await Endereco.findByPk(id);
-        return endereco
+        const Endereco = await endereco.findByPk(id);
+        return Endereco
     }
 
     async excluirEndereco(params: any, auth: any) {
@@ -45,7 +47,7 @@ export class EnderecoService {
             return
         }
 
-        await Endereco.destroy({
+        await endereco.destroy({
             where: {
                 id,
             },
@@ -54,13 +56,14 @@ export class EnderecoService {
     }
 
     async listarEnderecos() {
-        const listarEnderecos = await Endereco.findAll();
+        
+        const listarEnderecos = await endereco.findAll();
         return listarEnderecos;
     }
 
     async umEndereco(params: any) {
         const { id } = params;
-        const enderecoUnico = await Endereco.findByPk(id);
+        const enderecoUnico = await endereco.findByPk(id);
         return enderecoUnico
     }
 

@@ -1,5 +1,5 @@
 import db from "../../../shared/infrastructure/database";
-import { DataTypes } from "sequelize/types";
+import { DataTypes } from "sequelize";
 
 export const Categoria = db.define(
     "categoria",
