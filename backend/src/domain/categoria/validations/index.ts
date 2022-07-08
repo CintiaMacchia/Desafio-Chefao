@@ -3,7 +3,7 @@ import { getOne } from "./categoria/getOne";
 import { destroy}  from "./categoria/destroy";
 import { update } from "./categoria/update";
 
-export const UsuarioValidation = {
+export const CategoriaValidation = {
   create,
   getOne,
   destroy,
