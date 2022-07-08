@@ -1,4 +1,3 @@
-//const db = require("../../../shared/infrastructure/database")
 import db from '../../../shared/infrastructure/database'
 import { DataTypes } from "sequelize"
 
@@ -25,7 +24,4 @@ export const Usuarios = db.define(
         type: DataTypes.DATE,
       },
     },
-    {
-        tablename:"usuarios"
-    }
 )

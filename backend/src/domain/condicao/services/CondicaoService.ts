@@ -46,8 +46,9 @@ export class CondicaoService {
     }
 
     async todasCondicoes() {
-        const todasCondicoes = await Condicao.findAll();
-        return todasCondicoes;
+       
+        const todasAsCondicoes = await Condicao.findAll();
+        return todasAsCondicoes;
     }
 
     async umaCondicao(params: any) {
