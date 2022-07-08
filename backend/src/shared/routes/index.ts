@@ -7,7 +7,8 @@ import { UsuarioValidation } from '../../domain/usuarios/validations';
 import { UsuarioController } from '../../domain/usuarios/controllers/usuariosControler'
 //const UsuarioController = require('../../domain/usuarios/controllers/usuariosControler')
 <<<<<<< HEAD
-import { CreateProdutoController} from '../../domain/produto/controllers/create/CreateProdutoController'
+import {
+     CreateProdutoController} from '../../domain/produto/controllers/create/CreateProdutoController'
 
 routes.post("/produto", CreateProdutoController.create);
 
