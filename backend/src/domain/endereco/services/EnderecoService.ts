@@ -1,13 +1,14 @@
-import { Endereco } from '../models';
+import { endereco } from '../models/endereco';
+import { Request, Response } from 'express';
 
 export class EnderecoService {
-    async cadastrarEndereco(data: any, params: any, auth: any) {
+    async cadastrarEndereco(data: any, params: any) {
         const { usuario_id } = params;
-        if (auth.usuario_id != usuario_id) {
+        if (!usuario_id === usuario_id) {
             return
         }
 
-        const novoEndereco = await Endereco.create({
+        const novoEndereco = await endereco.create({
             ...data,
             where: {
                 usuario_id
@@ -16,16 +17,16 @@ export class EnderecoService {
         return novoEndereco;
     }
 
-    async alterarEndereco(data:any, params: any, auth: any) {
+    async alterarEndereco(data:any, params: any) {
         const { id } = params;
         const payloadUpdate = {};
 
-        if (auth.id != id) {
+        if (id != id) {
             return
         }
         Object.assign(payloadUpdate, data);
 
-        await Endereco.update({
+        await endereco.update({
             ...payloadUpdate,
         }, {
             where: {
@@ -34,33 +35,35 @@ export class EnderecoService {
             }
 
         })
-        const endereco = await Endereco.findByPk(id);
-        return endereco
+        const alterarEndereco = await endereco.findByPk(id);
+        return alterarEndereco
     }
 
-    async excluirEndereco(params: any, auth: any) {
+    async excluirEndereco(params: any,) {
         const { id } = params;
 
-        if (auth.id != id) {
+        if (id != id) {
             return
         }
 
-        await Endereco.destroy({
+        await endereco.destroy({
             where: {
                 id,
             },
         });
         return
     }
+  
+
 
     async listarEnderecos() {
-        const listarEnderecos = await Endereco.findAll();
+        const listarEnderecos = await endereco.findAll();
         return listarEnderecos;
     }
 
     async umEndereco(params: any) {
         const { id } = params;
-        const enderecoUnico = await Endereco.findByPk(id);
+        const enderecoUnico = await endereco.findByPk(id);
         return enderecoUnico
     }
 

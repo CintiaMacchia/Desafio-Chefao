@@ -6,11 +6,15 @@ import { UsuarioValidation } from '../../domain/usuarios/validations';
 import { UsuarioController } from '../../domain/usuarios/controllers/usuariosControler'
 import { CondicaoController } from '../../domain/condicao/controllers/condicaoController';
 //import { CategoriaValidation } from '../../domain/categoria/validations';
-import { CategoriaController } from '../../domain/categoria/controllers'
+import { CategoriaController } from '../../domain/categoria/controllers';
+import { EnderecoController } from '../../domain/endereco/controllers/endereco.controller';
+//import { authController } from '../../domain/usuarios/controllers/authController';
 
+import auth from '../middlewares/auth';
+import { loginValidation} from '../../domain/usuarios/validations/usuarios/login'
 
 //usuarios
-routes.post("/login", UsuarioController.login);
+
 routes.post("/users", UsuarioController.create);
 routes.get("/users", UsuarioController.getAll);
 routes.get("/users/:id", UsuarioValidation.getOne, UsuarioController.getOne);
@@ -23,13 +27,28 @@ routes.delete("/users/:id", UsuarioValidation.destroy, UsuarioController.delete)
 routes.post("/categoria", CategoriaController.create);
 routes.get("/categoria/:id", CategoriaController.getOne);
 routes.get("/categorias", CategoriaController.getAll)
-routes.put("categoria/:id", CategoriaController.update)
-routes.delete("categoria/:id", CategoriaController.delet)
+routes.put("/categoria/:id", CategoriaController.update)
+routes.delete("/categoria/:id", CategoriaController.delete)
 
 //Condicao
 routes.get("/condicao", CondicaoController.getAll)
 routes.post("/condicao", CondicaoController.create)
+routes.get("/condicao/:id", CondicaoController.getOne)
+routes.delete("/condicao/:id", CondicaoController.delete)
+routes.put("/condicao/:id", CondicaoController.update)
 
 
+//endereco
+routes.get("/endereco", EnderecoController.getAll);
+routes.get("/endereco/:id", EnderecoController.getOne);
+routes.post("/endereco", EnderecoController.create)
+routes.put("/endereco/:id", EnderecoController.update)
+routes.delete("/endereco/:id", EnderecoController.delete)
+
+
+//loginUsuario
+routes.post("/login",loginValidation, auth, UsuarioController.login)
+
+// routes.post("/login", loginValidation, auth, UsuarioValidation.create);
 
 export default routes;

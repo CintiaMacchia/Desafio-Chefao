@@ -8,11 +8,11 @@ export class CondicaoService {
         return novaCondicao;
     }
 
-    async alterarCondicao(data: any, params: any, auth: any) {
+    async alterarCondicao(data: any, params: any) {
         const { id } = params;
         const payloadUpdate = {};
 
-        if (auth.id != id) {
+        if (id != id) {
             return
         }
 
@@ -30,10 +30,10 @@ export class CondicaoService {
 
     }
 
-    async excluirCondicao(params: any, auth: any) {
+    async excluirCondicao(params: any) {
         const { id } = params;
 
-        if (auth.id != id) {
+        if (id != id) {
             return
         }
 

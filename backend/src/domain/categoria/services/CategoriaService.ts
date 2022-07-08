@@ -12,36 +12,36 @@ export class CategoriaService{
         return novaCategoria;
     }
 
-    async updateCategoria(data: any, params: any){
-        const { id } = params;
-        const payloadUpdate = {};
+    // async updateCategoria(data: any, params: any){
+    //     const { id } = params;
+    //     const payloadUpdate = {};
 
-        if(!id ===id ){
-            return
-        }
-        Object.assign(payloadUpdate, data);
+    //     if(!id ===id ){
+    //         return
+    //     }
+    //     Object.assign(payloadUpdate, data);
 
-        await Categoria.update({
-            ...payloadUpdate,
-        }, {
-            where:{ id },
-        });
-        const trocarCategoria = await Categoria.findByPk(id);
-        return trocarCategoria;
-    }
+    //     await Categoria.update({
+    //         ...payloadUpdate,
+    //     }, {
+    //         where:{ id },
+    //     });
+    //     const trocarCategoria = await Categoria.findByPk(id);
+    //     return trocarCategoria;
+    // }
 
-    async excluirCategoria(params: any, auth: any){
-        const { id } = params;
+    // async excluirCategoria(params: any,){
+    //     const { id } = params;
 
-        if(auth.id != id){
-            return
-        }
+    //     // if(auth.id != id){
+    //     //     return
+    //     // }
 
-        await Categoria.destroy({
-            where: {id}
-        });
-        return
-    }
+    //     await Categoria.destroy({
+    //         where: {id}
+    //     });
+    //     return
+    // }
    
     async listarCategorias(){
         const listarCategorias = await Categoria.findAll();
