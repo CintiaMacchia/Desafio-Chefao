@@ -31,6 +31,8 @@ exports.endereco = database_1.default.define("endereco", { id: {
     },
     usuario_id: {
         type: sequelize_1.DataTypes.INTEGER,
+        references: { model: 'usuario',
+            key: "id" },
     },
     createdAt: {
         type: sequelize_1.DataTypes.DATE,

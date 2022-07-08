@@ -28,6 +28,8 @@ export const endereco  = db.define(
       },
       usuario_id: {
         type: DataTypes.INTEGER,
+        references: { model: 'usuario',
+        key: "id" },
       },
       createdAt: {
         type: DataTypes.DATE,
