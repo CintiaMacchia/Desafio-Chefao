@@ -3,9 +3,12 @@ import mochilaImg from '../../components/assets/images/mochila.png';
 import FavoriteIcon from '../Favoritos';
 
 interface CardProdutoProps {
-    nome: string,
-    estado: string,
-    preco: string
+    titulo: string,
+    estado?: string,
+    foto?: string
+    valor: string
+    categoria?: string
+    texto?: string
 }
 
 const CardProduto = (props:CardProdutoProps) => {
@@ -13,11 +16,13 @@ const CardProduto = (props:CardProdutoProps) => {
         <S.StyledBody>
             <S.StyledContainer>
                 <FavoriteIcon className='icon'/>
-                <S.ImageContainer src={mochilaImg}/>
+                <S.ImageContainer src={props.foto}/>
                 <S.DescriptionContainer>
-                    <h4>{props.nome}</h4>
-                    <span>{`Produto: ${props.estado}`}</span>
-                    <h5>{`R$ ${props.preco}`}</h5>
+
+                    <h4>{props.titulo}</h4>
+                    <span>{`categoria: ${props.categoria}`}</span>
+                    <span>{`estado: ${props.estado}`}</span>
+                    <h5>{`R$ ${props.valor}`}</h5>
                 </S.DescriptionContainer>
             </S.StyledContainer>
         </S.StyledBody>

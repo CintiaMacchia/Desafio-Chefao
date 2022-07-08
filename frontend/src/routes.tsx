@@ -6,10 +6,11 @@ import ConfirmaCadastro from "./pages/ConfirmaCadastro"
 import ConfirmaMensagem from "./pages/ConfirmaMensagem"
 import Anuncio from "./pages/CriarAnuncios"
 import Home from "./pages/Home"
-import Recipes from "./pages/produtos"
-import RecipesDetail from "./pages/RecipesDetail"
+import Produtos from "./pages/Produtos"
 
-// import { Container } from './styles';
+import ProdutosDetail from "./pages/ProdutosDetail"
+
+
 
 const AppRoutes: React.FC = () => {
   return (
@@ -21,8 +22,8 @@ const AppRoutes: React.FC = () => {
         <Route path="/confirma-cadastro" element={<ConfirmaCadastro />} />
         <Route path="/confirma-mensagem" element={<ConfirmaMensagem />} />
         <Route path="/anuncio" element={<Anuncio />} />
-        <Route path="/receitas" element={<Recipes />}>
-          <Route path=":id" element={<RecipesDetail />} />
+        <Route path="/produtos" element={<Produtos/>}>
+          <Route path=":id" element={<ProdutosDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>
