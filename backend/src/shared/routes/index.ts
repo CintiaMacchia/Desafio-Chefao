@@ -3,9 +3,7 @@ const express = require('express')
 const routes = express.Router()
 
 import { UsuarioValidation } from '../../domain/usuarios/validations';
-//const UsuarioValidation = require('../../domain/usuarios/validations')
 import { UsuarioController } from '../../domain/usuarios/controllers/usuariosControler'
-//const UsuarioController = require('../../domain/usuarios/controllers/usuariosControler')
 //import { CategoriaValidation } from '../../domain/categoria/validations';
 import { CategoriaController } from '../../domain/categoria/controllers'
 
@@ -18,8 +16,11 @@ routes.get("/users/:id", UsuarioValidation.getOne, UsuarioController.getOne);
 routes.delete("/users/:id", UsuarioValidation.destroy, UsuarioController.delete);
 
 //categoria
-//routes.post("/categoria", CategoriaController.create);
-//routes.get("/categoria/:id", CategoriaController.getOne);
+routes.post("/categoria", CategoriaController.create);
+routes.get("/categoria/:id", CategoriaController.getOne);
+routes.get("/categorias", CategoriaController.getAll)
+routes.put("categoria", CategoriaController.update)
+routes.delete("categoria", CategoriaController.delet)
 
 
 export default routes;
