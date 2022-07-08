@@ -1,13 +1,13 @@
 import React from 'react';
 import { IoIosArrowForward } from 'react-icons/io';
 import Container from '../../components/Container';
-import ContentList from '../../components/ContentList';
+import ContentList from '../../components/ResultadoPesquisa';
 import { Footer } from '../../components/Footer';
 
 import Header from '../../components/Header';
 
 const Produtos: React.FC = () => (
-    <Container>
+    <>
         <Header />
         <div className="container-fluid ">
                 <div className="row">
@@ -24,7 +24,7 @@ const Produtos: React.FC = () => (
             </div>
         <ContentList />
         <Footer />
-    </Container>
+    </>
 )
 
 export default Produtos;
