@@ -1,5 +1,5 @@
 import { Usuarios } from "./usuario";
 
-module.exports={
-    Usuarios,
+module.exports = {
+    Usuarios
 }

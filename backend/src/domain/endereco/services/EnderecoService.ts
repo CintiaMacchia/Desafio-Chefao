@@ -1,4 +1,6 @@
-import { Endereco } from '../models';
+import { Endereco } from '../models/index';
+import * as dotenv from "dotenv";
+dotenv.config();
 
 export class EnderecoService {
     async cadastrarEndereco(data: any, params: any, auth: any) {
@@ -54,6 +56,7 @@ export class EnderecoService {
     }
 
     async listarEnderecos() {
+        console.log("Aqui2")
         const listarEnderecos = await Endereco.findAll();
         return listarEnderecos;
     }

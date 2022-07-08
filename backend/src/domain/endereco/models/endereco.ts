@@ -2,7 +2,7 @@ import db from '../../../shared/infrastructure/database'
 import { DataTypes } from "sequelize";
 
 export const endereco  = db.define(
-    "endereco", 
+    "enderecos", 
     { id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -28,7 +28,7 @@ export const endereco  = db.define(
       },
       usuario_id: {
         type: DataTypes.INTEGER,
-        references: { model: 'usuario',
+        references: { model: 'usuarios',
         key: "id" },
       },
       createdAt: {
@@ -39,6 +39,6 @@ export const endereco  = db.define(
       },
     },
     {
-        tablename:"endereco"
+        tablename:"enderecos"
     }
 )
