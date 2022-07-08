@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { enderecoService } from '../services';
-import { Endereco } from '../models';
+//import { endereco } from '..models/endereco'
 
 interface AuthRequest extends Request{ auth: any } 
 
@@ -34,6 +34,7 @@ export const EnderecoController = {
 
     async getAll(req: Request, res: Response) {
         try {
+            //console.log(req)
             const enderecos = await enderecoService.listarEnderecos();
             return res.json(enderecos);
         } catch (error) {

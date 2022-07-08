@@ -38,7 +38,4 @@ export const endereco  = db.define(
         type: DataTypes.DATE,
       },
     },
-    {
-        tablename:"enderecos"
-    }
 )
