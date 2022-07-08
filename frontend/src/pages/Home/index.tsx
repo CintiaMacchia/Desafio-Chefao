@@ -11,6 +11,7 @@ import AvaliacaoContainer from '../../components/AvaliacoesUI/AvaliacoesContaine
 const Home = () => {
   return (
     <>
+  
         <HeroBanner />
         <SectionMain>
           <h2 className='section-title'>Encontre seu Material</h2>
@@ -27,6 +28,8 @@ const Home = () => {
           <h2 className='section-title'>O que as pessoas estão comentando:</h2>
           <AvaliacaoContainer />
         </SectionMain>
+        
+
     </>
   )
 }
