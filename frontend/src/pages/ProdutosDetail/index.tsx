@@ -3,14 +3,16 @@ import Container from '../../components/Container';
 import { Footer } from '../../components/Footer';
 
 import Header from '../../components/Header';
+import ProdutosCarrossel from '../../components/ProdutosCarrossel';
 
-const RecipesDetail: React.FC = () => {
+const ProdutosDetail: React.FC = () => {
   return (
       <Container>
           <Header />
+          <ProdutosCarrossel />
           <Footer />
       </Container>
   );
 }
 
-export default RecipesDetail;
+export default ProdutosDetail;
