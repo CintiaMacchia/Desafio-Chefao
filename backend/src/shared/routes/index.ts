@@ -28,7 +28,7 @@ routes.put("categoria/:id", CategoriaController.update)
 //routes.delete("categoria/:id", CategoriaController.delet)
 
 //Condicao
-routes.get("/condicao", CondicaoController.getAll)
+routes.get("/condicoes", CondicaoController.getAll)
 routes.post("/condicao", CondicaoController.create)
 
 //Endereço
