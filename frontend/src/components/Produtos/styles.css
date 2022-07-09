@@ -1,0 +1,56 @@
+
+.content-container div.grid-container{
+  
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px ;
+    padding: 10px;
+
+}
+
+
+
+
+ div.card-container img{
+    width: 350px;
+    height: 350px;
+    max-width: 100%;
+    max-height: 100%;
+    border: 5px solid transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+
+@media screen and (max-width: 900px){
+    main.content-container div.grid-container{
+        grid-template-columns: auto auto;
+    }
+
+}
+
+.seleted{
+    margin-left: 10px;
+    width: 350px;
+}
+
+
+
+@media screen and (max-width: 450px){
+    main.content-container h1{
+        font-size: 40px;
+        line-height: 48px;
+        text-align: center;
+        margin-top: 300px;
+    }
+    main.content-container div.grid-container{
+        grid-template-columns: auto;
+    }
+
+    div.grid-item div.card-container img{
+        width: 150px;
+        height: 150px;
+    }
+}
