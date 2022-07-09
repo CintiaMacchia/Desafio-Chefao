@@ -3,17 +3,11 @@ import { GoLocation } from 'react-icons/go';
 import { IoIosArrowDown } from 'react-icons/io';
 import { BsPerson } from 'react-icons/bs';
 import { BiSearch } from 'react-icons/bi';
-
 import logo from '../../components/assets/images/logo.png';
 import "./styles.css";
 import ButonEntrar from '../ButonCheio';
 import ButtonBorda from '../ButtonBorda';
-
-
 import ButonCheio from '../ButonCheio';
-
-
-
 
 function Menu() {
 

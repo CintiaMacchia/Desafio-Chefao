@@ -1,30 +1,10 @@
-.underline {
-  font-size: 0.9em;
-  font-style: 0.2rem;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  position: relative;
+header  a {
+  color: #fff;
+  text-decoration: none;
 }
-.underline::after {
-  position: absolute;
-  content: "";
-  width: 0%;
-  height: 2px;
-  color: rgba(53, 53, 53, 0.9);
-  left: 50%;
-  bottom: -5px;
-  transform: all 1s ease-in-out;
-}
-.underline:hover {
-  cursor: pointer;
-  color: #000;
+header  a:hover {
+  color: #FFEEDE;
   text-decoration: underline;
-}
-.underline:hover::after {
-  cursor: pointer;
-  width: 100%;
-  left: 0;
 }
 
 .barra-de-pesquisa {
