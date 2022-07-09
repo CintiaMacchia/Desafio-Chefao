@@ -23,8 +23,10 @@ const AppRoutes: React.FC = () => {
         <Route path="/confirma-mensagem" element={<ConfirmaMensagem />} />
         <Route path="/anuncio" element={<Anuncio />} />
         <Route path="/produtos" element={<Produtos/>}>
+       
           <Route path=":id" element={<ProdutosDetail />} />
         </Route>
+        <Route path="/d-prodotos" element={<ProdutosDetail/>}/>
       </Routes>
     </BrowserRouter>
   )

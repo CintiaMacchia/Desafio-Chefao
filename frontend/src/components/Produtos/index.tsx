@@ -25,7 +25,7 @@ interface Produto {
 }
 
 
-export default function ResultadoPesqisa() {
+export default function Produtos() {
 //   const [produtos, setProdutos] = useState<Produto[]>([]);
 
 //   useEffect(() => {
@@ -43,11 +43,11 @@ export default function ResultadoPesqisa() {
 //   }, [setProdutos]);
   
   return (
-    <main className="container-lg">
+    <main className="container-lg ">
 
 <div className="content-container">
   <div className="row">
-    <div className="col-md-4 d-flex justify-content-around">
+    <div className="col-md-4 ">
       <Sidebar/>
     </div>
     <div className="col-md-8">
