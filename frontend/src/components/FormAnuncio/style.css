@@ -30,7 +30,7 @@
   padding: 30px;
 }
 
-h1 {
+.anuncio-h1 {
   /* Page name */
 
   width: 206px;
@@ -50,22 +50,22 @@ h1 {
   color: #161616;
 }
 
-h2 {
+.anuncio-h2 {
   font-size: 20px;
   font-weight: bold;
 }
 
-h3 {
+.anuncio-h3 {
   font-size: 17px;
   margin-top: 10px;
 }
 
-h4 {
+.anuncio-h4 {
   font-size: 20px;
   font-weight: bold;
 }
 
-h6 {
+.anuncio-h6 {
   padding-top: 20px;
   font-size: 15px;
 }

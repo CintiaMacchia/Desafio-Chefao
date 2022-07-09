@@ -34,18 +34,18 @@ const FormAnuncio: React.FC = () => {
   return (
     <div>
       <div className="title col-sm-12 ">
-        <h1>Criar anuncio</h1>
+        <h1 className="anuncio-h1">Criar anuncio</h1>
       </div>
       <div className="box">
         <div className="guide col-sm-6">
-          <h4>Título</h4>
+          <h4 className="anuncio-h1">Título</h4>
           <p>
             Escreva um título claro e que chame a atenção. Não é permitido
             colocar no título letras maiusculas, números de telefone, e-mails e
             links.
           </p>
 
-          <h4>Imagens</h4>
+          <h4 className="anuncio-h4">Imagens</h4>
           <p>
             Prefira adicionar imagens reais do produto em vez de imagens
             retiradas de catálogos da internet. Isso dá credibilidade ao seu
@@ -53,7 +53,7 @@ const FormAnuncio: React.FC = () => {
             5MB.
           </p>
 
-          <h4>Descrição</h4>
+          <h4 className="anuncio-h4">Descrição</h4>
           <p>
             Escreva de forma clara, assim receberá menos perguntas dos
             compradores. Inclua detalhes sobre o produto para encontraram o seu
@@ -62,14 +62,14 @@ const FormAnuncio: React.FC = () => {
           </p>
         </div>
         <div className="form col-sm-6">
-          <h2>Preencha aqui os dados do seu anúncio</h2>
+          <h2 className="anuncio-h2">Preencha aqui os dados do seu anúncio</h2>
           <input
             type="file"
             className="form-control"
             onChange={(e:any) => setFile(e.target.files[0])}
             placeholder="File"
           ></input>
-          <h6>* Obrigatório</h6>
+          <h6 className="anuncio-h3">* Obrigatório</h6>
           <h3>Título *</h3>
           <input
             type="text"
@@ -77,28 +77,28 @@ const FormAnuncio: React.FC = () => {
             onChange={(e) => setName(e.target.value)}
             placeholder=""
           ></input>
-          <h3>Valor</h3>
+          <h3 className="anuncio-h3">Valor</h3>
           <input
             type="text"
             className="form-control"
             onChange={(e) => setPrice(e.target.value)}
             placeholder=""
           ></input>
-          <h3>Estado *</h3>
+          <h3 className="anuncio-h3">Estado *</h3>
           <input
             type="text"
             className="form-control"
             onChange={(e) => setState(e.target.value)}
             placeholder=""
           ></input>
-          <h3>Cidade *</h3>
+          <h3 className="anuncio-h3">Cidade *</h3>
           <input
             type="text"
             className="form-control"
             onChange={(e) => setCity(e.target.value)}
             placeholder=""
           ></input>
-          <h3>Celular</h3>
+          <h3 className="anuncio-h3">Celular</h3>
           <input
             type="text"
             className="form-control"
@@ -109,14 +109,14 @@ const FormAnuncio: React.FC = () => {
             Este número de telefone será exibido no anúncio apenas para pessoas
             cadastradas.
           </p>
-          <h3>Categoria *</h3>
+          <h3 className="anuncio-h3">Categoria *</h3>
           <input
             type="text"
             className="form-control"
             placeholder=""
             onChange={(e) => setCategory(e.target.value)}
           ></input>
-          <h3>Descrição *</h3>
+          <h3 className="anuncio-h3">Descrição *</h3>
           <input
             type="text"
             className="description form-control"

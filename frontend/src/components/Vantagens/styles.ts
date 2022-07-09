@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const VantagensContainer = styled.section`
+
     width: 100%;
     background-color: #FFEEDE;
     text-align: center;
@@ -15,13 +16,14 @@ export const SectionTitle = styled.h2`
 `
 export const CardsContainer = styled.div`
     max-width: 1440px;
+    margin: 0 auto;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     
     @media (min-width: 720px) {
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         justify-content: space-evenly;
         gap: 1rem;
     }

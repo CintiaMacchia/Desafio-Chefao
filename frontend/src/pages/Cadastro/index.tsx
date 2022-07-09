@@ -1,12 +1,15 @@
-import SignUp from '../../components/CadastroUI/PrimeiroPasso';
+import FormCadastro from "../../components/CadastroUI";
+import { Footer } from "../../components/Footer";
+import Menu from "../../components/Header";
 
 
 const Cadastro: React.FC = () => {
     return (
         <>
-         <SignUp />
+            <Menu />
+            <FormCadastro />
+            <Footer />
         </>
-       
     )
 }
 

@@ -5,7 +5,6 @@ export const Body = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     padding: 1rem;
 `
 
@@ -34,12 +33,38 @@ export const Container = styled.div`
         font-size: 0.7rem;
         margin: 1rem 0;
         padding: 0;
+        align-self: flex-start;
     }
 
     hr {
         border: 1px solid #C9C9C9; 
         width: 100%;
         margin: 2rem 0;
+    }
+`
+
+export const StyledAnchor = styled.a`
+    width: 100%;
+    padding: 0.7rem 0;
+    background-color: transparent;
+    border: 1px solid #FF8B20;
+    border-radius: 8px;
+    color: #FF8B20;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+        background-color: #FF8B20;
+        color: #FFF;
+        border: 1px solid #FF8B20;
+    }
+
+    &:focus {
+        background-color: #FF8B20;
+        color: #FFF;
+        border: 1px solid #FF8B20;
     }
 `
 
@@ -56,29 +81,18 @@ export const StyledInput = styled(Form.Control)`
     height: 3.125rem;
 `
 
+export const StyledInputSmall = styled(StyledInput)`
+    width: 7.25rem;
+    margin-left: 1.125rem;
+`
+
 export const StyledSelect = styled(Form.Select)`
     height: 3.125rem;
 `
 
-export const StyledButtonOrange = styled(Button)`
-    width: 100%;
-    padding: 0.7rem 0;
-    background-color: #FCB322;
-    border: 1px solid #FCB322;
-    font-size: 1.063rem;
-    font-weight: 500;
-    color: #161616;
-    cursor: pointer;
-
-    &:hover {
-        background-color: #D48E03;
-        color: #161616;
-        border: 1px solid #D48E03;
-    }
-
-    &:focus {
-        background-color: #D48E03;
-        color: #161616;
-        border: 1px solid #D48E03;
-    }
+export const StyledError = styled.div`
+    padding-left: 0.5rem;
+    color: #FF3333;
+    font-size: 0.8rem;
 `
+

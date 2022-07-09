@@ -23,7 +23,7 @@ const LoginForm: React.FC = () => {
                 </Form>
                 <hr />
                 <h2>É novo por aqui? Cadastre-se!</h2>
-                <S.StyledButton>Cadastrar</S.StyledButton>
+                <a href='/cadastrar'><S.StyledButton>Cadastrar</S.StyledButton></a>
             </S.Container>
         </S.Body>
     )

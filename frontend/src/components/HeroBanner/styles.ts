@@ -15,7 +15,7 @@ export const HeroContainer = styled.div`
     }
 
     @media (min-width: 1100px) {
-        height: 65vh;
+        height: 70vh;
     }
 `
 
@@ -27,13 +27,13 @@ export const HeroTextContainer = styled.div`
     font-family: 'Quicksand', sans-serif;
     color: #161616;
 
-    h1 {
+    .hero-h1 {
         font-size: 2rem;
         font-weight: 700;
         margin-bottom: 2rem;
     }
 
-    h3 {
+    .hero-h3 {
         font-size: 1rem;
         font-weight: 700;
         margin-bottom: 2rem;
@@ -53,9 +53,9 @@ export const HeroTextContainer = styled.div`
         justify-content: center;
         padding: 4rem;
         width: 50%;
-        height: 100%;
 
-        h1 {
+
+        .hero-h1 {
             font-size: 2.3rem;
         }
     }
@@ -65,7 +65,7 @@ export const HeroTextContainer = styled.div`
         width: 47%;
         max-width: 700px;
 
-        h1 {
+        .hero-h1 {
             font-size: 3.5rem;
         }
     }
