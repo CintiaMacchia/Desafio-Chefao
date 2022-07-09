@@ -66,7 +66,7 @@ const FormAnuncio: React.FC = () => {
           <input
             type="file"
             className="form-control"
-            onChange={(e) => setFile(e.target.files[0])}
+            onChange={(e:any) => setFile(e.target.files[0])}
             placeholder="File"
           ></input>
           <h6>* Obrigatório</h6>

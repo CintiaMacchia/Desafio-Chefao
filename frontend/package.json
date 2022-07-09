@@ -6,7 +6,8 @@
     "dev": "vite",
     "api": "json-server --watch api.json --port 3333",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node src/App.tsx"
   },
   "dependencies": {
     "@types/styled-components": "^5.1.25",
