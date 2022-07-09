@@ -38,10 +38,4 @@ export const endereco  = db.define(
         type: DataTypes.DATE,
       },
     },
-<<<<<<< HEAD:backend/src/domain/endereco/models/endereco.ts
-    {
-        tablename:"enderecos"
-    }
-=======
->>>>>>> 405e2939819e3de9eaa95b0212872cacf98ac909:src/domain/endereco/models/endereco.ts
 )
