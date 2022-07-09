@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import { categoriaService } from "../services";
-//import { Categoria } from "../models/categoria";
+import { Categoria } from "../models/categoria";
 
-interface AuthRequest extends Request{ auth: any } 
+//interface AuthRequest extends Request{ auth: any } 
 
 export const CategoriaController = {
 
@@ -15,21 +15,62 @@ export const CategoriaController = {
         }
     },
 
-    async update(req:Request, res:Response) {
-        try {
-            const alterarCategoria = await categoriaService.updateCategoria(req.body, req.params);
-return res.status(200).json(alterarCategoria)
-        } catch (error) {
-            return res.status(500).json(error)
+//     async update(req:Request, res:Response) {
+//         try {
+//             const alterarCategoria = await categoriaService.updateCategoria(req.body, req.params);
+// return res.status(200).json(alterarCategoria)
+//         } catch (error) {
+//             return res.status(500).json(error)
+//         }
+//     },
+
+    async update(req: Request, res: Response) {
+try {
+    const { id } = req.params;
+    const { categoria } = req.body;
+
+    const existeId = await Categoria.count({
+        where: {
+            id: id,
         }
+    });
+    if(!existeId){
+        return res.status(400).json('Categoria não encontrada')
+    }
+
+    const updateCategoria = await Categoria.update({categoria },
+        { where:{
+            id: id
+        }
+    });
+    res.json({message: "Categoria Atualizada"}).status(201)
+} catch (error) {
+    return res.status(500).json(error)
+}
     },
 
-    async delet(req:AuthRequest, res:Response){
+    async delete(req:Request, res:Response){
         try {
-            await categoriaService.excluirCategoria(req.params, req.auth);
-            return res.sendStatus(204);
+            const { id } = req.params;
+
+            const existeId = await Categoria.count({
+                where: {
+                    id: id,
+                }
+            });
+            if(!existeId){
+                return res.status(400).json('Categoria não encontrada')
+            }
+            
+            await Categoria.destroy({
+                where: {
+                    id: id
+                }
+            });
+
+            return res.status(204).json('categoria deletada');
         } catch (error) {
-            return res.status(500).json(error)
+            return res.status(500).json("Falha ao deletar a categoria")
         }
     },
 

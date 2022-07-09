@@ -1,11 +1,14 @@
-import { endereco } from "../models/endereco";
+import { endereco } from '../models/endereco';
+import { Request, Response } from 'express';
+
+
 import * as dotenv from "dotenv";
 dotenv.config();
 
 export class EnderecoService {
-    async cadastrarEndereco(data: any, params: any, auth: any) {
+    async cadastrarEndereco(data: any, params: any) {
         const { usuario_id } = params;
-        if (auth.usuario_id != usuario_id) {
+        if (!usuario_id === usuario_id) {
             return
         }
 
@@ -18,11 +21,11 @@ export class EnderecoService {
         return novoEndereco;
     }
 
-    async alterarEndereco(data:any, params: any, auth: any) {
-        const { id } = params;
+    async alterarEndereco(data:any, params: any) {
+        const { id, usuario_id,  } = params;
         const payloadUpdate = {};
 
-        if (auth.id != id) {
+        if (id != id) {
             return
         }
         Object.assign(payloadUpdate, data);
@@ -38,12 +41,13 @@ export class EnderecoService {
         })
         const Endereco = await endereco.findByPk(id);
         return Endereco
+
     }
 
-    async excluirEndereco(params: any, auth: any) {
+    async excluirEndereco(params: any,) {
         const { id } = params;
 
-        if (auth.id != id) {
+        if (id != id) {
             return
         }
 
@@ -54,9 +58,9 @@ export class EnderecoService {
         });
         return
     }
-
+  
     async listarEnderecos() {
-        
+
         const listarEnderecos = await endereco.findAll();
         return listarEnderecos;
     }
