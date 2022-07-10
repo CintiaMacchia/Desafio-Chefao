@@ -1,43 +1,35 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { UserState } from "../../@types"
+import { User, UserState } from "../../@types"
 
 const initialState: UserState = {
     isLogged: false,
-    accessToken: "",
-    id: undefined,
-    email: undefined,
-    endereco: undefined,
-    numero: undefined,
-    cep: undefined,
-    cidade: undefined,
-    estado: undefined,
-    completemento: undefined,
+    accessToken: '',
+    email: '',
+    cidade: '',
+    estado: ''
 }
 
-const userReduce = createSlice({
+const usersSlice = createSlice({
     name: "@user",
     initialState,
     reducers:{
+        //SignIn
         logIn(state, action){
             Object.assign(state, {
                 isLogged: true,
                 accessToken: action.payload.accessToken,
-                id: action.payload.user.id,
-                email: action.payload.user.email,
-                endereco: action.payload.user.endereco,
-                numero: action.payload.user.numero,
-                cep: action.payload.user.cep,
-                cidade: action.payload.user.cidade,
-                estado: action.payload.user.estado,
-                completemento: action.payload.user.completemento
+                email: action.payload.email,
+                cidade: action.payload.cidade,
+                estado: action.payload.estado
             })
         },
+        //SignOut
         logOut(state){
             Object.assign(state, initialState)
         }
     }
 })
 
-export const { logIn, logOut } = userReduce.actions
+export const { logIn, logOut } = usersSlice.actions
 
-export default userReduce.reducer;
+export default usersSlice.reducer;

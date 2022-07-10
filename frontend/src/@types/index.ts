@@ -25,12 +25,7 @@ export interface Endereco {
 export interface UserState {
     isLogged: boolean,
     accessToken: string,
-    id?: number,
-    email?: string,
-    endereco?: string,
-    numero?: number,
-    cep?: string,
-    cidade?: string,
-    estado?: string,
-    completemento?: string
+    email: string,
+    cidade: string,
+    estado: string
 }
