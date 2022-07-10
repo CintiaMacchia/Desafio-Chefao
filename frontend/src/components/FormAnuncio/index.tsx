@@ -39,7 +39,7 @@ const FormAnuncio: React.FC = () => {
       </div>
       <div className="box">
         <div className="guide col-sm-6">
-          <h4 className="anuncio-h1">Título</h4>
+          <h4 className="anuncio-h4">Título</h4>
           <p>
             Escreva um título claro e que chame a atenção. Não é permitido
             colocar no título letras maiusculas, números de telefone, e-mails e
@@ -70,8 +70,8 @@ const FormAnuncio: React.FC = () => {
             onChange={(e: any) => setFile(e.target.files[0])}
             placeholder="File"
           ></input>
-          <h6 className="anuncio-h3">* Obrigatório</h6>
-          <h3>Título *</h3>
+          <h6 className="anuncio-obrigatorio">* Obrigatório</h6>
+          <h3 className="anuncio-h3">Título *</h3>
           <input
             type="text"
             className="form-control"
