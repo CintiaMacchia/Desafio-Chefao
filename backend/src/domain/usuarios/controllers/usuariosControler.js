@@ -7,7 +7,7 @@ import { Usuarios } from "../models/usuario"
 
 export const UsuarioController = {
 
-  async login(req: Request, res: Response) {
+  async login(req, res) {
     try {
       const accessToken = await usuarioService.loginUsuario(req.body);
 
@@ -21,7 +21,7 @@ export const UsuarioController = {
     }
   },
 
-  async create(req:Request, res:Response) {
+  async create(req, res) {
     try {
       const novoUsuario = await usuarioService.cadastrarUsuario(req.body);
       return res.status(201).json(novoUsuario);
@@ -40,7 +40,7 @@ export const UsuarioController = {
   //   }
   // },
 
-  async update(req: Request, res: Response) {
+  async update(req, res) {
     try {
       const { id } = req.params;
       const { nome, email, senha } = req.body;
@@ -80,7 +80,7 @@ export const UsuarioController = {
   //   }
   // },
 
-  async delete(req: Request, res: Response) {
+  async delete(req, res) {
     try {
       const { id } = req.params;
 
@@ -108,7 +108,7 @@ export const UsuarioController = {
     }
   },
   
-  async getAll(req:Request, res:Response) {
+  async getAll(req, res) {
     try {
       const usuarios = await usuarioService.todosUsuarios();
       return res.json(usuarios);
@@ -117,7 +117,7 @@ export const UsuarioController = {
       return res.status(500).json(error);
     }
   },
-  async getOne(req:Request, res:Response) {
+  async getOne(req, res) {
     try {
       const usuario = await usuarioService.umUsuario(req.params);
       return res.json(usuario);
