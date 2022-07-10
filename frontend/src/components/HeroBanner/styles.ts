@@ -15,7 +15,7 @@ export const HeroContainer = styled.div`
     }
 
     @media (min-width: 1100px) {
-        height: 70vh;
+        height: 80vh;
     }
 `
 
@@ -26,17 +26,22 @@ export const HeroTextContainer = styled.div`
     padding: 2rem;
     font-family: 'Quicksand', sans-serif;
     color: #161616;
+    
 
     .hero-h1 {
         font-size: 2rem;
         font-weight: 700;
-        margin-bottom: 2rem;
+        line-height: 70px;
+        margin-bottom: 1.5rem;
+        width: 90%;
+        max-width: 46.063rem;
     }
 
     .hero-h3 {
+        font-family: Poppins;
         font-size: 1rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
     }
 
     @media (min-width: 395px) {
@@ -51,7 +56,7 @@ export const HeroTextContainer = styled.div`
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
-        padding: 4rem;
+        padding: 5rem;
         width: 50%;
 
 
@@ -62,17 +67,14 @@ export const HeroTextContainer = styled.div`
 
     @media (min-width: 1100px) {
         padding: 5rem;
-        width: 47%;
-        max-width: 700px;
+        width: 51%;
+
 
         .hero-h1 {
             font-size: 3.5rem;
         }
     }
 
-    @media (min-width: 1441px) {
-        max-width: 700px;
-    }
 `
 
 export const HeroImageContainer = styled.div`
@@ -87,10 +89,6 @@ export const HeroImageContainer = styled.div`
     }
 
     @media (min-width: 1100px) {
-        width: 53%;   
-    }
-
-    @media (min-width: 1441px) {
-        max-width: 800px;
+        width: 49%;   
     }
 `
