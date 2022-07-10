@@ -31,23 +31,31 @@ export const CardsContainer = styled.div`
 
 export const VantagensCard = styled.div`
     text-align: center;
-    width: 16.8rem;
-    margin-bottom: 3rem;
-    
-    img {
-        width: 200px;
-        height: 200px;
-    }
-    h3 {
-        font-size: 1.375rem;
-        font-weight: 500;
-        margin-top: 3rem;
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 21.875rem;
+
+    .advantage__icon {
+        align-self: center;
+        margin-bottom: 2rem;
     }
 
-    h4 {
+    .advantage__title {
+        display: inline-block;
+        font-family: Poppins;
+        font-size: 1.375rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+
+    .advantage__text {
+        font-family: Poppins;
         font-size: 1rem;
         font-weight: 400;
-        margin-top: 2rem;
+        margin: 0;
         line-height: 1.5rem;
+        width: 70%;
+        margin: 0 auto;
+        padding-bottom: 5rem;
     }
 `

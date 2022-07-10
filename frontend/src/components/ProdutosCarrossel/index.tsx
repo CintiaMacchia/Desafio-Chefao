@@ -19,7 +19,7 @@ const ProdutosCarrossel = () => {
             loopFillGroupWithBlank={true}
             navigation={true}
             modules={[Navigation]}
-            spaceBetween={40}
+            spaceBetween={-50}
             className="mySwiper"
             breakpoints={{
                 // when window width is >= 640px
@@ -38,14 +38,14 @@ const ProdutosCarrossel = () => {
                 },
             }}
         >
-            <SwiperSlide><CardProduto titulo='Mochila Infantil do Batman 1' estado='Usado' valor='99'/></SwiperSlide>
-            <SwiperSlide><CardProduto titulo='Mochila Infantil do Batman 2' estado='Usado' valor='99'/></SwiperSlide>
-            <SwiperSlide><CardProduto titulo='Mochila Infantil do Batman 3' estado='Usado' valor='99'/></SwiperSlide>
-            <SwiperSlide><CardProduto titulo='Mochila Infantil do Batman 4' estado='Usado' valor='99'/></SwiperSlide>
-            <SwiperSlide><CardProduto titulo='Mochila Infantil do Batman 5' estado='Usado' valor='99'/></SwiperSlide>
-            <SwiperSlide><CardProduto titulo='Mochila Infantil do Batman 6' estado='Usado' valor='99'/></SwiperSlide>
-            <SwiperSlide><CardProduto titulo='Mochila Infantil do Batman 7' estado='Usado' valor='99'/></SwiperSlide>
-            <SwiperSlide><CardProduto titulo='Mochila Infantil do Batman 8' estado='Usado' valor='99'/></SwiperSlide>
+            <SwiperSlide><CardProduto titulo='Mochila Escolar Infantil Batman 1' estado='Usado' valor='99'/></SwiperSlide>
+            <SwiperSlide><CardProduto titulo='Mochila Escolar Infantil do Batman 2' estado='Usado' valor='99'/></SwiperSlide>
+            <SwiperSlide><CardProduto titulo='Mochila Escolar Infantil do Batman 3' estado='Usado' valor='99'/></SwiperSlide>
+            <SwiperSlide><CardProduto titulo='Mochila Escolar Infantil do Batman 4' estado='Usado' valor='99'/></SwiperSlide>
+            <SwiperSlide><CardProduto titulo='Mochila Escolar Infantil do Batman 5' estado='Usado' valor='99'/></SwiperSlide>
+            <SwiperSlide><CardProduto titulo='Mochila Escolar Infantil do Batman 6' estado='Usado' valor='99'/></SwiperSlide>
+            <SwiperSlide><CardProduto titulo='Mochila Escolar Infantil do Batman 7' estado='Usado' valor='99'/></SwiperSlide>
+            <SwiperSlide><CardProduto titulo='Mochila Escolar Infantil do Batman 8' estado='Usado' valor='99'/></SwiperSlide>
         </Swiper>
     </S.Container>
     )

@@ -14,7 +14,7 @@ export const Container = styled.section`
         text-align: center;
     }
 
-    a {
+    .button-orange {
         background-color: #FF8B20;
         padding: 0.75rem 2.313rem;
         width: 14.563rem;

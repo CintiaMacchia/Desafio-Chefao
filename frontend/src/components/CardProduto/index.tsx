@@ -16,13 +16,11 @@ const CardProduto = (props:CardProdutoProps) => {
         <S.StyledBody>
             <S.StyledContainer>
                 <FavoriteIcon className='icon'/>
-                <S.ImageContainer src={props.foto}/>
-                <S.DescriptionContainer>
-
-                    <h4>{props.titulo}</h4>
-                    <span>{`categoria: ${props.categoria}`}</span>
-                    <span>{`estado: ${props.estado}`}</span>
-                    <h5>{`R$ ${props.valor}`}</h5>
+                <S.ImageContainer src={mochilaImg}/>
+                <S.DescriptionContainer className='product'>
+                    <h4 className='product__title'>{props.titulo}</h4>
+                    <h5 className='product__condition'>{`Produto: ${props.estado}`}</h5>
+                    <h3 className='product__price'>{`R$ ${props.valor}`}</h3>
                 </S.DescriptionContainer>
             </S.StyledContainer>
         </S.StyledBody>

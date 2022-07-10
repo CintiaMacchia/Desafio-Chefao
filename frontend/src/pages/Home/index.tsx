@@ -16,12 +16,12 @@ const Home = () => {
         <SectionMain>
           <h2 className='section-title'>Encontre seu Material</h2>
           <ProdutosCarrossel />
-          <a href='#'>Veja todos os itens</a>
+          <a className='button-orange' href='#'>Veja todos os itens</a>
         </SectionMain>
         <SectionMain>
           <h2 className='section-title'>Anúncios Recentes</h2>
           <ProdutosCarrossel />
-          <a href='#'>Veja todos os itens</a>
+          <a className='button-orange' href='#'>Veja todos os itens</a>
         </SectionMain>
         <Vantagens />
         <SectionMain>

@@ -10,7 +10,7 @@ const avaliacoes = [
     {
         nome: 'Marcos T.',
         titulo: 'Economizei !',
-        comentario: 'Pude economizar e comprar o que meu filho precisava.'
+        comentario: 'Pude economizar e comprar o que meu filho...'
     },
     {
         nome: 'Luiza M.',
