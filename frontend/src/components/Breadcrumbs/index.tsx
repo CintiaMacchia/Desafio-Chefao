@@ -10,8 +10,8 @@ const Breadcrumbs = (props:BreadcrumbsProps) => {
         <S.StyledBar>
             <S.StyledText>
                 <p>{`Pagina Principal > `}
-                    <span className={!props.secondPage ? 'highlight' : ''}>{`${props.firstPage} >`}</span>
-                    <span className={props.secondPage && 'highlight'}>{props.secondPage && ` ${props.secondPage}`}</span>
+                    <span className={!props.secondPage ? 'highlight' : ''}>{`${props.firstPage}`}</span>
+                    <span className={props.secondPage && 'highlight'}>{props.secondPage && ` > ${props.secondPage}`}</span>
                 </p>
             </S.StyledText>
         </S.StyledBar>

@@ -14,14 +14,14 @@ export const StyledButtonOrange = styled(Button)`
     cursor: pointer;
 
     &:hover {
-        background-color: #D48E03;
-        color: #161616;
+        background-color: #E46D00;
+        color: #FFF;
         border: 1px solid #D48E03;
     }
 
     &:focus {
-        background-color: #D48E03;
-        color: #161616;
-        border: 1px solid #D48E03;
+        background-color: #E46D00;
+        color: #FFF;
+        border: 1px solid #E46D00;
     }
 `

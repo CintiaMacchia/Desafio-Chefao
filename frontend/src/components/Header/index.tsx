@@ -20,7 +20,7 @@ function Menu() {
 					<div className="container-lg">
 						<div className="d-flex justify-content-end">
 							<a className="underline me-4 text-dark"><GoLocation className='mx-2 fs-5  icon-header' />Todos os Estados< IoIosArrowDown /> </a>
-							<a className=" underline text-dark"><BsPerson className='mx-2 fs-5 icon-header' />Minha Conta </a>
+							<a className=" underline text-dark" href='/perfil'><BsPerson className='mx-2 fs-5 icon-header' />Minha Conta </a>
 
 						</div>
 					</div>
