@@ -1,8 +1,8 @@
 import { FindOneProdutosUseCase } from '../useCase/findOneProdutoUseCase';
-import {Request, Response} from "express";
+//import { Request, Response } from "express";
 
-export const FindOneProdutosController ={
-    async umProduto(req: Request, res:Response){
+export const FindOneProdutosController = {
+    async umProduto(req, res) {
         try {
             const umProduto = await FindOneProdutosUseCase.umProduto(req.params);
             return res.json(umProduto);
