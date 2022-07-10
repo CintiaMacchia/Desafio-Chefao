@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { enderecoService } from '../services';
-
+//import { usuario } from '../../usuarios/models/usuario'
 import { endereco } from '../models/endereco';
 //import { endereco } from '..models/endereco'
 
@@ -16,15 +16,15 @@ export const EnderecoController = {
         };
     },
 
-    async update(req:Request, res: Response) {
-        try {
-            const alterarEndereco = await enderecoService.alterarEndereco(req.body, req.params);
-            return res.status(200).json(alterarEndereco);
+    // async update(req:Request, res: Response) {
+    //     try {
+    //         const alterarEndereco = await enderecoService.alterarEndereco(req.body, req.params);
+    //         return res.status(200).json(alterarEndereco);
             
-        } catch (error) {
-            return res.status(500).json(error);
-        }
-    },
+    //     } catch (error) {
+    //         return res.status(500).json(error);
+    //     }
+    // },
 
 
     // async delete(req:Request, res: Response) {
@@ -36,9 +36,40 @@ export const EnderecoController = {
     //     }
     // },
 
+    async update(req: Request, res: Response) {
+        try {
+          const { id } = req.params;
+          const { rua, numero , complemento, cidade, estado, cep, usuario_id } = req.body;
+    
+          const existId = await endereco.count({
+            where: {
+              id: id,
+              
+            }
+          }); 
+    
+          if (!existId) {
+            return res.status(400).json('Usuário não encontrado');
+          }
+    
+          const updateEndereco = await endereco.update({ rua, numero , complemento, cidade, estado, cep, usuario_id }, {
+            where: {
+              id: id,
+            }
+          });
+    
+          res.json({message: 'Dados atualizados com sucesso'}).status(201);
+        }
+    
+        catch (error) {
+          res.status(404).json('Verfique os dados e tente novamente');
+          console.error(error);
+        };
+      },
+
     async delete(req:Request, res:Response){
         try {
-            const { id} = req.params;
+            const { id } = req.params;
 
             const existeId = await endereco.count({
                 where: {

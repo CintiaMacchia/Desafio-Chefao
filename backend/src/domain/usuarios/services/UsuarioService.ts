@@ -47,13 +47,13 @@ export class UsuarioService {
     }
 
     
-    async alterarUsuario(data: any, params: any, auth: any ) {
+    async alterarUsuario(data: any, params: any ) {
         const { id } = params;
         const { senha } = data;
         const payloadUpdate = {};
 
 
-        if(auth.id != id){
+        if(id != id){
             return
         }
         Object.assign(payloadUpdate, data);

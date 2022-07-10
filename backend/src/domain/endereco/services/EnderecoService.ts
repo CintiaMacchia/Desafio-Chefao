@@ -21,28 +21,28 @@ export class EnderecoService {
         return novoEndereco;
     }
 
-    async alterarEndereco(data:any, params: any) {
-        const { id, usuario_id,  } = params;
-        const payloadUpdate = {};
+    // async alterarEndereco(data:any, params: any) {
+    //     const { id, usuario_id,  } = params;
+    //     const payloadUpdate = {};
 
-        if (id != id) {
-            return
-        }
-        Object.assign(payloadUpdate, data);
+    //     if (id != id) {
+    //         return
+    //     }
+    //     Object.assign(payloadUpdate, data);
 
-        await endereco.update({
-            ...payloadUpdate,
-        }, {
-            where: {
-                id,
+    //     await endereco.update({
+    //         ...payloadUpdate,
+    //     }, {
+    //         where: {
+    //             id,
 
-            }
+    //         }
 
-        })
-        const Endereco = await endereco.findByPk(id);
-        return Endereco
+    //     })
+    //     const Endereco = await endereco.findByPk(id);
+    //     return Endereco
 
-    }
+    // }
 
     async excluirEndereco(params: any,) {
         const { id } = params;

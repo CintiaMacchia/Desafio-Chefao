@@ -9,6 +9,7 @@ const storage = multer.diskStorage({
         fs.mkdirSync(pathImageFolder, {recursive : true})
        }
         cb(null, pathImageFolder)
+         
     },
     filename: function(req: Request, file: any, cb: any) {
         cb(null, Date.now() + '-' + file.originalname)

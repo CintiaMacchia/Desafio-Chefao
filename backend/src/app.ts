@@ -6,13 +6,13 @@ import upload from './shared/infrastructure/config/upload'
 
 const app = express();
 
-db.hasConection()
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 app.use(upload.any());
-//app.usea(express.static('./src/public'))
-
+app.use(express.static('./src/public'));
+db.hasConection();
 app.use(routes);
 app.use(handleMiddleware)
 
