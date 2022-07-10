@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { BrowserRouter as Router, Link } from "react-router-dom"
 import "./style.css"
 
 const FormAnuncio: React.FC = () => {
@@ -131,9 +132,11 @@ const FormAnuncio: React.FC = () => {
               </p>
             </div>
           </div>
-          <button onClick={addProduct} className="btn btn-primary">
-            Publicar
-          </button>
+          <Link to="/confirma-anuncio">
+            <button onClick={addProduct} className="btn btn-primary">
+              Publicar
+            </button>
+          </Link>
         </div>
       </div>
     </div>
