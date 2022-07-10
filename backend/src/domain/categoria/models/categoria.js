@@ -1,25 +1,23 @@
-import db from "../../../shared/infrastructure/database";
-import { DataTypes } from "sequelize";
+const db = require('"../../../shared/infrastructure/database"')
+const { DataTypes } = require('sequelize');
 
 export const Categoria = db.define(
-    "categoria",
-    {
+    "categoria", {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
-          },
-          categoria: {
+        },
+        categoria: {
             type: DataTypes.STRING,
-          },
-          createdAt: {
+        },
+        createdAt: {
             type: DataTypes.DATE,
-          },
-          updatedAt: {
+        },
+        updatedAt: {
             type: DataTypes.DATE,
-          },
-    },
-    {
-        tablename:"categoria"
+        },
+    }, {
+        tablename: "categoria"
     }
 )

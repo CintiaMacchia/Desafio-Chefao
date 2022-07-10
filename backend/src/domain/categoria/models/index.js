@@ -1,5 +1,5 @@
-import { Categoria } from "./categoria";
+const { Categoria } = require('./categoria')
 
-module.exports ={
+module.exports = {
     Categoria
 }

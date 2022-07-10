@@ -1,3 +1,3 @@
-import { CondicaoService } from './CondicaoService';
+const { CondicaoService } = require('./CondicaoService')
 
 export const condicaoService = new CondicaoService;

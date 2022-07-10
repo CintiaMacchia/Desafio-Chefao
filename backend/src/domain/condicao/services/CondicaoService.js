@@ -1,4 +1,4 @@
-import { Condicao } from "../models/condicao";
+const { Condicao } = require('../models/condicao')
 
 export class CondicaoService {
     async cadastrarCondicao(data) {
@@ -46,15 +46,15 @@ export class CondicaoService {
     }
 
     async todasCondicoes() {
-       
+
         const todasAsCondicoes = await Condicao.findAll();
         return todasAsCondicoes;
     }
 
-    async umaCondicao(params: any) {
+    async umaCondicao(params) {
         const { id } = params;
         const umaCondicao = await Condicao.findByPk(id);
         return umaCondicao
     }
 
-};
+}

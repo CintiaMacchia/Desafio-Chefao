@@ -1,11 +1,11 @@
-import { Request, Response } from "express";
-import { categoriaService } from "../services";
-import { Categoria } from "../models/categoria";
+const Categoria = require('../models/categoria')
+const categoriaService = require('../services');
+
 
 
 export const CategoriaController = {
 
-    async create(req, res){
+    async create(req, res) {
         try {
             const novaCategoria = await categoriaService.cadatrarCategoria(req.body);
             return res.status(200).json(novaCategoria);
@@ -14,41 +14,41 @@ export const CategoriaController = {
         }
     },
 
-//     async update(req:Request, res:Response) {
-//         try {
-//             const alterarCategoria = await categoriaService.updateCategoria(req.body, req.params);
-// return res.status(200).json(alterarCategoria)
-//         } catch (error) {
-//             return res.status(500).json(error)
-//         }
-//     },
+    //     async update(req:Request, res:Response) {
+    //         try {
+    //             const alterarCategoria = await categoriaService.updateCategoria(req.body, req.params);
+    // return res.status(200).json(alterarCategoria)
+    //         } catch (error) {
+    //             return res.status(500).json(error)
+    //         }
+    //     },
 
     async update(req, res) {
-try {
-    const { id } = req.params;
-    const { categoria } = req.body;
+        try {
+            const { id } = req.params;
+            const { categoria } = req.body;
 
-    const existeId = await Categoria.count({
-        where: {
-            id: id,
-        }
-    });
-    if(!existeId){
-        return res.status(400).json('Categoria não encontrada')
-    }
+            const existeId = await Categoria.count({
+                where: {
+                    id: id,
+                }
+            });
+            if (!existeId) {
+                return res.status(400).json('Categoria não encontrada')
+            }
 
-    const updateCategoria = await Categoria.update({categoria },
-        { where:{
-            id: id
+            const updateCategoria = await Categoria.update({ categoria }, {
+                where: {
+                    id: id
+                }
+            });
+            res.json({ message: "Categoria Atualizada" }).status(201)
+        } catch (error) {
+            return res.status(500).json(error)
         }
-    });
-    res.json({message: "Categoria Atualizada"}).status(201)
-} catch (error) {
-    return res.status(500).json(error)
-}
     },
 
-    async delete(req, res){
+    async delete(req, res) {
         try {
             const { id } = req.params;
 
@@ -57,10 +57,10 @@ try {
                     id: id,
                 }
             });
-            if(!existeId){
+            if (!existeId) {
                 return res.status(400).json('Categoria não encontrada')
             }
-            
+
             await Categoria.destroy({
                 where: {
                     id: id
@@ -73,7 +73,7 @@ try {
         }
     },
 
-    async getAll(req, res){
+    async getAll(req, res) {
         try {
             const categorias = await categoriaService.listarCategorias();
             return res.json(categorias);
@@ -82,12 +82,12 @@ try {
         }
     },
 
-    async getOne(req, res){
-try {
-    const categoria = await categoriaService.umaCategoria(req.params);
-    return res.json(categoria)
-} catch (error) {
-    return res.status(500).json(error)
-}
+    async getOne(req, res) {
+        try {
+            const categoria = await categoriaService.umaCategoria(req.params);
+            return res.json(categoria)
+        } catch (error) {
+            return res.status(500).json(error)
+        }
     }
 }

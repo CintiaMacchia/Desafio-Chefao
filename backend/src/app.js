@@ -1,4 +1,4 @@
-import express from 'express'
+const express = require('express')
 import db from './shared/infrastructure/database'
 import handleMiddleware from './shared/middlewares/hendleMiddleware'
 import routes from './shared/routes/index'
@@ -9,7 +9,7 @@ const app = express();
 
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(upload.any());
 app.use(express.static('./src/public'));
 db.hasConection();
