@@ -40,3 +40,13 @@
   color: #fff;
   background-color: #000;
 }
+
+@media screen and (max-width: 600px) {
+  .titulo {
+    width: 350px;
+  }
+
+  .subtexto {
+    width: 300px;
+  }
+}

@@ -127,3 +127,18 @@ p {
 .texto-termos {
   font-size: 15px;
 }
+
+@media screen and (max-width: 600px) {
+  .guide {
+    display: none;
+  }
+
+  .form {
+    margin-left: -1100px;
+    width: 350px;
+  }
+
+  .btn {
+    width: 300px;
+  }
+}
