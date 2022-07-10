@@ -1,9 +1,8 @@
-import { Request, Response } from "express"
 import { condicaoService } from '../services'
 import { Condicao } from '../models/condicao'
 
 export const CondicaoController = {
-    async create(req: Request, res: Response) {
+    async create(req, res) {
         try {
             const novaCondicao = await condicaoService.cadastrarCondicao(req.body);
             return res.status(201).json(novaCondicao);
@@ -22,7 +21,7 @@ export const CondicaoController = {
     //     }
     // },
 
-    async update(req: Request, res: Response) {
+    async update(req, res) {
         try {
             const { id } = req.params;
             const { condicao } = req.body;
@@ -49,7 +48,7 @@ export const CondicaoController = {
 
             
 
-            async delete(req:Request, res:Response){
+            async delete(req, res){
                 try {
                     const { id } = req.params;
         
@@ -82,7 +81,7 @@ export const CondicaoController = {
     //     }
     // },
 
-    async getAll(req: Request, res: Response) {
+    async getAll(req, res) {
         try {
             const condicao = await condicaoService.todasCondicoes();
             return res.json(condicao);
@@ -91,7 +90,7 @@ export const CondicaoController = {
         }
     },
 
-    async getOne(req: Request, res: Response) {
+    async getOne(req, res) {
         try {
             const condicao = await condicaoService.umaCondicao(req.params);
             return res.json(condicao);

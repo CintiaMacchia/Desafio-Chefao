@@ -1,14 +1,14 @@
 import { Condicao } from "../models/condicao";
 
 export class CondicaoService {
-    async cadastrarCondicao(data: any) {
+    async cadastrarCondicao(data) {
         const novaCondicao = await Condicao.create({
             ...data,
         })
         return novaCondicao;
     }
 
-    async alterarCondicao(data: any, params: any, auth: any) {
+    async alterarCondicao(data, params, auth) {
         const { id } = params;
         const payloadUpdate = {};
 
@@ -30,7 +30,7 @@ export class CondicaoService {
 
     }
 
-    async excluirCondicao(params: any, auth: any) {
+    async excluirCondicao(params, auth) {
         const { id } = params;
 
         if (auth.id != id) {
