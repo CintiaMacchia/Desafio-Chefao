@@ -10,7 +10,7 @@ import { CategoriaController } from '../../domain/categoria/controllers'
 import { EnderecoController } from '../../domain/endereco/controllers/enderecoController'
 
 import { loginValidation} from '../../domain/usuarios/validations/usuarios/login'
-import auth from '../middlewares/auth'
+//import auth from '../middlewares/auth'
 
 //usuarios
 
@@ -21,8 +21,7 @@ routes.put("/users/:id", UsuarioController.update);
 routes.delete("/users/:id", UsuarioValidation.destroy, UsuarioController.delete);
 
 //login
-routes.post("/login", UsuarioController.login);
-routes.post("/login",loginValidation, auth, UsuarioController.login)
+routes.post("/login",loginValidation, UsuarioController.login)
 
 // routes.post("/login", loginValidation, auth, UsuarioValidation.create);
 

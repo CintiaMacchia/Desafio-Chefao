@@ -1,5 +1,6 @@
 import "./style.css"
 import check from "../assets/images/check.jpg"
+import { Link } from "react-router-dom"
 
 const ConfirmacaoMensagem: React.FC = () => {
   return (
@@ -13,7 +14,9 @@ const ConfirmacaoMensagem: React.FC = () => {
         breve.
       </h2>
 
-      <button className="confirm-button">Ir para a Página Principal</button>
+      <Link to="/">
+        <button className="confirm-button">Ir para a Página Principal</button>
+      </Link>
     </div>
   )
 }
