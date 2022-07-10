@@ -1,11 +1,13 @@
-import { Produtos } from "../models/produto";
-import { Request, Response } from "express";
-import * as dotenv from "dotenv";
+// import { Produtos } from "../models/produto";
+// import { Request, Response } from "express";
+// import * as dotenv from "dotenv";
 dotenv.config();
+const { Produtos } = require('../models/produto')
+require('dotenv').config();
 
 export const FindAllProdutosUseCase = {
-  async ListarProdutos() {
-    const todosProdutos = await Produtos.findAll();
-    return todosProdutos;
-  },
+    async ListarProdutos() {
+        const todosProdutos = await Produtos.findAll();
+        return todosProdutos;
+    },
 };

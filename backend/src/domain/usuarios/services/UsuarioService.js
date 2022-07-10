@@ -1,35 +1,34 @@
-import { Usuarios } from "../models/usuario";
-import bcrypt from "bcrypt";
-import jwt from 'jsonwebtoken'
-import * as dotenv from "dotenv"
-dotenv.config()
-import { Request, Response} from 'express'
+const { Usuarios } = require("../models/usuario");
+const bcrypt = require("bcrypt")
+const jwt = require('jsonwebtoken')
+require('dotenv').config()
+
 
 export class UsuarioService {
 
-    
+
 
     async loginUsuario(data) {
         const { email, senha } = data;
 
         const usuario = await Usuarios.findOne({
-            where:{
+            where: {
                 email,
             },
         });
-        
-        if(!usuario || !bcrypt.compareSync(senha, usuario.senha)){
+
+        if (!usuario || !bcrypt.compareSync(senha, usuario.senha)) {
             return
         }
 
         const token = jwt.sign({
-            id: usuario.id,
-            email: usuario.email,
-            name: usuario.nome,
-            senha: usuario.senha,
-            
-        },
-            process.env.SECRET_KEY 
+                id: usuario.id,
+                email: usuario.email,
+                name: usuario.nome,
+                senha: usuario.senha,
+
+            },
+            process.env.SECRET_KEY
         );
         return token;
     }
@@ -41,19 +40,19 @@ export class UsuarioService {
         const novoUsuario = await Usuarios.create({
             ...data,
             senha: novaSenha
-            
+
         });
         return novoUsuario;
     }
 
-    
-    async alterarUsuario(data, params ) {
+
+    async alterarUsuario(data, params) {
         const { id } = params;
         const { senha } = data;
         const payloadUpdate = {};
 
 
-        if(id != id){
+        if (id != id) {
             return
         }
         Object.assign(payloadUpdate, data);
@@ -79,7 +78,7 @@ export class UsuarioService {
     //     if(auth.id != id){
     //         return
     //     }
-              
+
     //     await Usuarios.destroy({
     //         where: {
     //             id,
@@ -89,7 +88,7 @@ export class UsuarioService {
     // }
 
 
-    
+
     async todosUsuarios() {
         const todosOsUsuarios = await Usuarios.findAll();
         return todosOsUsuarios;

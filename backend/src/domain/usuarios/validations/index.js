@@ -1,11 +1,13 @@
-import { create } from "./usuarios/create";
-import { getOne } from "./usuarios/getOne";
-import { destroy}  from "./usuarios/destroy";
-import { update } from "./usuarios/update";
+const { create } = require('./usuarios/create')
+const { destroy } = require('./usuarios/destroy')
+const { getOne } = require('./usuarios/getOne')
+const { update } = require('./usuarios/update')
 
-export const UsuarioValidation = {
-  create,
-  getOne,
-  destroy,
-  update,
-};
+
+
+// module.exports =  UsuarioValidation {
+//     create,
+//     getOne,
+//     destroy,
+//     update,
+// }

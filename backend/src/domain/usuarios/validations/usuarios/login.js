@@ -1,4 +1,4 @@
-const { validate, Joi } = require('express-validation');
+const { validate, Joi } = require("express-validation");
 
 export const loginValidation = validate({
     body: Joi.object({

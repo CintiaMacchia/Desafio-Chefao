@@ -1,5 +1,8 @@
-import { Produtos } from "../models/produto"
-import { Request, Response } from "express";
+// import { Produtos } from "../models/produto"
+// import { Request, Response } from "express";
+
+const { Produtos } = require('../models/produto')
+require('dotenv').config();
 
 export const FindOneProdutosUseCase = {
     async umProduto(params) {

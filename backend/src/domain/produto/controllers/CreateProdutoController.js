@@ -1,9 +1,8 @@
 import { CreateProdutoUseCase } from '../useCase/createProdutoUseCase';
-import { Request, Response } from "express"
 
-import { Produtos } from '../models/produto';
-//import upload from '../../../shared/infrastructure/config/upload';
-//import multer from 'multer';
+const { Produtos } = require('../models/produto')
+    //import upload from '../../../shared/infrastructure/config/upload';
+    //import multer from 'multer';
 const fs = require('fs');
 //         returnimport cloudinary from '../../../config/cloudinary'
 const cloudinary = require('../../../config/cloudinary')

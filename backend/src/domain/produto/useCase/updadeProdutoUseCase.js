@@ -1,4 +1,5 @@
-import { Produtos } from "../models/produto"
+const { Produtos } = require('../models/produto')
+require('dotenv').config();
 
 export const UpdateProdutoUseCase = {
     async atualizarPrduto(params) {
