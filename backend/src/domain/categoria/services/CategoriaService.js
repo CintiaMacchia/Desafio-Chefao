@@ -5,14 +5,14 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 export class CategoriaService{
-    async cadatrarCategoria(data: any){
+    async cadatrarCategoria(data){
         const novaCategoria = await Categoria.create({
             ...data
         });
         return novaCategoria;
     }
 
-    async updateCategoria(data: any, params: any){
+    async updateCategoria(data, params){
         const { id } = params;
         const payloadUpdate = {};
 
@@ -30,7 +30,7 @@ export class CategoriaService{
         return trocarCategoria;
     }
 
-    async excluirCategoria(params: any, auth: any){
+    async excluirCategoria(params, auth){
         const { id } = params;
 
         if(auth.id != id){
@@ -48,7 +48,7 @@ export class CategoriaService{
         return listarCategorias;
     }
 
-    async umaCategoria(params: any){
+    async umaCategoria(params){
         const { id } = params;
         const umaCategoria = await Categoria.findByPk(id);
         return umaCategoria;

@@ -2,11 +2,10 @@ import { Request, Response } from "express";
 import { categoriaService } from "../services";
 import { Categoria } from "../models/categoria";
 
-//interface AuthRequest extends Request{ auth: any } 
 
 export const CategoriaController = {
 
-    async create(req: Request, res:Response){
+    async create(req, res){
         try {
             const novaCategoria = await categoriaService.cadatrarCategoria(req.body);
             return res.status(200).json(novaCategoria);
@@ -24,7 +23,7 @@ export const CategoriaController = {
 //         }
 //     },
 
-    async update(req: Request, res: Response) {
+    async update(req, res) {
 try {
     const { id } = req.params;
     const { categoria } = req.body;
@@ -49,7 +48,7 @@ try {
 }
     },
 
-    async delete(req:Request, res:Response){
+    async delete(req, res){
         try {
             const { id } = req.params;
 
@@ -74,7 +73,7 @@ try {
         }
     },
 
-    async getAll(req:Request, res:Response){
+    async getAll(req, res){
         try {
             const categorias = await categoriaService.listarCategorias();
             return res.json(categorias);
@@ -83,7 +82,7 @@ try {
         }
     },
 
-    async getOne(req:Request, res:Response){
+    async getOne(req, res){
 try {
     const categoria = await categoriaService.umaCategoria(req.params);
     return res.json(categoria)
@@ -91,8 +90,4 @@ try {
     return res.status(500).json(error)
 }
     }
-
-
-    
-
 }
