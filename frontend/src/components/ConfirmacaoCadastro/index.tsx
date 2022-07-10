@@ -1,5 +1,6 @@
 import "./style.css"
 import check from "../assets/images/check.jpg"
+import { Link } from "react-router-dom"
 
 const ConfirmacaoCadastro: React.FC = () => {
   return (
@@ -12,8 +13,9 @@ const ConfirmacaoCadastro: React.FC = () => {
         Agora você pode publicar anúncios e entrar em contato com outros
         anunciantes.
       </h2>
-
-      <button className="confirm-button">Ir para Minha Conta</button>
+      <Link to="/perfil">
+        <button className="confirm-button">Ir para Minha Conta</button>
+      </Link>
     </div>
   )
 }
