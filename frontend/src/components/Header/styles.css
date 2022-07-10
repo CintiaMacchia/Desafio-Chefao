@@ -7,19 +7,32 @@ header  a:hover {
   text-decoration: underline;
 }
 
+.text-dark {
+  font-family: Poppins;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .barra-de-pesquisa {
   width: 40rem;
   outline: none;
   height: 45px;
   border-radius: 10px 0px 0px 10px;
   padding: 0px 16px;
-
   border: 1px solid rgba(53, 53, 53, 0.15);
   background: #ffffff;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
 }
+
+.barra-de-pesquisa::placeholder {
+  font-family: Poppins;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .icon-header {
   color: #ff8b20;
+  margin-top: 2px;
 }
 
 .icon-search {
@@ -36,12 +49,22 @@ header  a:hover {
   cursor: pointer;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
 }
+
 .categorias {
-  margin-top: 20px;
   background: #ff8b20;
   overflow: hidden;
-  height: 45px;
   align-items: center;
   width: 100%;
-  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.categories-navbar {
+  gap: 7rem;
+}
+
+.link-nav {
+  font-family: Poppins;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
 }
