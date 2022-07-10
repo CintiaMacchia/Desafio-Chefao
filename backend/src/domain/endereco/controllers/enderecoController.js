@@ -1,13 +1,10 @@
 import { Request, Response } from 'express';
 import { enderecoService } from '../services';
-//import { usuario } from '../../usuarios/models/usuario'
 import { endereco } from '../models/endereco';
-//import { endereco } from '..models/endereco'
 
-//interface Request, res: Response extends Request{ auth: any } 
 
 export const EnderecoController = {
-    async create(req:Request, res: Response) {
+    async create(req, res) {
         try {
            const novoEndereco = await enderecoService.cadastrarEndereco(req.body, req.params);
             return res.status(201).json(novoEndereco);
@@ -36,7 +33,7 @@ export const EnderecoController = {
     //     }
     // },
 
-    async update(req: Request, res: Response) {
+    async update(req, res) {
         try {
           const { id } = req.params;
           const { rua, numero , complemento, cidade, estado, cep, usuario_id } = req.body;
@@ -67,7 +64,7 @@ export const EnderecoController = {
         };
       },
 
-    async delete(req:Request, res:Response){
+    async delete(req, res){
         try {
             const { id } = req.params;
 
@@ -94,7 +91,7 @@ export const EnderecoController = {
     },
   
 
-    async getAll(req: Request, res: Response) {
+    async getAll(req, res) {
         try {
             //console.log(req)
             const enderecos = await enderecoService.listarEnderecos();
@@ -104,7 +101,7 @@ export const EnderecoController = {
         }
     },
 
-    async getOne(req: Request, res: Response) {
+    async getOne(req, res) {
         try {
             const endereco = await enderecoService.umEndereco(req.params);
             return res.json(endereco);
