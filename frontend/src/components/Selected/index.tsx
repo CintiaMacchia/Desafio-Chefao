@@ -25,7 +25,3 @@ export default class WithPromises extends Component {
 }
 
 
-{/* https://codesandbox.io/s/react-slick-product-carousel-mobxn?file=/src/product.js
-https://codesandbox.io/s/e-commerce-task-xux3d?file=/src/App.js:749-758
-
-*/}

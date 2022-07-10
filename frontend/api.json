@@ -192,6 +192,21 @@
       "complemento": "",
       "termos": true,
       "id": 1
+    },
+    {
+      "email": "zcueto87@gmail.com",
+      "password": "123456789",
+      "confirmaSenha": "123456789",
+      "estado": "AM",
+      "cidade": "São Paulo",
+      "endereco": "rua atucuri 848",
+      "numero": "556",
+      "cep": "03411000",
+      "bairro": "chacarasanto antonio",
+      "complemento": "csa",
+      "termos": true,
+      "id": 2
     }
+  
   ]
 }

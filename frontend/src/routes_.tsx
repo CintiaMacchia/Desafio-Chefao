@@ -8,7 +8,6 @@ import Anuncio from "./pages/CriarAnuncios"
 import Home from "./pages/Home"
 import LoginPage from "./pages/Login"
 import Produtos from "./pages/Produtos"
-
 import ProdutosDetail from "./pages/ProdutosDetail"
 
 
