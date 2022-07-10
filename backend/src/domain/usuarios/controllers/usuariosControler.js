@@ -4,7 +4,7 @@ const Usuarios = ( "../models/usuario")
 //interface AuthRequest extends Request{ auth: any}
 
 
-export const UsuarioController = {
+module.exports = UsuarioController = {
 
   async login(req, res) {
     try {

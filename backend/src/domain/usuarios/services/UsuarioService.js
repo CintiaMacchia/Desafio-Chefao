@@ -4,7 +4,7 @@ const jwt = ('jsonwebtoken')
 const dotenv = require ("dotenv")
 dotenv.config()
 
-export class UsuarioService {
+class UsuarioService {
 
     
 
@@ -101,3 +101,4 @@ export class UsuarioService {
     }
 
 }
+module.exports = UsuarioService

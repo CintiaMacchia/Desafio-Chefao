@@ -1,7 +1,7 @@
 const  ValidationError = require( 'express-validation')
 const  UnauthorizedError = require( 'express-jwt')
 
-export default function (err, req, res, next){
+module.exports = (err, req, res, next)=>{
     if (err instanceof ValidationError) {
         return res
            .status(400)

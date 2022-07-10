@@ -16,4 +16,4 @@ db.hasConection();
 app.use(routes);
 app.use(handleMiddleware)
 
-export default app
+module.exports = app
