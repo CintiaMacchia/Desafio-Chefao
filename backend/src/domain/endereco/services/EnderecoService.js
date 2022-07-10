@@ -1,7 +1,7 @@
-import { endereco } from '../models/endereco';
+const { endereco } = require ('../models/endereco');
 
 
-import * as dotenv from "dotenv";
+const dotenv = require ("dotenv").congig();
 dotenv.config();
 
 export class EnderecoService {

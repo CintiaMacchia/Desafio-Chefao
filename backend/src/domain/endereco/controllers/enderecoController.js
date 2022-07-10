@@ -1,6 +1,5 @@
-import { Request, Response } from 'express';
-import { enderecoService } from '../services';
-import { endereco } from '../models/endereco';
+const  { enderecoService }  = require ('../services');
+const { endereco } = require ('../models/endereco');
 
 
 export const EnderecoController = {

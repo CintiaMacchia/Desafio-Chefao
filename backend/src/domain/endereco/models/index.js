@@ -1,4 +1,4 @@
-import { endereco } from "./endereco";
+const { endereco } = require ("./endereco");
 
 
 module.exports = {

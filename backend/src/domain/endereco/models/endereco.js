@@ -1,5 +1,5 @@
-import db from '../../../shared/infrastructure/database'
-import { DataTypes } from "sequelize";
+const db = require('"../../../shared/infrastructure/database"')
+const { DataTypes } = require('sequelize');
 
 export const endereco  = db.define(
     "enderecos", 
