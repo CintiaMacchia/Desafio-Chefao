@@ -9,7 +9,7 @@ export class UsuarioService {
 
     
 
-    async loginUsuario(data: any) {
+    async loginUsuario(data) {
         const { email, senha } = data;
 
         const usuario = await Usuarios.findOne({
@@ -29,12 +29,12 @@ export class UsuarioService {
             senha: usuario.senha,
             
         },
-            process.env.SECRET_KEY as string
+            process.env.SECRET_KEY 
         );
         return token;
     }
 
-    async cadastrarUsuario(data: any) {
+    async cadastrarUsuario(data) {
         const { senha } = data;
         const novaSenha = bcrypt.hashSync(senha, 10);
 
@@ -47,7 +47,7 @@ export class UsuarioService {
     }
 
     
-    async alterarUsuario(data: any, params: any ) {
+    async alterarUsuario(data, params ) {
         const { id } = params;
         const { senha } = data;
         const payloadUpdate = {};
@@ -95,7 +95,7 @@ export class UsuarioService {
         return todosOsUsuarios;
     }
 
-    async umUsuario(params: any) {
+    async umUsuario(params) {
         const { id } = params;
         const usuarioUnico = await Usuarios.findByPk(id);
         return usuarioUnico;

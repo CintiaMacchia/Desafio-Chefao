@@ -10,7 +10,7 @@ const DB_CONFIG = {
     port: process.env.DB_PORT,
 }
 
-let db: any = {};
+let db = {};
 
 try {
     db = new Sequelize(DB_NAME, DB_USER, DB_PASS, DB_CONFIG);
@@ -31,5 +31,5 @@ Object.assign(db, {
     hasConection,
 });
 
-export = db;
+module.exports = db;
 
