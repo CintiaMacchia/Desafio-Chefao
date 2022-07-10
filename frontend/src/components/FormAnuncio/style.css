@@ -51,8 +51,14 @@
 }
 
 .anuncio-h2 {
-  font-size: 20px;
+  padding-bottom: 20px;
+  font-size: 22px;
   font-weight: bold;
+}
+
+.anuncio-obrigatorio {
+  padding-top: 20px;
+  font-size: 13px;
 }
 
 .anuncio-h3 {
