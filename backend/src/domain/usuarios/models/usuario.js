@@ -1,5 +1,5 @@
-import db from '../../../shared/infrastructure/database'
-import { DataTypes } from "sequelize"
+const db = ('../../../shared/infrastructure/database')
+const DataTypes = require ("sequelize")
 
 export const Usuarios = db.define(
     "usuarios",

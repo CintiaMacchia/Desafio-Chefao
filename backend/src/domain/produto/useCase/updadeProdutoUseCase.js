@@ -1,4 +1,4 @@
-import { Produtos } from "../models/produto"
+const Produtos = require("../models/produto")
 
 export const UpdateProdutoUseCase = {
     async atualizarPrduto(params) {

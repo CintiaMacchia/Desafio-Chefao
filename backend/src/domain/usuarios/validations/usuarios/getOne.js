@@ -1,4 +1,4 @@
-import { validate, Joi } from "express-validation";
+const { validate, Joi } = require("express-validation")
 
 export const getOne = validate({
   params: Joi.object({

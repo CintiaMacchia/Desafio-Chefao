@@ -1,8 +1,7 @@
-import {NextFunction, Request, Response} from 'express'
-import { ValidationError } from 'express-validation'
-import { UnauthorizedError } from 'express-jwt'
+const  ValidationError = require( 'express-validation')
+const  UnauthorizedError = require( 'express-jwt')
 
-export default function (err: Error, req: Request, res: Response, next: NextFunction){
+export default function (err, req, res, next){
     if (err instanceof ValidationError) {
         return res
            .status(400)

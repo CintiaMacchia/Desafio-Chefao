@@ -1,9 +1,8 @@
-import { Usuarios } from "../models/usuario";
-import bcrypt from "bcrypt";
-import jwt from 'jsonwebtoken'
-import * as dotenv from "dotenv"
+const Usuarios  = ("../models/usuario")
+const bcrypt = ("bcrypt")
+const jwt = ('jsonwebtoken')
+const dotenv = require ("dotenv")
 dotenv.config()
-import { Request, Response} from 'express'
 
 export class UsuarioService {
 

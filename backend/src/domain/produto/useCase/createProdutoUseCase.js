@@ -1,6 +1,5 @@
-import { Produtos } from "../models/produto";
-import { Request, Response } from "express"
-import * as dotenv from "dotenv"
+const Produtos = ("../models/produto")
+const dotenv = require("dotenv")
 dotenv.config()
 
 export const CreateProdutoUseCase = {

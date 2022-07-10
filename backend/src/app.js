@@ -1,8 +1,8 @@
 const express = require('express')
-import db from './shared/infrastructure/database'
-import handleMiddleware from './shared/middlewares/hendleMiddleware'
-import routes from './shared/routes/index'
-import upload from './shared/infrastructure/config/upload'
+const db = require ('./shared/infrastructure/database')
+const handleMiddleware = require ('./shared/middlewares/hendleMiddleware')
+const routes = require ('./shared/routes/index')
+const upload = require ('./shared/infrastructure/config/upload')
 
 const app = express();
 

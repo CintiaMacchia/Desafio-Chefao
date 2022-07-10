@@ -1,4 +1,4 @@
-import { FindAllProdutosUseCase } from "../useCase/findAllProdutoUseCase";
+const FindAllProdutosUseCase = ("../useCase/findAllProdutoUseCase")
 
 export const FindAllProdutoController = {
     async listarTodos(req, res) {

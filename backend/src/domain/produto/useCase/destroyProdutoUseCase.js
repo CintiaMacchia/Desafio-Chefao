@@ -1,5 +1,4 @@
-import { Produtos } from "../models/produto";
-import { Request, Response } from "express"
+import { Produtos } from "../models/produto"
 //import * as dotenv from "dotenv"
 //dotenv.config()
 

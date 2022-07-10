@@ -1,6 +1,5 @@
-"use strict";
-import db from "../../../shared/infrastructure/database";
-import { DataTypes, Sequelize } from "sequelize";
+const db = require("../../../shared/infrastructure/database")
+const { DataTypes } = require("sequelize")
 
 export const Produtos = db.define(
     "produtos", {

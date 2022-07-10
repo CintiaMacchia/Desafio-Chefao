@@ -1,5 +1,4 @@
-import { Produtos } from "../models/produto"
-import { Request, Response } from "express";
+const Produtos = require("../models/produto")
 
 export const FindOneProdutosUseCase = {
     async umProduto(params) {

@@ -1,6 +1,5 @@
-import { Request, Response } from "express";
-import { usuarioService } from "../services";
-import { Usuarios } from "../models/usuario"
+const usuarioService  = ( "../services")
+const Usuarios = ( "../models/usuario")
 
 //interface AuthRequest extends Request{ auth: any}
 

@@ -1,7 +1,7 @@
 import { CreateProdutoUseCase } from '../useCase/createProdutoUseCase';
 import { Request, Response } from "express"
 //import cloudinary from "cloudinary/";
-import { Produtos } from '../models/produto';
+const Produtos = ('../models/produto')
 
 const fs = require('fs');
 const cloudinary = require('../../../shared/infrastructure/config/cloudinary');

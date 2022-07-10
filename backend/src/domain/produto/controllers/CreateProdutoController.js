@@ -1,7 +1,4 @@
-import { CreateProdutoUseCase } from '../useCase/createProdutoUseCase';
-import { Request, Response } from "express"
-
-import { Produtos } from '../models/produto';
+const Produtos = require('../models/produto')
 //import upload from '../../../shared/infrastructure/config/upload';
 //import multer from 'multer';
 const fs = require('fs');
@@ -9,9 +6,6 @@ const fs = require('fs');
 const cloudinary = require('../../../config/cloudinary')
 const imagemFolder = 'images/';
 //const path = require('path')
-
-
-
 
 //interface AuthRequest extends Request{ files: any}
 
