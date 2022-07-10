@@ -10,12 +10,12 @@ cloudinary.config({
 });
 
 
- const uploads = (file: any, fotoAnuncio: any) => {
+const uploads = (file, fotoAnuncio) => {
     return new Promise(
         (resolve) => {
             cloudinary.uploader.upload(
                 file,
-                (fotoReturn: any) => {
+                (fotoReturn) => {
                     resolve({
                         imageUrl: fotoReturn.url
                     })
@@ -23,7 +23,7 @@ cloudinary.config({
                     folder: fotoAnuncio,
                     resource_type: 'auto'
                 }
-                
+
             )
         }
     )

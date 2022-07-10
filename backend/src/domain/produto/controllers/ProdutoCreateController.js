@@ -11,7 +11,7 @@ const imagemFolder = 'images/'
 //interface AuthRequest extends Request{ files: any}
 
 export const CreateProdutoController = {
-    async create(req: Request, res: Response) {
+    async create(req, res) {
         // try {
         //     const { nome, descricao, valor, categoria_id, usuario_id, condicao_id } = req.body;
 
@@ -29,13 +29,13 @@ export const CreateProdutoController = {
         //     res.status(500).json(error)
         // }
 
-const novoProduto = await Produtos.create({
-    ...req.body
-})
+        const novoProduto = await Produtos.create({
+            ...req.body
+        })
 
-// console.log(req.)
-return res.status(201).json({ dadosfinais: novoProduto })
+        // console.log(req.)
+        return res.status(201).json({ dadosfinais: novoProduto })
     }
-    
-   
+
+
 }
