@@ -1,0 +1,212 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "titulo": "muchila muito bem conservado",
+      "estado": "Sao Paulo",
+      "cidade": " sao paulo",
+      "celular": "11998888888",
+      "valor": "R$ 10,00",
+      "foto": "./assets/images/Rectangle.png",
+      "categoria": "muchilas",
+      "descricao": "muito bem conservado e bom muito bem conservado e bom"
+    },
+    {
+      "id": 2,
+      "titulo": "muchila muito bem conservado",
+      "estado": "Sao Paulo",
+      "cidade": " sao paulo",
+      "celular": "11998888888",
+      "valor": "R$ 10,00",
+      "foto": "./assets/images/Rectangle.png",
+      "categoria": "muchilas",
+      "descricao": "muito bem conservado e bom muito bem conservado e bom"
+    },
+    {
+      "id": 3,
+      "titulo": "muchila muito bem conservado",
+      "estado": "Sao Paulo",
+      "cidade": " sao paulo",
+      "celular": "11998888888",
+      "valor": "R$ 10,00",
+      "foto": "./assets/images/mochila.png",
+      "categoria": "muchilas",
+      "descricao": "muito bem conservado e bom muito bem conservado e bom"
+    },
+    {
+      "id": 4,
+      "titulo": "muchila muito bem conservado",
+      "estado": "Sao Paulo",
+      "cidade": " sao paulo",
+      "celular": "11998888888",
+      "valor": "R$ 10,00",
+      "foto": "./assets/images/mochila.png",
+      "categoria": "libvros",
+      "descricao": "muito bem conservado e bom muito bem conservado e bom"
+    },
+    {
+      "id": 5,
+      "titulo": "muchila muito bem conservado",
+      "estado": "Sao Paulo",
+      "cidade": " sao paulo",
+      "celular": "11998888888",
+      "valor": "R$ 10,00",
+      "foto": "./assets/images/moclila.png",
+      "categoria": " libvros",
+      "descricao": "muito bem conservado e bom muito bem conservado e bom"
+    },
+    {
+      "id": 6,
+      "titulo": "muchila muito bem conservado",
+      "estado": "Sao Paulo",
+      "cidade": " sao paulo",
+      "celular": "11998888888",
+      "valor": "R$ 10,00",
+      "foto": "./assets/images/Rectangle.png",
+      "categoria": "muchilas",
+      "descricao": "muito bem conservado e bom muito bem conservado e bom"
+    },
+    {
+      "id": 7,
+      "titulo": "muchila muito bem conservado",
+      "estado": "Sao Paulo",
+      "cidade": " sao paulo",
+      "celular": "11998888888",
+      " valor": "R$ 10,00",
+      " foto": "./assets/images/Rectangle.png",
+      "categoria": "muchilas",
+      "descricao": "muito bem conservado e bom muito bem conservado e bom"
+    },
+    {
+      "id": 8,
+      "titulo": "muchila muito bem conservado",
+      "estado": "Sao Paulo",
+      "cidade": " sao paulo",
+      "celular": "11998888888",
+      "valor": "R$ 10,00",
+      "foto": "./assets/images/Rectangle.png",
+      "categoria": "muchilas",
+      "descricao": "muito bem conservado e bom muito bem conservado e bom"
+    },
+    {
+      "id": 9,
+      "titulo": "muchila muito bem conservado",
+      "estado": "Sao Paulo",
+      "cidade": " sao paulo",
+      "celular": "11998888888",
+      "valor": "R$ 10,00",
+      "foto": "./assets/images/mochila.png",
+      "categoria": "libvros",
+      "descricao": "muito bem conservado e bom muito bem conservado e bom"
+    },
+    {
+      "id": 10,
+      "titulo": "muchila muito bem conservado",
+      "estado": "Sao Paulo",
+      "cidade": " sao paulo",
+      "celular": "11998888888",
+      "valor": "R$ 10,00",
+      "foto": "./assets/images/moclila.png",
+      "categoria": " libvros",
+      "descricao": "muito bem conservado e bom muito bem conservado e bom"
+    },
+    {
+      "id": 11,
+      "titulo": "muchila muito bem conservado",
+      "estado": "Sao Paulo",
+      "cidade": " sao paulo",
+      "celular": "11998888888",
+      "valor": "R$ 10,00",
+      "foto": "./assets/images/Rectangle.png",
+      "categoria": "muchilas",
+      "descricao": "muito bem conservado e bom muito bem conservado e bom"
+    },
+    {
+      "id": 12,
+      "titulo": "muchila muito bem conservado",
+      "estado": "Sao Paulo",
+      "cidade": " sao paulo",
+      "celular": "11998888888",
+      "valor": "R$ 10,00",
+      "foto": "./assets/images/Rectangle.png",
+      "categoria": "muchilas",
+      "descricao": "muito bem conservado e bom muito bem conservado e bom"
+    },
+    {
+      "id": 13,
+      "titulo": "muchila muito bem conservado",
+      "estado": "Sao Paulo",
+      "cidade": " sao paulo",
+      "celular": "11998888888",
+      "valor": "R$ 10,00",
+      "foto": "./assets/images/Rectangle.png",
+      "categoria": "muchilas",
+      "descricao": "muito bem conservado e bom muito bem conservado e bom"
+    },
+    {
+      "id": 14,
+      "titulo": "muchila muito bem conservado",
+      "estado": "Sao Paulo",
+      "cidade": " sao paulo",
+      "celular": "11998888888",
+      "valor": "R$ 10,00",
+      "foto": "./assets/images/mochila.png",
+      "categoria": "libvros",
+      "descricao": "muito bem conservado e bom muito bem conservado e bom"
+    },
+    {
+      "id": 15,
+      "titulo": "muchila muito bem conservado",
+      "estado": "Sao Paulo",
+      "cidade": " sao paulo",
+      "celular": "11998888888",
+      "valor": "R$ 10,00",
+      "foto": "./assets/images/moclila.png",
+      "categoria": " libvros",
+      "descricao": "muito bem conservado e bom muito bem conservado e bom"
+    }
+  ],
+  "users": [
+    {
+      "id": 0,
+      "email": "ziriguidunho@email.com",
+      "password": "12345678",
+      "estado": "SP",
+      "cidade": "São Paulo",
+      "endereco": "Rua Logo ali",
+      "numero": 123,
+      "cep": "00000-000",
+      "bairro": "bairro",
+      "complemento": "ap 21"
+    },
+    {
+      "email": "email@email.com",
+      "password": "$2a$10$k.IaLCyXxZXHzDgEA2hXGucUcWmfv.4AyvA8UG4hdlOjZUwnMa1OK",
+      "confirmaSenha": "123456",
+      "estado": "AC",
+      "cidade": "Cidade",
+      "endereco": "Logo ali",
+      "numero": "123",
+      "cep": "00000-000",
+      "bairro": "Bairro",
+      "complemento": "",
+      "termos": true,
+      "id": 1
+    },
+    {
+      "email": "zcueto87@gmail.com",
+      "password": "123456789",
+      "confirmaSenha": "123456789",
+      "estado": "AM",
+      "cidade": "São Paulo",
+      "endereco": "rua atucuri 848",
+      "numero": "556",
+      "cep": "03411000",
+      "bairro": "chacarasanto antonio",
+      "complemento": "csa",
+      "termos": true,
+      "id": 2
+    }
+  
+  ]
+}

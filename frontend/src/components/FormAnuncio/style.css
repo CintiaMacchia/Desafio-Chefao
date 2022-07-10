@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
+
+* {
+  font-family: "Quicksand";
+  font-weight: 700;
+}
+
+.box {
+  margin-left: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 1100px;
+}
+
+.title {
+  background: rgba(53, 53, 53, 0.05);
+  padding: 40px;
+}
+
+.guide {
+  max-width: 400px;
+  margin-right: 20px;
+}
+
+.form {
+  background: #f0f0f0;
+  padding: 30px;
+}
+
+.anuncio-h1 {
+  /* Page name */
+
+  width: 206px;
+  height: 40px;
+
+  /* Heading 3 */
+
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  /* identical to box height */
+
+  /* Text/Black */
+
+  color: #161616;
+}
+
+.anuncio-h2 {
+  padding-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.anuncio-obrigatorio {
+  padding-top: 20px;
+  font-size: 13px;
+}
+
+.anuncio-h3 {
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+.anuncio-h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.anuncio-h6 {
+  padding-top: 20px;
+  font-size: 15px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.confirmacao-cadastro {
+  font-size: 12px;
+}
+
+.btn {
+  display: flex;
+  width: 490px;
+  margin-top: 20px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #ff8b20;
+  border: solid 1px transparent;
+  font-weight: 400;
+}
+
+.btn:hover {
+  background-color: #fff;
+  border: solid 1px #ff8b20;
+  color: #ff8b20;
+}
+
+.form-control::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.form-control::before {
+  content: "Escolha uma imagem";
+  background-color: #ff8b20;
+  border: 1px solid #ff8b20;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.form-control:hover {
+  background-color: #fff;
+  border: solid 1px #ff8b20;
+}
+
+.description {
+  height: 120px;
+}
+
+.termos-servico {
+  padding-top: 20px;
+  display: flex;
+  align-items: baseline;
+}
+
+.texto-termos {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .guide {
+    display: none;
+  }
+
+  .form {
+    margin-left: -1100px;
+    width: 350px;
+  }
+
+  .btn {
+    width: 300px;
+  }
+}

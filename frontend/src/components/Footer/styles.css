@@ -1,0 +1,163 @@
+footer {
+  font-family: Poppins;
+  padding: 4rem 5rem 2.5rem;
+}
+
+.logo-black {
+  margin-bottom: 2.313rem;
+}
+
+.copy {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0;
+}
+
+.company-info__container {
+  width: 19.188rem;
+  margin-right: 14.938rem;
+}
+
+.company-info__text {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.company-info__title {
+  font-weight: 700;
+}
+
+.company-info__email {
+  font-weight: 500;
+}
+
+ .buton-enviar{
+  margin-left:-27px;
+
+ }
+ .categorias{
+ display: flex;
+  font-style: normal;
+  font-weight: 300;
+ }
+ 
+ .mt-2  {
+  width: 200px;
+ }
+
+ footer {
+  background: rgba(53, 53, 53, 0.05);
+ }
+
+footer a{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+letter-spacing: 0.01em;
+  text-decoration: none;
+  color:#000000;
+}
+footer a:hover{
+  color:#FF8B20;
+
+
+} 
+foter.a{
+ 
+  width: 100%;
+  font-size: 16px;
+  font-style: 0.2rem;
+  color: #353535 !important;
+  position: relative;
+}
+footer.a::after{
+ position: absolute;
+ content: "";
+ width: 0%;
+ height: 2px;
+ background-color:#353535;
+ left:50%;
+ bottom: -4px;
+ transform: all 1s ease-in-out;
+}
+/* footer.e:hover{
+  cursor: pointer;
+  text-decoration: none;
+   */
+
+footer a:hover::after{
+cursor: pointer;
+
+
+
+ }
+
+
+
+ @media (max-width: 589px) {
+
+
+  .buton-enviar {
+    position: relative;
+    left: 479px;
+    top: -38px;
+}
+.container{
+  justify-content: center;
+}
+  }
+ @media (max-width: 540px) {
+  .buton-enviar {
+   
+    left: 460px;
+ 
+}
+  }
+
+    
+ @media (max-width: 525px) {
+  .buton-enviar {
+   
+    left: 420px;
+ 
+}
+  }
+ @media (max-width:487px) {
+  .buton-enviar {   
+    left: 379px;
+ 
+}
+  }
+ @media (max-width:360px) {
+  .buton-enviar {   
+    left: 282px;
+  }
+ 
+}
+ @media (max-width:390px) {
+  .buton-enviar {   
+    left: 250px;
+  }
+ 
+}
+
+ @media (max-width:375px) {
+  .buton-enviar {   
+    left: 287px;
+  }
+ 
+}
+ @media (max-width:320px) {
+  .buton-enviar {   
+    left: 243px;
+  }
+ 
+}
+
