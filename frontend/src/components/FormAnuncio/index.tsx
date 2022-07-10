@@ -24,7 +24,7 @@ const FormAnuncio: React.FC = () => {
     formData.append("description", description)
 
     // Trocar por API correto do Backend
-    let result = await fetch("http://localhost:3000", {
+    let result = await fetch("http://localhost:3333", {
       method: "POST",
       body: formData,
     })
@@ -66,7 +66,7 @@ const FormAnuncio: React.FC = () => {
           <input
             type="file"
             className="form-control"
-            onChange={(e:any) => setFile(e.target.files[0])}
+            onChange={(e: any) => setFile(e.target.files[0])}
             placeholder="File"
           ></input>
           <h6 className="anuncio-h3">* Obrigatório</h6>
