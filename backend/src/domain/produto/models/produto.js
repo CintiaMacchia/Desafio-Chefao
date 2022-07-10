@@ -1,5 +1,5 @@
-const db = require('"../../../shared/infrastructure/database"')
-const { DataTypes } = require('sequelize');
+const db = require("../../../shared/infrastructure/database")
+const { DataTypes } = require("sequelize")
 
 export const Produtos = db.define(
     "produtos", {

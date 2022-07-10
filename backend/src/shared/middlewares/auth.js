@@ -1,7 +1,7 @@
 require ('dotenv').config()
-import { expressjwt } from "express-jwt";
+const expressjwt = require("express-jwt")
 
-export default expressjwt({
-   secret: process.env.SECRET_KEY as string,
+module.exports = expressjwt({
+   secret: process.env.SECRET_KEY,
    algorithms: ["HS256"],
 });

@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 //import { DestroyProdutosUseCase } from "../useCase/destroyProdutoUseCase";
 
 const { Produtos } = require('../models/produto')
+=======
+const Produtos = require ("../models/produto")
+>>>>>>> 3d12aceeec85c81cfe66b7b13c9dcc754986a2ff
 
 export const DestroyProdutoController = {
     //   async destroy(req: Request, res: Response) {

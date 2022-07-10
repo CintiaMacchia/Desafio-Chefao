@@ -4,7 +4,7 @@ const { Usuarios } = require('../models/usuario')
 
 
 
-export const UsuarioController = {
+module.exports = UsuarioController = {
 
     async login(req, res) {
         try {

@@ -1,4 +1,4 @@
-import { FindOneProdutosUseCase } from '../useCase/findOneProdutoUseCase';
+const FindOneProdutosUseCase = ('../useCase/findOneProdutoUseCase')
 //import { Request, Response } from "express";
 
 export const FindOneProdutosController = {

@@ -62,6 +62,7 @@ routes.get("/produtos", FindAllProdutoController.listarTodos);
 routes.get("/produto/:id", FindOneProdutosController.umProduto);
 routes.delete("/produto/:id", DestroyProdutoController.delete);
 routes.put("/produto/:id", updateProdutoController.update);
-routes.post("/produto", CreateProdutoController.create)
+routes.post("/produto", CreateProdutoController.create) <<
 
-module.exports = routes
+
+    module.exports
