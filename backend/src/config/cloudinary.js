@@ -4,13 +4,13 @@ const cloudinary = require('cloudinary');
 
 
 cloudinary.config({
-    // cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-    // api_key: process.env.CLOUDINARY_API_KEY,
-    // api_secret: process.env.CLOUDINARY_API_SECRET,
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
 
-const uploads = (file, fotoAnuncio) => {
+exports.uploads = (file, foto) => {
     return new Promise(
         (resolve) => {
             cloudinary.uploader.upload(
@@ -20,7 +20,7 @@ const uploads = (file, fotoAnuncio) => {
                         imageUrl: fotoReturn.url
                     })
                 }, {
-                    folder: fotoAnuncio,
+                    folder: foto,
                     resource_type: 'auto'
                 }
 
@@ -28,4 +28,3 @@ const uploads = (file, fotoAnuncio) => {
         }
     )
 }
-module.exports = uploads

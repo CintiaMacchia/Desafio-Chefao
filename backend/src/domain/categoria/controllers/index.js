@@ -1,17 +1,23 @@
 const Categoria = require('../models/categoria')
-const categoriaService = require('../services');
+const categoriaService = require('../services/CategoriaService');
 
-
-
-module.exports = CategoriaController = {
+const CategoriaController = {
 
     async create(req, res) {
         try {
-            const novaCategoria = await categoriaService.cadatrarCategoria(req.body);
-            return res.status(200).json(novaCategoria);
+            const { categoria } = req.body;
+            if (!categoria)
+                return res.status(400).json("Todas as informações são obrigatórias")
+
+            const novaCategoria = await Categoria.create({
+                categoria
+            })
+            res.json(novaCategoria)
         } catch (error) {
             return res.status(500).json(error);
+            console.log(error)
         }
+
     },
 
     //     async update(req:Request, res:Response) {
@@ -42,7 +48,7 @@ module.exports = CategoriaController = {
                     id: id
                 }
             });
-            res.json({ message: "Categoria Atualizada" }).status(201)
+            res.json('Categoria Atualizada').status(201)
         } catch (error) {
             return res.status(500).json(error)
         }
@@ -75,8 +81,8 @@ module.exports = CategoriaController = {
 
     async getAll(req, res) {
         try {
-            const categorias = await categoriaService.listarCategorias();
-            return res.json(categorias);
+            const Listarcategorias = await Categoria.findAll();
+            return res.json(Listarcategorias);
         } catch (error) {
             return res.status(500).json(error);
         }
@@ -84,10 +90,13 @@ module.exports = CategoriaController = {
 
     async getOne(req, res) {
         try {
-            const categoria = await categoriaService.umaCategoria(req.params);
+            const { id } = req.params;
+            const categoria = await Categoria.findByPk(id);
             return res.json(categoria)
         } catch (error) {
-            return res.status(500).json(error)
+            return res.status(500).json('Categoria não encontrada!')
         }
     }
 }
+
+module.exports = CategoriaController

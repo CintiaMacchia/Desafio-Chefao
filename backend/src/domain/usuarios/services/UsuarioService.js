@@ -6,7 +6,7 @@ require('dotenv').config()
 
 
 
-class UsuarioService {
+const UsuarioService = {
 
 
 
@@ -33,7 +33,7 @@ class UsuarioService {
             process.env.SECRET_KEY
         );
         return token;
-    }
+    },
 
     async cadastrarUsuario(data) {
         const { senha } = data;
@@ -41,11 +41,11 @@ class UsuarioService {
 
         const novoUsuario = await Usuarios.create({
             ...data,
-            senha: novaSenha
+            senha: novaSenha,
 
         });
-        return novoUsuario;
-    }
+        return res.json(novoUsuario);
+    },
 
 
     async alterarUsuario(data, params) {
@@ -72,7 +72,7 @@ class UsuarioService {
 
         const usuario = await Usuarios.findByPk(id);
         return usuario;
-    }
+    },
 
     // async excluirUsuario(params: any, auth: any) {
     //     const { id } = params;
@@ -94,13 +94,13 @@ class UsuarioService {
     async todosUsuarios() {
         const todosOsUsuarios = await Usuarios.findAll();
         return todosOsUsuarios;
-    }
+    },
 
     async umUsuario(params) {
         const { id } = params;
         const usuarioUnico = await Usuarios.findByPk(id);
         return usuarioUnico;
-    }
+    },
 
 }
 module.exports = UsuarioService

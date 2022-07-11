@@ -3,7 +3,7 @@ const { Usuarios } = require('../models/usuario')
 
 
 
-module.exports = UsuarioController = {
+const UsuarioController = {
 
     async login(req, res) {
         try {
@@ -122,3 +122,5 @@ module.exports = UsuarioController = {
         }
     },
 };
+
+module.exports = UsuarioController
