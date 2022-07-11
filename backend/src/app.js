@@ -1,5 +1,5 @@
 const express = require('express')
-const db = require('../../backend/src/shared/infrastructure/database')
+const db = require('../src/shared/infrastructure/database')
 const handleMiddleware = require('./shared/middlewares/hendleMiddleware')
 const routes = require('./shared/routes/index')
 const upload = require('./config/upload')
