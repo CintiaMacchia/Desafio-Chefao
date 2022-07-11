@@ -60,9 +60,9 @@ export function Footer() {
         <S.FooterMailingContainer>
             <label className='mailing-list__label'>Assine nosso informativo mensal</label>
             <form>
-            <input type='text' placeholder='E-mail' className='input-mail'/>
-            <button type='submit' className='button-mail-list'>Assinar</button>
-          </form>
+              <input type='text' placeholder='E-mail' className='input-mail'/>
+              <button type='submit' className='button-mail-list'>Assinar</button>
+            </form>
         </S.FooterMailingContainer>
 
       </S.SecondHalfContainer>
