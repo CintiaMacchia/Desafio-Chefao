@@ -12,10 +12,10 @@ import { BrowserRouter as Router, Link } from "react-router-dom"
 function Menu() {
   return (
     <header>
-      <div className="row ">
-        <div className="  shadow-sm p-3 mb-2bg-body rounded ">
+      <div className="row w-100 m-0">
+        <div className="shadow-sm mb-2 bg-body rounded py-3 px-0 w-100">
           <div className="container-lg">
-            <div className="d-flex justify-content-end">
+            <div className="d-flex justify-content-end p-0">
               <GoLocation className="mx-2 fs-5  icon-header" />
               <a className="underline me-4 text-dark">
                 Todos os Estados

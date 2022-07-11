@@ -57,9 +57,9 @@ export const HeroTextContainer = styled.div`
         flex-flow: column nowrap;
         justify-content: center;
         padding: 5rem;
+    
         width: 50%;
-
-
+        
         .hero-h1 {
             font-size: 2.3rem;
         }
@@ -70,6 +70,12 @@ export const HeroTextContainer = styled.div`
         width: 51%;
 
 
+        .hero-h1 {
+            font-size: 2.5rem;
+        }
+    }
+
+    @media (min-width: 1200px) {
         .hero-h1 {
             font-size: 3.5rem;
         }

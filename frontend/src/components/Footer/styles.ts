@@ -27,6 +27,8 @@ export const StyledFooter = styled.footer`
         color: #000;
         margin-bottom: 1rem;
     }
+
+
 `
 export const FirstHalfContainer = styled.div`
     display:flex;
@@ -36,6 +38,13 @@ export const FirstHalfContainer = styled.div`
     @media (min-width: 1500px) {
         padding-left: 10rem;
     }
+    @media (max-width: 1224px) {
+        padding-left: 3rem;
+    }
+    @media (min-width: 800px) and (max-width: 1150px) {
+        padding-left: 0;
+    }
+
 `
 
 export const SecondHalfContainer = styled.div`
@@ -44,6 +53,10 @@ export const SecondHalfContainer = styled.div`
     flex-flow: row wrap;
     justify-content: flex-start;
     margin-left: 3.25rem;
+
+    @media (max-width: 1201px) {
+        justify-content: center;
+    }
 `
 
 export const FooterInfoContainer = styled.div`
@@ -52,6 +65,8 @@ export const FooterInfoContainer = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     padding-right: 14.938rem;
+
+
 `
 
 export const FooterMenuContainer = styled.div`
@@ -132,6 +147,26 @@ export const FooterMailingContainer = styled.div`
         border-radius: 8px;
         margin-left: 1.5rem;
     }
+
+    @media (max-width: 1390px) {
+        left: -20%;
+        
+        .input-mail {
+            width: 14rem;
+        }
+    }
+    @media (min-width: 800px) and (max-width: 1350px) {
+        width: 350px;
+        
+        .button-mail-list {
+            padding: 0.75rem 0;
+            width: 6rem;
+        }
+        .input-mail {
+            width: 14rem;
+        }
+    }
+
 `
 
 export const MailingListForm = styled.form`

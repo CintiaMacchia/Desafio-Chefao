@@ -1,3 +1,5 @@
+
+
 header  a {
   color: #fff;
   text-decoration: none;
@@ -23,6 +25,7 @@ header  a:hover {
   background: #ffffff;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
 }
+
 
 .barra-de-pesquisa::placeholder {
   font-family: Poppins;
@@ -59,7 +62,7 @@ header  a:hover {
 }
 
 .categories-navbar {
-  gap: 7rem;
+  gap: 5rem;
 }
 
 .link-nav {
@@ -67,4 +70,20 @@ header  a:hover {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5rem;
+}
+
+
+@media (max-width: 1300px) {
+  .barra-de-pesquisa{
+    width: 30rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .barra-de-pesquisa{
+    width: 20rem;
+  }
+  .categories-navbar {
+    gap: 3rem;
+  }
 }
