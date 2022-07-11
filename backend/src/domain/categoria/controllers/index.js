@@ -1,5 +1,5 @@
 const Categoria = require('../models/categoria')
-const categoriaService = require('../services/CategoriaService');
+    //const categoriaService = require('../services/CategoriaService');
 
 const CategoriaController = {
 
@@ -20,14 +20,6 @@ const CategoriaController = {
 
     },
 
-    //     async update(req:Request, res:Response) {
-    //         try {
-    //             const alterarCategoria = await categoriaService.updateCategoria(req.body, req.params);
-    // return res.status(200).json(alterarCategoria)
-    //         } catch (error) {
-    //             return res.status(500).json(error)
-    //         }
-    //     },
 
     async update(req, res) {
         try {
@@ -39,7 +31,7 @@ const CategoriaController = {
                     id: id,
                 }
             });
-            if (!existeId) {
+            if (!existeId === id) {
                 return res.status(400).json('Categoria não encontrada')
             }
 

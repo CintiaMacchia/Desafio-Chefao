@@ -26,11 +26,14 @@ const FormAnuncio: React.FC = () => {
     formData.append("description", description)
 
     // Trocar por API correto do Backend
-    let result = await fetch("http://localhost:3333", {
+    let result = await fetch("localhost:3550/produtos", {
       method: "POST",
       body: formData,
+    }).then((resp) => {
+      resp.json().then((result) => {
+        console.warn(result)
+      })
     })
-    alert("Teste deu certo!")
   }
 
   return (

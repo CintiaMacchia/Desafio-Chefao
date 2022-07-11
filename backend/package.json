@@ -2,7 +2,7 @@
     "name": "desafio-chefao",
     "version": "1.0.0",
     "description": "api",
-    "main": "index.ts",
+    "main": "server.js",
     "scripts": {
         "test": "jest",
         "dev": "nodemon src/server.js",

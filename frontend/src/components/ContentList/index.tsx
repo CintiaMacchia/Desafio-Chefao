@@ -1,14 +1,10 @@
-
-
-
-
-import{ useEffect, useState } from 'react';
-import Container from '../Container';
-import {listarProdutos} from '../../services/MainApi/produtos';
-
 import Selected from '../Selected';
 import CardProduto from '../CardProduto';
-import Mochila from '../../components/assets/images/mochila.png';
+import MochilaBatman from '../assets/images/mochila-batman.png';
+import MochilaPetMacaco from '../assets/images/mochila-pet-macaco.png';
+import MochilaHomemAranha from '../assets/images/mochila-homem-aranha.jpg';
+
+
 import './styles.css';
 import { Sidebar } from '../Sidebar';
 
@@ -17,10 +13,9 @@ interface Produto {
   id: number;
   titulo:string;
   estado: string;
-   valor:string;
-   foto: string;
+  valor:string;
+  foto: string;
   categoria: string;
-  // descricao: string;
 
 }
 
@@ -65,94 +60,75 @@ export default function Produtos() {
             </div>
           
           </div>
-         
         </div>
       </div>
       <div className="row">
         <div className="col-md-12">
           
         <div className="grid-container">
-            {/* {produtos.map(produto=>(  */}
-              {/* <div className="grid-item" key={produto.id}>  */}
-          
-            
-                <div className="card-container mt-4">
-                 
-                <CardProduto
-                  
-                  titulo={"pofifdvhfdiuhbid"}
+                <CardProduto 
+                  titulo={"Mochila Escolar Infantil do Batman"}
                   categoria={"livro"}
-                  estado={"usado"}
-                  valor={"10$"}
-             foto={Mochila}
+                  estado={"Semi-Novo"}
+                  valor={"30,00"}
+                  foto={MochilaBatman}
                   />
-                      </div>
-                     {/* </div> 
-            ))}  */}
-             
-                <div className="card-container mt-4">
-                 
-                <CardProduto
-                  
-                  titulo={"pofifdvhfdiuhbid"}
+                <CardProduto 
+                  titulo={"Mochila Escolar Homem-Aranha"}
                   categoria={"livro"}
-                  estado={"usado"}
-                  valor={"10$"}
-             foto={Mochila}
+                  estado={"Semi-Novo"}
+                  valor={"40,00"}
+                  foto={MochilaHomemAranha}
                   />
-                </div>
-          
-                <div className="card-container mt-4">
-                 
-                <CardProduto
-                  
-                  titulo={"pofifdvhfdiuhbid"}
+                <CardProduto 
+                  titulo={"Mochila Escolar Pets Macaco"}
                   categoria={"livro"}
-                  estado={"usado"}
-                  valor={"10$"}
-             foto={Mochila}
+                  estado={"Usado"}
+                  valor={"20,00"}
+                  foto={MochilaPetMacaco}
                   />
-                {/* </div> */}
-              </div>
-            
-
-                <div className="card-container mt-4">
-                 
-                <CardProduto
-                  
-                  titulo={"pofifdvhfdiuhbid"}
+                <CardProduto 
+                  titulo={"Mochila Escolar Infantil do Batman"}
                   categoria={"livro"}
-                  estado={"usado"}
-                  valor={"10$"}
-             foto={Mochila}
+                  estado={"Semi-Novo"}
+                  valor={"30,00"}
+                  foto={MochilaBatman}
                   />
-                </div>
- 
-                <div className="card-container mt-4">
-                 
-                <CardProduto
-                  
-                  titulo={"pofifdvhfdiuhbid"}
+                <CardProduto 
+                  titulo={"Mochila Escolar Homem-Aranha"}
                   categoria={"livro"}
-                  estado={"usado"}
-                  valor={"10$"}
-             foto={Mochila}
+                  estado={"Semi-Novo"}
+                  valor={"40,00"}
+                  foto={MochilaHomemAranha}
                   />
-                </div>
-       
-                <div className="card-container mt-4 ">
-                 
-                <CardProduto
-                  
-                  titulo={"pofifdvhfdiuhbid"}
+                <CardProduto 
+                  titulo={"Mochila Escolar Pets Macaco"}
                   categoria={"livro"}
-                  estado={"usado"}
-                  valor={"10$"}
-             foto={Mochila}
+                  estado={"Usado"}
+                  valor={"20,00"}
+                  foto={MochilaPetMacaco}
                   />
-                </div>
-            
-              
+                <CardProduto 
+                  titulo={"Mochila Escolar Infantil do Batman"}
+                  categoria={"livro"}
+                  estado={"Semi-Novo"}
+                  valor={"30,00"}
+                  foto={MochilaBatman}
+                  />
+                <CardProduto 
+                  titulo={"Mochila Escolar Homem-Aranha"}
+                  categoria={"livro"}
+                  estado={"Semi-Novo"}
+                  valor={"40,00"}
+                  foto={MochilaHomemAranha}
+                  />
+                <CardProduto 
+                  titulo={"Mochila Escolar Pets Macaco"}
+                  categoria={"livro"}
+                  estado={"Usado"}
+                  valor={"20,00"}
+                  foto={MochilaPetMacaco}
+                  />
           </div>
         </div>
       </div>

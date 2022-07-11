@@ -12,7 +12,7 @@ import ProdutosDetail from "../pages/ProdutosDetail"
 import RequireAuth from "./auth"
 import PerfilUsuario from "../pages/PerfilUsuario"
 import Contato from "../pages/Contatos"
-import PageFaboritos from "../pages/PageFavoritos"
+import PageFavoritos from "../pages/PageFavoritos"
 
 function AppRoutes(): JSX.Element {
   return (
@@ -43,8 +43,8 @@ function AppRoutes(): JSX.Element {
         <Route path="/produtos" element={<Produtos />}>
            {/* <Route path=":id" element={<ProdutosDetail />} /> */}
         </Route>
-        <Route path="/faboritos" element={<PageFaboritos />}/>
-        <Route path="/d-produto" element={<ProdutosDetail />} />
+        <Route path="/favoritos" element={<PageFavoritos />}/>
+        <Route path="/produto-detalhes" element={<ProdutosDetail />} />
         <Route
           path="/contato"
           element={

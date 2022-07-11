@@ -10,8 +10,8 @@ import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 
 
-const PageFaboritos: React.FC = () => { 
-    const categoria:string ="Faboritos"
+const PageFavoritos: React.FC = () => { 
+    const categoria:string ="Favoritos"
     return (
     <>
         <Header />
@@ -26,4 +26,4 @@ const PageFaboritos: React.FC = () => {
     </>
 )
     }
-export default PageFaboritos;
+export default PageFavoritos;

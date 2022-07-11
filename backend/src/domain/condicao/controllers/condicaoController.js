@@ -1,5 +1,5 @@
-const { condicaoService } = require('../services')
-const { Condicao } = require('../models/condicao')
+//const condicaoService = require('../services');
+const Condicao = require('../models/condicao');
 
 const CondicaoController = {
     async create(req, res) {
@@ -20,14 +20,6 @@ const CondicaoController = {
     },
 
 
-    // async update(req: Request, res: Response) {
-    //     try {
-    //         const updateCondicao = await condicaoService.alterarCondicao(req.body, req.params, req.body.auth);
-    //         return res.status(200).json(updateCondicao);
-    //     } catch (error) {
-    //         return res.status(500).json(error);
-    //     }
-    // },
 
     async update(req, res) {
         try {
@@ -80,18 +72,11 @@ const CondicaoController = {
             return res.status(500).json("Falha ao deletar a categoria")
         }
     },
-    // async delete(req: Request, res: Response) {
-    //     try {
-    //         const deletarCondicao = await condicaoService.excluirCondicao(req.params, req.body.auth);
-    //         return res.sendStatus(204).json(deletarCondicao)
-    //     } catch (error) {
-    //         return res.status(500).json(error);
-    //     }
-    // },
+
 
     async getAll(req, res) {
         try {
-            const condicao = await condicaoService.todasCondicoes();
+            const condicao = await Condicao.findAll();
             return res.json(condicao);
         } catch (error) {
             return res.status(500).json(error);
@@ -100,8 +85,9 @@ const CondicaoController = {
 
     async getOne(req, res) {
         try {
-            const condicao = await condicaoService.umaCondicao(req.params);
-            return res.json(condicao);
+            const { id } = req.params;
+            const listarCondicao = await Condicao.findByPk(id);
+            return res.json(listarCondicao);
         } catch (error) {
             return res.status(500).json(error);
         }
