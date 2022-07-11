@@ -95,14 +95,14 @@ export const StyledButtonOrange = styled(Button)`
     cursor: pointer;
 
     &:hover {
-        background-color: #E46D00;
-        color: #FFF;
-        border: 1px solid #E46D00;
+        background-color: #FFF;
+        color: #FF8B20;
+        border: 1px solid #FF8B20;
     }
 
     &:focus {
-        background-color: #E46D00;
-        color: #FFF;
-        border: 1px solid #E46D00;
+        background-color: #FFF;
+        color: #FF8B20;
+        border: 1px solid #FF8B20;
     }
 `
