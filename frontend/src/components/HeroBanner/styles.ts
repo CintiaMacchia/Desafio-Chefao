@@ -24,11 +24,11 @@ export const HeroTextContainer = styled.div`
     width: 100%;
     height: 60%;
     padding: 2rem;
-    font-family: 'Quicksand', sans-serif;
     color: #161616;
     
 
     .hero-h1 {
+        font-family: 'Quicksand', sans-serif;
         font-size: 2rem;
         font-weight: 700;
         line-height: 70px;

@@ -1,168 +1,71 @@
 import LogoBlack from '../assets/images/logo-black.png'
-import { Col, Form, Row } from 'react-bootstrap';
 import { FaTwitter } from 'react-icons/fa';
 import { GrFacebookOption } from 'react-icons/gr';
 import { AiFillInstagram } from 'react-icons/ai';
-import ButonBorda from '../ButtonBorda';
-import './styles.css';
+import * as S from './styles'
 
 export function Footer() {
   return (
-    <footer>
-      <div className="container-lg">
-        <div className="row">
-          <div className="col-md-12">
-            <div className="row">
-              <div className="col-md-4">
-                <div className="company-info__container">
-                  <div>
-                    <img className='logo-black' src={LogoBlack} alt="" />
-                  </div>
-                  {/* div contatos */}
-                  <div className="mt-3 ">
-                    <div>
-                      <a href="#" ></a>
-                    </div>
-                    <div className='d-flex flex-column company-info'>
-                      <h5 className='company-info__text'><span className='company-info__title'>CNPJ:</span>XX. XXX. XXX/0001-XX</h5>
-                      <h5 className='company-info__text'><span className='company-info__title'>Endereço:</span> Rua XXXXX, numero XX, Bairro: XXXX, CEP: 0XXXX-XX0</h5>
-                      <h5 className='company-info__text'><span className='company-info__title'>Telefone:</span> +55 (XX) XXXX-XXXX</h5> 
-                    </div>
-                    <div className="mt-3">
-                      <a className='company-info__email' href="http://Mailto:#">atendimento@passorepasso.com.br</a>
-                    </div>
-                    <div>
-                      <div className='  mt-2 '>
-                        <strong>Redes Sociais:</strong>
-                        <div className='mt-2 mb-3'>
-                          <a
-                            href="https://www.facebook.com/">
-                            <GrFacebookOption size={24} color="#6866cc" />
-                          </a>
-                          <a className="h-20 m-3"
-                            href="https://www.instagram.com">
-                            <AiFillInstagram size={24} color="#9c6361" />
-                          </a>
-                          <a 
-                            href="https://twitter.com">
-                            <FaTwitter size={24} color="#3a87a1" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              <div className="col-md-8 mt-4">
-                <div className="row">
-                  <div className="col-md-4">
-                    <div className="col-md-4 categoria ">
-                      <strong>Categorias</strong>
-                      <div className="mt-2 ">
-                        <div className='mt-3'>
-                        <a className='undeline '
-                          id='listasDeCompra '
-                          href="#"> Todas as categorias
-                        </a>
-                        </div>
-                        <div className='mt-2'>
-                        <a 
-                          id=' '
-                          href="#"> Lancheiras
-                        </a>
-                        </div>
-                        <div className='mt-2'>
-                        <a 
-                          id=' '
-                          href="#">Lancheiras
-                        </a>
-                        </div>
-                        <div className='mt-2'>
-                        <a 
-                          id=' '
-                          href="#"> Livros
-                        </a>
-                        </div>
-                        <div className='mt-2'>
-                        <a 
-                          id=' '
-                          href="#"> Mochilas
-                        </a>
-                        </div>
-                        <div className='mt-2'>
-                        <a 
-                          id=' '
-                          href="#">Papelaria
-                        </a>
-                        </div>
-                        <div className='mt-2'>
-                        </div>
-                        <div className='mt-2'>
-                        <a className='mt-2 '
-                          id=' '
-                          href="#">Uniformes
-                        </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-md-8">
-                    <div className="row">
-                      <div className="col-md-6">
-                        <strong>Menu</strong>
-                        <div className="mt-2">
-                          <a className='undeline '
-                            href="#">Minha Conta</a>
-                        </div>
-                        <div className="mt-2">
-                          <a className='undeline '
-                            href="#">Favoritos</a>
-                        </div>
-                      </div>
-                      <div className="col-md-6">
-                        <strong className="bold">Links</strong>
-                        <div className="mt-2">
-                          <a className='undeline '
-                            href="#">Política de Privacidade
-                          </a>
-                        </div>
-                        <div className="mt-2">
-                          <a className='underline'
-                            href="#">Termos de Serviço</a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="row">
-                      <div className="col-md-12">
-                        <Form className="mt-5 ">
-                          <Form.Group as={Row} controlId="formPlaintextPassword">      
-                          <Col className='imput-email' sm="10">
-                            <Form.Control type="email" placeholder="Email" />
-                          </Col>
-                            <Col sm="1" >
-                            <ButonBorda typeButton="submit" text={"Assinar"} />
-                            </Col>
-                          </Form.Group>
-                        </Form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <S.StyledFooter>
+      <S.FirstHalfContainer>
+        <S.FooterInfoContainer>
+          <div>
+            <img className='logo-black' src={LogoBlack} alt="" />
           </div>
-        </div>
+          <S.CompanyInfoContainer>
+            <h5 className='company-info__text'><span className='company-info__title'>CNPJ:</span> XX. XXX. XXX/0001-XX</h5>
+            <h5 className='company-info__text'><span className='company-info__title'>Endereço:</span> Rua XXXXX, numero XX, Bairro: XXXX, CEP: 0XXXX-XX0</h5>
+            <h5 className='company-info__text'><span className='company-info__title'>Telefone:</span> +55 (XX) XXXX-XXXX</h5>
+            <h5 className='company-info__email'>atendimento@passorepasso.com.br</h5>
+          </S.CompanyInfoContainer>
+          <S.SocialMediaContainer>
+            <h5 className='footer__title footer__title-social'>Rede Sociais:</h5>
+            <div className='company-info__social-icons-container'>
+              <GrFacebookOption size={20} color='#2F80ED' className='company-info__social-icons'/>
+              <AiFillInstagram size={20} className='company-info__social-icons'/>
+              <FaTwitter size={20} color='#56CCF2' className='company-info__social-icons'/>
+            </div>
+          </S.SocialMediaContainer>
+        </S.FooterInfoContainer>
 
-        <div className="copyright-container">
-          <span className='copy'>
-            © PassoRepasso - Todos os direitos reservados
-          </span>
-        </div>
-      </div>
-    </footer>
+        <S.FooterMenuContainer>
+          <h5 className='footer__title'>Categorias</h5>
+          <a className='footer__link'>Todas as Categorias</a>
+          <a className='footer__link'>Lancheiras</a>
+          <a className='footer__link'>Listas Escolares</a>
+          <a className='footer__link'>Livros</a>
+          <a className='footer__link'>Mochilas</a>
+          <a className='footer__link'>Papelaria</a>
+          <a className='footer__link'>Uniformes</a>
+        </S.FooterMenuContainer>
+
+      </S.FirstHalfContainer>
+
+      <S.SecondHalfContainer>
+        <S.FooterMenuContainer>
+          <h5 className='footer__title'>Menu</h5>
+          <a className='footer__link'>Minha Conta</a>
+          <a className='footer__link'>Favoritos</a>
+          <a className='footer__link'>Chat</a>
+        </S.FooterMenuContainer>
+
+        <S.FooterMenuContainer style={{paddingLeft: '2.938rem'}}>
+          <h5 className='footer__title'>Links</h5>
+          <a className='footer__link'>Política de Privacidade</a>
+          <a className='footer__link'>Termos de Serviço</a>
+        </S.FooterMenuContainer>
+
+        <S.FooterMailingContainer>
+            <label className='mailing-list__label'>Assine nosso informativo mensal</label>
+            <form>
+            <input type='text' placeholder='E-mail' className='input-mail'/>
+            <button type='submit' className='button-mail-list'>Assinar</button>
+          </form>
+        </S.FooterMailingContainer>
+
+      </S.SecondHalfContainer>
+    </S.StyledFooter>
   );
 };
 

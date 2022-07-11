@@ -17,17 +17,20 @@ export const StyledText = styled.div`
     align-self: center;
     display: flex;
     align-content: center;
-    font-size: 1rem;
-    font-weight: 500;
-    color: rgba(53, 53, 53, 0.7);
     padding-left: 5rem;
 
     .highlight {
+        font-size: 1rem;
+        font-weight: 500;
         color: #353535;
+        margin-left: 0.2rem;
     }
 
-    p {
+    .breadcrumb {
         padding: 0;
         margin: 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: rgba(53, 53, 53, 0.7);
     }
 `
