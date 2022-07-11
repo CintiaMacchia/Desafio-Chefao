@@ -4,5 +4,4 @@ module.exports = destroy = validate({
     params: Joi.object({
         id: Joi.number().required(),
     }),
-
 });

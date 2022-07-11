@@ -1,4 +1,5 @@
-const { UsuarioService } = require("./UsuarioService")
+const usuarioService = require("../services/UsuarioService")
 
-const usuarioService = new UsuarioService;
-module.exports = usuarioService
+module.exports = {
+    usuarioService,
+}

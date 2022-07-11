@@ -3,9 +3,11 @@ const getOne = require("./usuarios/getOne")
 const destroy = require("./usuarios/destroy")
 const update = require("./usuarios/update")
 
-module.exports = UsuarioValidation = {
+const UsuarioValidation = {
     create,
     getOne,
     destroy,
     update,
 };
+
+module.exports = UsuarioValidation
