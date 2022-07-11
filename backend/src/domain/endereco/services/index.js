@@ -1,3 +1,3 @@
-import { EnderecoService } from "./EnderecoService";
+const { EnderecoService } = require("./EnderecoService");
 
-export const enderecoService = new EnderecoService;
+// export const enderecoService = new EnderecoService;

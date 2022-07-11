@@ -1,7 +1,7 @@
 import { CreateProdutoUseCase } from '../useCase/createProdutoUseCase';
 import { Request, Response } from "express"
 //import cloudinary from "cloudinary/";
-import { Produtos } from '../models/produto';
+const Produtos = ('../models/produto')
 
 const fs = require('fs');
 const cloudinary = require('../../../shared/infrastructure/config/cloudinary');
@@ -10,7 +10,7 @@ const imagemFolder = 'images/'
 
 //interface AuthRequest extends Request{ files: any}
 
-export const CreateProdutoController = {
+module.exports = CreateProdutoController = {
     async create(req, res) {
         // try {
         //     const { nome, descricao, valor, categoria_id, usuario_id, condicao_id } = req.body;

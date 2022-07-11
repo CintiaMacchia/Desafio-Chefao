@@ -1,9 +1,8 @@
-import { create } from './endereco/create';
-import { update } from './endereco/update';
-import { getOne } from './endereco/getOne';
-import { destroy } from './endereco/destroy';
-
-export const EnderecoValidation = {
+const { create } = require('./endereco/create');
+const { update } = require('./endereco/update');
+const { getOne } = require('./endereco/getOne');
+const { destroy } = require('./endereco/destroy');
+module.exports = EnderecoValidation = {
     create,
     update,
     getOne,

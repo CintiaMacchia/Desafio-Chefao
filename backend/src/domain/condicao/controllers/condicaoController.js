@@ -1,7 +1,7 @@
-import { condicaoService } from '../services'
-import { Condicao } from '../models/condicao'
+const { condicaoService } = require('../services')
+const { Condicao } = require('../models/condicao')
 
-export const CondicaoController = {
+module.exports = CondicaoController = {
     async create(req, res) {
         try {
             const novaCondicao = await condicaoService.cadastrarCondicao(req.body);
@@ -25,53 +25,53 @@ export const CondicaoController = {
         try {
             const { id } = req.params;
             const { condicao } = req.body;
-        
+
             const existeId = await Condicao.count({
                 where: {
                     id: id,
                 }
             });
-            if(!existeId){
+            if (!existeId) {
                 return res.status(400).json('Condição de produto não localizada')
             }
-        
-            const updateCategoria = await Condicao.update({ condicao },
-                { where:{
+
+            const updateCategoria = await Condicao.update({ condicao }, {
+                where: {
                     id: id
                 }
             });
-            res.json({message: "Condição  Atualizada"}).status(201)
+            res.json({ message: "Condição  Atualizada" }).status(201)
         } catch (error) {
             return res.status(500).json(error)
         }
-            },
+    },
 
-            
 
-            async delete(req, res){
-                try {
-                    const { id } = req.params;
-        
-                    const existeId = await Condicao.count({
-                        where: {
-                            id: id,
-                        }
-                    });
-                    if(!existeId){
-                        return res.status(400).json('Categoria não encontrada')
-                    }
-                    
-                    await Condicao.destroy({
-                        where: {
-                            id: id
-                        }
-                    });
-        
-                    return res.status(204).json('categoria deletada');
-                } catch (error) {
-                    return res.status(500).json("Falha ao deletar a categoria")
+
+    async delete(req, res) {
+        try {
+            const { id } = req.params;
+
+            const existeId = await Condicao.count({
+                where: {
+                    id: id,
                 }
-            },
+            });
+            if (!existeId) {
+                return res.status(400).json('Categoria não encontrada')
+            }
+
+            await Condicao.destroy({
+                where: {
+                    id: id
+                }
+            });
+
+            return res.status(204).json('categoria deletada');
+        } catch (error) {
+            return res.status(500).json("Falha ao deletar a categoria")
+        }
+    },
     // async delete(req: Request, res: Response) {
     //     try {
     //         const deletarCondicao = await condicaoService.excluirCondicao(req.params, req.body.auth);

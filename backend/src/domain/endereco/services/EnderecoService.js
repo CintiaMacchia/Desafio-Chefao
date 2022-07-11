@@ -1,10 +1,9 @@
-import { endereco } from '../models/endereco';
+const { endereco } = require('../models/endereco');
+
+require("dotenv").config();
 
 
-import * as dotenv from "dotenv";
-dotenv.config();
-
-export class EnderecoService {
+module.exports = EnderecoService = {
     async cadastrarEndereco(data, params) {
         const { usuario_id } = params;
         if (!usuario_id === usuario_id) {
@@ -18,7 +17,7 @@ export class EnderecoService {
             }
         });
         return novoEndereco;
-    }
+    },
 
     // async alterarEndereco(data:any, params: any) {
     //     const { id, usuario_id,  } = params;
@@ -56,13 +55,12 @@ export class EnderecoService {
             },
         });
         return
-    }
-  
+    },
     async listarEnderecos() {
 
         const listarEnderecos = await endereco.findAll();
         return listarEnderecos;
-    }
+    },
 
     async umEndereco(params) {
         const { id } = params;

@@ -1,9 +1,10 @@
-import { create } from './condicao/create';
-import { update } from './condicao/update';
-import { getOne } from './condicao/getOne';
-import { destroy } from './condicao/destroy';
+const { create } = require('./condicao/create')
+const { update } = require('./condicao/update')
+const { getOne } = require('./condicao/getOne')
+const { destroy } = require('./condicao/destroy')
 
-export const CondicaoValidation = {
+
+module.exports = CondicaoValidation = {
     create,
     update,
     getOne,

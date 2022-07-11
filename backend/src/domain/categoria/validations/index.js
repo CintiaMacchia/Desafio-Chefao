@@ -1,11 +1,13 @@
-import { create } from "./categoria/create";
-import { getOne } from "./categoria/getOne";
-import { destroy}  from "./categoria/destroy";
-import { update } from "./categoria/update";
+const { create } = require('./categoria/create')
+const { update } = require('./categoria/update')
+const { getOne } = require('./categoria/getOne')
+const { destroy } = require('./categoria/destroy')
 
-export const CategoriaValidation = {
-  create,
-  getOne,
-  destroy,
-  update,
+
+
+module.exports = CategoriaValidation = {
+    create,
+    getOne,
+    destroy,
+    update,
 };

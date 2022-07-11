@@ -1,8 +1,6 @@
-//import { DestroyProdutosUseCase } from "../useCase/destroyProdutoUseCase";
+const Produtos = require("../models/produto")
 
-import { Produtos } from "../models/produto"
-
-export const DestroyProdutoController = {
+module.exports = DestroyProdutoController = {
     //   async destroy(req: Request, res: Response) {
     //     try {
     //       await DestroyProdutosUseCase.deleteProduto(req.params);

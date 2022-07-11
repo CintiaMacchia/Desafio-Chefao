@@ -1,12 +1,11 @@
-import { Request, Response } from 'express';
-import { enderecoService } from '../services';
-import { endereco } from '../models/endereco';
+const { enderecoService } = require('../services');
+const { endereco } = require('../models/endereco');
 
 
-export const EnderecoController = {
+module.exports = EnderecoController = {
     async create(req, res) {
         try {
-           const novoEndereco = await enderecoService.cadastrarEndereco(req.body, req.params);
+            const novoEndereco = await enderecoService.cadastrarEndereco(req.body, req.params);
             return res.status(201).json(novoEndereco);
         } catch (error) {
             return res.status(500).json(error);
@@ -17,7 +16,7 @@ export const EnderecoController = {
     //     try {
     //         const alterarEndereco = await enderecoService.alterarEndereco(req.body, req.params);
     //         return res.status(200).json(alterarEndereco);
-            
+
     //     } catch (error) {
     //         return res.status(500).json(error);
     //     }
@@ -35,61 +34,59 @@ export const EnderecoController = {
 
     async update(req, res) {
         try {
-          const { id } = req.params;
-          const { rua, numero , complemento, cidade, estado, cep, usuario_id } = req.body;
-    
-          const existId = await endereco.count({
-            where: {
-              id: id,
-              
-            }
-          }); 
-    
-          if (!existId) {
-            return res.status(400).json('Usuário não encontrado');
-          }
-    
-          const updateEndereco = await endereco.update({ rua, numero , complemento, cidade, estado, cep, usuario_id }, {
-            where: {
-              id: id,
-            }
-          });
-    
-          res.json({message: 'Dados atualizados com sucesso'}).status(201);
-        }
-    
-        catch (error) {
-          res.status(404).json('Verfique os dados e tente novamente');
-          console.error(error);
-        };
-      },
+            const { id } = req.params;
+            const { rua, numero, complemento, cidade, estado, cep, usuario_id } = req.body;
 
-    async delete(req, res){
+            const existId = await endereco.count({
+                where: {
+                    id: id,
+
+                }
+            });
+
+            if (!existId) {
+                return res.status(400).json('Usuário não encontrado');
+            }
+
+            const updateEndereco = await endereco.update({ rua, numero, complemento, cidade, estado, cep, usuario_id }, {
+                where: {
+                    id: id,
+                }
+            });
+
+            res.json({ message: 'Dados atualizados com sucesso' }).status(201);
+        } catch (error) {
+            res.status(404).json('Verfique os dados e tente novamente');
+            console.error(error);
+        };
+    },
+
+    async delete(req, res) {
         try {
             const { id } = req.params;
 
             const existeId = await endereco.count({
                 where: {
                     id: id,
-                    
+
                 }
             });
-            if(!existeId){
-                return res.status(400).json({message:'Endereco não encontrado'})
+            if (!existeId) {
+                return res.status(400).json({ message: 'Endereco não encontrado' })
             }
-            
+
             await endereco.destroy({
                 where: {
                     id: id
                 }
             });
 
-            return res.status(204).json({message:'Endereco deletado'});
+            return res.status(204).json({ message: 'Endereco deletado' });
         } catch (error) {
             return res.status(500).json(error);
         }
     },
-  
+
 
     async getAll(req, res) {
         try {

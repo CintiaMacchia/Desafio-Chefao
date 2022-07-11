@@ -1,8 +1,13 @@
-import { Produtos } from "../models/produto";
-import { Request, Response } from "express"
+<<<<<<< HEAD
+// import { Produtos } from "../models/produto";
+// import { Request, Response } from "express"
+=======
+import { Produtos } from "../models/produto"
+>>>>>>> 3d12aceeec85c81cfe66b7b13c9dcc754986a2ff
 //import * as dotenv from "dotenv"
 //dotenv.config()
-
+const { Produtos } = require('../models/produto')
+require('dotenv').config();
 export const DestroyProdutosUseCase = {
 
     //     async deleteProduto(params: any,){
