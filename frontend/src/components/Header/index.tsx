@@ -50,7 +50,7 @@ function Menu() {
               </div>
             </div>
             <div>
-            <Link to="/faboritos">
+            <Link to="/favoritos">
             <ButonCheio typeButton="button" text={"Favoritos"} />
               </Link>
             </div>

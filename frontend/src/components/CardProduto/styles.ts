@@ -31,6 +31,7 @@ export const ImageContainer = styled.img`
     width: 256px;
     height: 250px;
     border-radius: 16px 16px 0 0;
+    border-bottom: 1px solid #C9C9C9;
 `
 
 export const DescriptionContainer = styled.div`

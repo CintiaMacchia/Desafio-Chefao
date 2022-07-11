@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form} from 'react-bootstrap';
 
 export const Body = styled.div`
     display: flex;

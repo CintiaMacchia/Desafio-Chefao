@@ -1,4 +1,4 @@
-const { Usuarios } = require("../models/usuario");
+const Usuarios = require("../models/usuario");
 const bcrypt = require("bcrypt")
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
@@ -91,7 +91,7 @@ const UsuarioService = {
 
 
 
-    async todosUsuarios() {
+    async todosUsuarios(x) {
         const todosOsUsuarios = await Usuarios.findAll();
         return todosOsUsuarios;
     },

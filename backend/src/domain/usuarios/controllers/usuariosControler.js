@@ -1,5 +1,8 @@
-const { usuarioService } = require('../services/UsuarioService')
-const { Usuarios } = require('../models/usuario')
+//const usuarioService = require("../services")
+const  Usuarios  = require('../models/usuario')
+const bcrypt = require("bcrypt")
+const jwt = require('jsonwebtoken')
+require('dotenv').config()
 
 
 
@@ -7,12 +10,34 @@ const UsuarioController = {
 
     async login(req, res) {
         try {
-            const accessToken = await usuarioService.loginUsuario(req.body);
+            const { email, senha } = req.body;
 
-            if (!accessToken) {
-                return res.status(401).json("E-mail ou senha inválido, verifique e tente novamente");
+            const usuario = await Usuarios.findOne({
+             where: {
+                 email,
+             },
+            });
+
+            if (!usuario || !bcrypt.compareSync(senha, usuario.senha)) {
+                return
             }
-            return res.status(200).json(accessToken);
+
+            const token = jwt.sign({
+                id: usuario.id,
+                email: usuario.email,
+                name: usuario.nome,
+                senha: usuario.senha,
+
+            },
+            process.env.SECRET_KEY
+            )
+
+            if (!token) {
+                return res.status(401).json("E-mail ou senha inválido, verifiquee tente novamente");
+                }
+
+            return res.status(200).json(token)
+
         } catch (error) {
 
             return res.status(500).json(error);
@@ -21,7 +46,12 @@ const UsuarioController = {
 
     async create(req, res) {
         try {
-            const novoUsuario = await usuarioService.cadastrarUsuario(req.body);
+            const {senha}= req.body
+            const novaSenha = bcrypt.hashSync(senha, 10)
+            const novoUsuario = await Usuarios.create({
+                ...req.body,
+                senha: novaSenha
+            });
             return res.status(201).json(novoUsuario);
         } catch (error) {
 
@@ -105,7 +135,7 @@ const UsuarioController = {
 
     async getAll(req, res) {
         try {
-            const usuarios = await usuarioService.todosUsuarios();
+            const usuarios = await Usuarios.findAll()
             return res.json(usuarios);
         } catch (error) {
             console.log(error);
@@ -114,7 +144,7 @@ const UsuarioController = {
     },
     async getOne(req, res) {
         try {
-            const usuario = await usuarioService.umUsuario(req.params);
+            const usuario = await Usuarios.findByPk(req.params.id);
             return res.json(usuario);
         } catch (error) {
             console.log(error)

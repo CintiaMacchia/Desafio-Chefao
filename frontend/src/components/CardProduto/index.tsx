@@ -1,5 +1,4 @@
 import * as S from './styles'
-import mochilaImg from '../../components/assets/images/mochila.png';
 import FavoriteIcon from './IconeFavorito';
 
 interface CardProdutoProps {
@@ -16,7 +15,7 @@ const CardProduto = (props:CardProdutoProps) => {
         <S.StyledBody>
             <S.StyledContainer>
                 <FavoriteIcon className='icon'/>
-                <S.ImageContainer src={mochilaImg}/>
+                <a href='/produto-detalhes'><S.ImageContainer src={props.foto}/></a>
                 <S.DescriptionContainer className='product'>
                     <h4 className='product__title'>{props.titulo}</h4>
                     <h5 className='product__condition'>{`Produto: ${props.estado}`}</h5>
