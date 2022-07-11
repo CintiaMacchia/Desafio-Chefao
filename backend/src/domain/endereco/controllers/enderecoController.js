@@ -1,11 +1,21 @@
 const { enderecoService } = require('../services');
-const endereco = require('../models/endereco');
+const endereco  = require('../models/endereco');
 
 
 const EnderecoController = {
     async create(req, res) {
         try {
-            const novoEndereco = await enderecoService.cadastrarEndereco(req.body, req.params);
+            const {usuario_id} = req.body;
+            if (!usuario_id === usuario_id) {
+                return
+            }
+    
+            const novoEndereco = await endereco.create({
+                ...req.body,
+                where: {
+                    usuario_id
+                }
+            });
             return res.status(201).json(novoEndereco);
         } catch (error) {
             return res.status(500).json(error);
@@ -71,7 +81,7 @@ const EnderecoController = {
 
                 }
             });
-            if (!existeId === id) {
+            if (!existeId) {
                 return res.status(400).json({ message: 'Endereco não encontrado' })
             }
 
@@ -90,9 +100,8 @@ const EnderecoController = {
 
     async getAll(req, res) {
         try {
-            //console.log(req)
-            const enderecos = await enderecoService.listarEnderecos();
-            return res.json(enderecos);
+            const ListarEndereco = await endereco.findAll();
+            return res.json(ListarEndereco);
         } catch (error) {
             return res.status(500).json(error);
         }
@@ -100,8 +109,9 @@ const EnderecoController = {
 
     async getOne(req, res) {
         try {
-            const endereco = await enderecoService.umEndereco(req.params);
-            return res.json(endereco);
+            const { id } = req.params;
+            const umEndereco = await endereco.findByPk(id);
+            return res.json(umEndereco);
         } catch (error) {
             return res.status(500).json(error);
         }

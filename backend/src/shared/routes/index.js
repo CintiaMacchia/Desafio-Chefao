@@ -52,9 +52,9 @@ routes.put("/condicao/:id", CondicaoController.update)
 // //Endereço
 routes.get("/endereco", EnderecoController.getAll);
 routes.get("/endereco/:id", EnderecoController.getOne);
-// routes.post("/endereco", EnderecoController.create)
+routes.post("/endereco", EnderecoController.create)
 routes.put("/endereco/:id", EnderecoController.update)
-    // routes.delete("/endereco/:id", EnderecoValidation.destroy, EnderecoController.delete);
+routes.delete("/endereco/:id", EnderecoController.delete);
 
 //produtos
 
