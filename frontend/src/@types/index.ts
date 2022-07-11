@@ -6,6 +6,14 @@ export interface Login {
 export interface User extends Login {
     id: number,
     nome: string,
+    estado: string,
+    cidade: string,
+    endereco: string,
+    numero: string,
+    cep: string,
+    bairro: string,
+    complemento: string,
+    termos: false
 }
 
 export interface Endereco {
