@@ -18,7 +18,7 @@ const FormCadastro: React.FC = () => {
                     initialValues={{
                         nome: '',
                         email: '',
-                        password: ''
+                        senha: ''
 
                     }}
                     onSubmit={async (values: any) => {
@@ -56,8 +56,8 @@ const FormCadastro: React.FC = () => {
                         </S.StyledFormGroup>
                         <S.StyledFormGroup>
                             <S.StyledLabel>Senha *</S.StyledLabel>
-                            <CadastroLoginInput id='password' name='password' type='password' />
-                            <ErrorMessage name='password' component={S.StyledError} />
+                            <CadastroLoginInput id='senha' name='senha' type='password' />
+                            <ErrorMessage name='senha' component={S.StyledError} />
                         </S.StyledFormGroup>
                         <S.StyledFormGroup>
                             <S.StyledLabel>Confirme sua senha *</S.StyledLabel>

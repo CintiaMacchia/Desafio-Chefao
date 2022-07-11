@@ -1,6 +1,6 @@
 export interface Login {
     email: string,
-    password: string
+    senha: string
 }
 
 export interface User extends Login {

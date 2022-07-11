@@ -15,7 +15,7 @@ const LoginForm: React.FC = () => {
 
     const schema = Yup.object({
         email: Yup.string().email('E-mail não é válido').required('Campo E-mail é obrigatório'),
-        password: Yup.string().required('Campo Senha é obrigatório').min(6, 'Senha deve ter pelo menos 6 caracteres.')
+        senha: Yup.string().required('Campo Senha é obrigatório').min(6, 'Senha deve ter pelo menos 6 caracteres.')
     }) 
 
     return (
@@ -24,7 +24,7 @@ const LoginForm: React.FC = () => {
                 validationSchema={schema}
                 initialValues={{
                     email: '',
-                    password: ''
+                    senha: ''
                 }}
                 onSubmit={async values => {
                     const { accessToken, user } = await loginUser(values);
@@ -57,17 +57,17 @@ const LoginForm: React.FC = () => {
                         <S.StyledLabel>Senha</S.StyledLabel>
                         <S.StyledInput 
                             className='w-100'
-                            id='password'
-                            name='password'
+                            id='senha'
+                            name='senha'
                             type='password'
                             aria-label="Username"
                             aria-describedby="basic-addon1"
-                            value={values.password}
+                            value={values.senha}
                             onChange={handleChange}
-                            isValid={touched.password && !errors.password}
-                            isInvalid={touched.password && !!errors.password}
+                            isValid={touched.senha && !errors.senha}
+                            isInvalid={touched.senha && !!errors.senha}
                         />
-                        <ErrorMessage name='password' component={S.StyledError}/>
+                        <ErrorMessage name='senha' component={S.StyledError}/>
                     </Form.Group>
                     <a href='#' className='link'>Esqueceu a senha?</a>
                     <Form.Group className='mt-4'>
