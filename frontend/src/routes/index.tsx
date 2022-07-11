@@ -27,9 +27,9 @@ function AppRoutes(): JSX.Element {
         <Route
           path="/anuncio"
           element={
-            /*<RequireAuth>*/
+            <RequireAuth>
             <Anuncio />
-            /*</RequireAuth>*/
+            </RequireAuth>
           }
         />
         <Route
@@ -46,7 +46,7 @@ function AppRoutes(): JSX.Element {
         <Route path="/faboritos" element={<PageFaboritos />}/>
         <Route path="/d-produto" element={<ProdutosDetail />} />
         <Route
-          path="/contato:id"
+          path="/contato"
           element={
             <RequireAuth>
               <Contato />

@@ -106,3 +106,9 @@ export const StyledButtonOrange = styled(Button)`
         border: 1px solid #FF8B20;
     }
 `
+
+export const StyledError = styled.div`
+    padding-left: 0.5rem;
+    color: #FF3333;
+    font-size: 0.8rem;
+`

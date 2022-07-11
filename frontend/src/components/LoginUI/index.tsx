@@ -28,7 +28,7 @@ const LoginForm: React.FC = () => {
                 }}
                 onSubmit={async values => {
                     const { accessToken, user } = await loginUser(values);
-                    alert(JSON.stringify(user, null, 2))
+                    // alert(JSON.stringify(user, null, 2))
                     dispatch(logIn({accessToken, user}));
                     //@ts-ignore
                     baseApi.defaults.headers["Authorization"] = `Bearer ${accessToken}`
@@ -51,7 +51,7 @@ const LoginForm: React.FC = () => {
                             isValid={touched.email && !errors.email}
                             isInvalid={touched.email && !!errors.email}
                         />
-                        <ErrorMessage name='email'/>
+                        <ErrorMessage name='email' component={S.StyledError}/>
                     </Form.Group>
                     <Form.Group>
                         <S.StyledLabel>Senha</S.StyledLabel>
@@ -65,6 +65,7 @@ const LoginForm: React.FC = () => {
                             isValid={touched.password && !errors.password}
                             isInvalid={touched.password && !!errors.password}
                         />
+                        <ErrorMessage name='password' component={S.StyledError}/>
                     </Form.Group>
                     <a href='#' className='link'>Esqueceu a senha?</a>
                     <Form.Group className='mt-4'>

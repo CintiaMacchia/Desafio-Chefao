@@ -83,35 +83,35 @@ const FormAnuncio: React.FC = () => {
           <h3 className="anuncio-h3">Título *</h3>
           <input
             type="text"
-            className="form-control input-text"
+            className="form-control-anuncio input-text"
             onChange={(e) => setName(e.target.value)}
             placeholder=""
           ></input>
           <h3 className="anuncio-h3">Valor</h3>
           <input
             type="text"
-            className="form-control input-text"
+            className="form-control-anuncio input-text"
             onChange={(e) => setPrice(e.target.value)}
             placeholder=""
           ></input>
           <h3 className="anuncio-h3">Estado *</h3>
           <input
             type="text"
-            className="form-control input-text"
+            className="form-control-anuncio input-text"
             onChange={(e) => setState(e.target.value)}
             placeholder=""
           ></input>
           <h3 className="anuncio-h3">Cidade *</h3>
           <input
             type="text"
-            className="form-control input-text"
+            className="form-control-anuncio input-text"
             onChange={(e) => setCity(e.target.value)}
             placeholder=""
           ></input>
           <h3 className="anuncio-h3">Celular</h3>
           <input
             type="text"
-            className="form-control input-text"
+            className="form-control-anuncio input-text"
             onChange={(e) => setCell(e.target.value)}
             placeholder=""
           ></input>
@@ -122,7 +122,7 @@ const FormAnuncio: React.FC = () => {
           <h3 className="anuncio-h3">Categoria *</h3>
           <input
             type="text"
-            className="form-control input-text"
+            className="form-control-anuncio input-text"
             placeholder=""
             onChange={(e) => setCategory(e.target.value)}
           ></input>
