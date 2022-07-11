@@ -12,7 +12,7 @@ const app = express();
 
 app.use(
     cors({
-        origin: 'https://desafio-chefao-one.vercel.app/'
+        origin: 'https://desafio-chefao-one.vercel.app'
     })
 )
 app.use(express.json());
