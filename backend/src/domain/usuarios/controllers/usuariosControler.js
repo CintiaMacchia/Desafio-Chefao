@@ -1,4 +1,3 @@
-import { Request, Response } from "express";
 const { usuarioService } = require('../services/UsuarioService')
 const { Usuarios } = require('../models/usuario')
 

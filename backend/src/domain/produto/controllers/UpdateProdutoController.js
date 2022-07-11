@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-//import { Request, Response } from 'express';
-
-const { Produtos } = require('../models/produto')
-    //import cloudinary from '../../../config/cloudinary'
-=======
 const Produtos = require("../models/produto")
-//import cloudinary from '../../../config/cloudinary'
->>>>>>> 3d12aceeec85c81cfe66b7b13c9dcc754986a2ff
+    //import cloudinary from '../../../config/cloudinary'
 
-export const updateProdutoController = {
+module.exports = updateProdutoController = {
     async update(req, res) {
         try {
             const { id } = req.params;

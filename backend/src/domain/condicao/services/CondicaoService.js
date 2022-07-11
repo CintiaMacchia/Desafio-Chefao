@@ -1,12 +1,12 @@
 const { Condicao } = require('../models/condicao')
 
-export class CondicaoService {
+module.exports = CondicaoService = {
     async cadastrarCondicao(data) {
         const novaCondicao = await Condicao.create({
             ...data,
         })
         return novaCondicao;
-    }
+    },
 
     async alterarCondicao(data, params, auth) {
         const { id } = params;
@@ -28,7 +28,7 @@ export class CondicaoService {
         const condicao = await Condicao.findByPk(id);
         return condicao
 
-    }
+    },
 
     async excluirCondicao(params, auth) {
         const { id } = params;
@@ -43,18 +43,18 @@ export class CondicaoService {
             }
         });
         return
-    }
+    },
 
     async todasCondicoes() {
 
         const todasAsCondicoes = await Condicao.findAll();
         return todasAsCondicoes;
-    }
+    },
 
     async umaCondicao(params) {
         const { id } = params;
         const umaCondicao = await Condicao.findByPk(id);
         return umaCondicao
-    }
+    },
 
 }

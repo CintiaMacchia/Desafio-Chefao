@@ -2,7 +2,7 @@ const express = require('express')
 const db = require('../../backend/src/shared/infrastructure/database')
 const handleMiddleware = require('./shared/middlewares/hendleMiddleware')
 const routes = require('./shared/routes/index')
-const upload = require('./shared/infrastructure/config/upload')
+const upload = require('./config/upload')
 
 
 

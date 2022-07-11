@@ -3,7 +3,7 @@ const express = require('express')
 const routes = express.Router()
 
 const { UsuarioValidation } = require('../../domain/usuarios/validations');
-const { UsuarioController } = require('../../domain/usuarios/controllers/usuariosControler')
+const usuarioController = require('../../domain/usuarios/controllers/usuariosControler');
 const { CondicaoController } = require('../../domain/condicao/controllers/condicaoController');
 const { CondicaoValidation } = require('../../domain/condicao/validations');
 const { CategoriaValidation } = require('../../domain/categoria/validations');
@@ -22,47 +22,47 @@ const auth = require('../middlewares/auth')
 //import ProdutoCreateController from '../../domain/produto/controllers/ProdutoCreateController'
 //usuarios
 
-routes.post("/users", UsuarioValidation.create, UsuarioController.create);
-routes.get("/users", UsuarioController.getAll);
-routes.get("/users/:id", UsuarioValidation.getOne, UsuarioController.getOne);
-routes.put("/users/:id", UsuarioValidation.update, UsuarioController.update);
-routes.delete("/users/:id", UsuarioValidation.destroy, UsuarioController.delete);
+routes.post("/users", usuarioController.create);
+// routes.get("/users", UsuarioController.getAll);
+// routes.get("/users/:id", UsuarioValidation.getOne, UsuarioController.getOne);
+// routes.put("/users/:id", UsuarioValidation.update, UsuarioController.update);
+// routes.delete("/users/:id", UsuarioValidation.destroy, UsuarioController.delete);
 
-//login
-routes.post("/login", UsuarioController.login);
-routes.post("/login", loginValidation, auth, UsuarioController.login)
+// //login
+// routes.post("/login", UsuarioController.login);
+// routes.post("/login", loginValidation, auth, UsuarioController.login)
 
-// routes.post("/login", loginValidation, auth, UsuarioValidation.create);
+// // routes.post("/login", loginValidation, auth, UsuarioValidation.create);
 
-//categoria
-routes.post("/categoria", CategoriaValidation.create, CategoriaController.create);
-routes.get("/categoria/:id", CategoriaController.getOne);
-routes.get("/categorias", CategoriaController.getAll);
-routes.put("/categoria/:id", CategoriaValidation.update, CategoriaController.update);
-routes.delete("/categoria/:id", CategoriaController.delete);
+// //categoria
+// routes.post("/categoria", CategoriaValidation.create, CategoriaController.create);
+// routes.get("/categoria/:id", CategoriaController.getOne);
+// routes.get("/categorias", CategoriaController.getAll);
+// routes.put("/categoria/:id", CategoriaValidation.update, CategoriaController.update);
+// routes.delete("/categoria/:id", CategoriaController.delete);
 
 
-//Condicao
-routes.get("/condicao", CondicaoController.getAll)
-routes.post("/condicao", CondicaoValidation.create, CondicaoController.create)
-routes.get("/condicao/:id", CondicaoController.getOne)
-routes.delete("/condicao/:id", CondicaoValidation.destroy, CondicaoController.delete)
-routes.put("/condicao/:id", CondicaoValidation.update, CondicaoController.update)
+// //Condicao
+// routes.get("/condicao", CondicaoController.getAll)
+// routes.post("/condicao", CondicaoValidation.create, CondicaoController.create)
+// routes.get("/condicao/:id", CondicaoController.getOne)
+// routes.delete("/condicao/:id", CondicaoValidation.destroy, CondicaoController.delete)
+// routes.put("/condicao/:id", CondicaoValidation.update, CondicaoController.update)
 
-//Endereço
-routes.get("/endereco", EnderecoController.getAll);
-routes.get("/endereco/:id", EnderecoController.getOne);
-routes.post("/endereco", EnderecoController.create)
-routes.put("/endereco/:id", EnderecoController.update)
-routes.delete("/endereco/:id", EnderecoValidation.destroy, EnderecoController.delete);
+// //Endereço
+// routes.get("/endereco", EnderecoController.getAll);
+// routes.get("/endereco/:id", EnderecoController.getOne);
+// routes.post("/endereco", EnderecoController.create)
+// routes.put("/endereco/:id", EnderecoController.update)
+// routes.delete("/endereco/:id", EnderecoValidation.destroy, EnderecoController.delete);
 
 //produtos
 
-routes.get("/produtos", FindAllProdutoController.listarTodos);
-routes.get("/produto/:id", FindOneProdutosController.umProduto);
-routes.delete("/produto/:id", DestroyProdutoController.delete);
-routes.put("/produto/:id", updateProdutoController.update);
-routes.post("/produto", CreateProdutoController.create) <<
+// routes.get("/produtos", FindAllProdutoController.listarTodos);
+// routes.get("/produto/:id", FindOneProdutosController.umProduto);
+// routes.delete("/produto/:id", DestroyProdutoController.delete);
+// routes.put("/produto/:id", updateProdutoController.update);
+//routes.post("/produto", CreateProdutoController.create) <<
 
 
-    module.exports
+module.exports = routes

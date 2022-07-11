@@ -1,7 +1,7 @@
 const { condicaoService } = require('../services')
 const { Condicao } = require('../models/condicao')
 
-export const CondicaoController = {
+module.exports = CondicaoController = {
     async create(req, res) {
         try {
             const novaCondicao = await condicaoService.cadastrarCondicao(req.body);

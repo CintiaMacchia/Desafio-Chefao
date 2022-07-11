@@ -4,7 +4,7 @@ const { getOne } = require('./condicao/getOne')
 const { destroy } = require('./condicao/destroy')
 
 
-export const CondicaoValidation = {
+module.exports = CondicaoValidation = {
     create,
     update,
     getOne,

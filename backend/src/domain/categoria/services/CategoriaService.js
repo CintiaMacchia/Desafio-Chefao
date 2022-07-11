@@ -3,13 +3,13 @@ const { Categoria } = require('../models/categoria')
     //import jwt from 'jsonwebtoken';
 require('dotenv').config();
 
-export class CategoriaService {
+module.exports = CategoriaService = {
     async cadatrarCategoria(data) {
         const novaCategoria = await Categoria.create({
             ...data
         });
         return novaCategoria;
-    }
+    },
 
     async updateCategoria(data, params) {
         const { id } = params;
@@ -27,7 +27,7 @@ export class CategoriaService {
         });
         const trocarCategoria = await Categoria.findByPk(id);
         return trocarCategoria;
-    }
+    },
 
     async excluirCategoria(params, auth) {
         const { id } = params;
@@ -40,12 +40,11 @@ export class CategoriaService {
             where: { id }
         });
         return
-    }
-
+    },
     async listarCategorias() {
         const listarCategorias = await Categoria.findAll();
         return listarCategorias;
-    }
+    },
 
     async umaCategoria(params) {
         const { id } = params;

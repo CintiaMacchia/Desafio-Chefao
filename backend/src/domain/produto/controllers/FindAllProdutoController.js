@@ -1,6 +1,6 @@
 const FindAllProdutosUseCase = ("../useCase/findAllProdutoUseCase")
 
-export const FindAllProdutoController = {
+module.exports = FindAllProdutoController = {
     async listarTodos(req, res) {
         try {
             const produtos = await FindAllProdutosUseCase.ListarProdutos();

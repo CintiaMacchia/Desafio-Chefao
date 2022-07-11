@@ -1,21 +1,23 @@
-const db = require('"../../../shared/infrastructure/database"')
+const db = require('../../../shared/infrastructure/database')
 const { DataTypes } = require('sequelize')
 
-export const Condicao = db.define(
-  "condicoes",
-  { id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    condicao:{
-      type: DataTypes.STRING,
-    },
-    createdAt: {
-      type: DataTypes.DATE,
-    },
-    updatedAt: {
-      type: DataTypes.DATE,
-    },
-  },
+module.exports = Condicao = db.define(
+    "condicoes", {
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
+        },
+        condicao: {
+            type: DataTypes.STRING,
+        },
+        createdAt: {
+            type: DataTypes.DATE,
+        },
+        updatedAt: {
+            type: DataTypes.DATE,
+        },
+    }, {
+        tablename: 'condicoes'
+    }
 )

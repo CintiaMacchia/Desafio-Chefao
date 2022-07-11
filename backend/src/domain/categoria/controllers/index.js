@@ -3,7 +3,7 @@ const categoriaService = require('../services');
 
 
 
-export const CategoriaController = {
+module.exports = CategoriaController = {
 
     async create(req, res) {
         try {

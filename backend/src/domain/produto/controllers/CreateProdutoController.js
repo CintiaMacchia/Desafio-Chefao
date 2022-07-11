@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-import { CreateProdutoUseCase } from '../useCase/createProdutoUseCase';
-
-const { Produtos } = require('../models/produto')
+const Produtos = require('../models/produto')
     //import upload from '../../../shared/infrastructure/config/upload';
     //import multer from 'multer';
-=======
-const Produtos = require('../models/produto')
-//import upload from '../../../shared/infrastructure/config/upload';
-//import multer from 'multer';
->>>>>>> 3d12aceeec85c81cfe66b7b13c9dcc754986a2ff
 const fs = require('fs');
 //         returnimport cloudinary from '../../../config/cloudinary'
 const cloudinary = require('../../../config/cloudinary')
@@ -17,7 +9,7 @@ const imagemFolder = 'images/';
 
 //interface AuthRequest extends Request{ files: any}
 
-export const CreateProdutoController = {
+module.exports = CreateProdutoController = {
     async create(req, res) {
 
         const file = req.files[0]

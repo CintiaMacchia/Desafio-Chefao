@@ -5,7 +5,7 @@ const { destroy } = require('./categoria/destroy')
 
 
 
-export const CategoriaValidation = {
+module.exports = CategoriaValidation = {
     create,
     getOne,
     destroy,

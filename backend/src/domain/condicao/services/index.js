@@ -1,3 +1,6 @@
 const { CondicaoService } = require('./CondicaoService')
 
-export const condicaoService = new CondicaoService;
+
+
+// const condicaoService = new CondicaoService;
+// module.exports = condicaoService

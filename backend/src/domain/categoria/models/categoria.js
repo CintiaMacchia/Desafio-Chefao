@@ -1,7 +1,7 @@
-const db = require('"../../../shared/infrastructure/database"')
+const db = require("../../../shared/infrastructure/database")
 const { DataTypes } = require('sequelize');
 
-export const Categoria = db.define(
+module.exports = Categoria = db.define(
     "categoria", {
         id: {
             type: DataTypes.INTEGER,
