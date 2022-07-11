@@ -2,7 +2,7 @@ const { enderecoService } = require('../services');
 const endereco = require('../models/endereco');
 
 
-module.exports = EnderecoController = {
+const EnderecoController = {
     async create(req, res) {
         try {
             const novoEndereco = await enderecoService.cadastrarEndereco(req.body, req.params);
@@ -108,3 +108,4 @@ module.exports = EnderecoController = {
     }
 
 };
+module.exports = EnderecoController

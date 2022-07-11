@@ -35,11 +35,11 @@ routes.post("/login", UsuarioController.login);
 // // routes.post("/login", loginValidation, auth, UsuarioValidation.create);
 
 //categoria
-routes.post("/categoria", categoriaController.create);
-routes.get("/categoria/:id", categoriaController.getOne);
-routes.get("/categorias", categoriaController.getAll)
-routes.put("/categoria/:id", categoriaController.update);
-routes.delete("/categoria/:id", categoriaController.delete);
+routes.post("/categoria", CategoriaController.create);
+routes.get("/categoria/:id", CategoriaController.getOne);
+routes.get("/categorias", CategoriaController.getAll)
+routes.put("/categoria/:id", CategoriaController.update);
+routes.delete("/categoria/:id", CategoriaController.delete);
 
 
 // //Condicao
