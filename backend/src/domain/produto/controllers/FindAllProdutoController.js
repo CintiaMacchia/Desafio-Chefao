@@ -1,20 +1,19 @@
-const Produtos = require('../models/produto');
-const findAllProdutoUseCase = require('../useCase/findAllProdutoUseCase')
+//const FindAllProdutosUseCase = ("../useCase/findAllProdutoUseCase")
+//const FindAllProdutosUseCase = require('../useCase/findAllProdutoUseCase')
+const  Produtos  = require('../models/produto')
+require('dotenv').config();
 
-
-const ProdutoController = {
+const FindAllProdutoController = {
     async getAll(req, res) {
         try {
-
-            const ListarProdutos = await findAllProdutoUseCase.ListarProdutos();
-
-            return res.status(204).json(ListarProdutos);
-
+            const ListarProdutos = await Produtos.findAll()
+            return res.json(ListarProdutos);
         } catch (error) {
+            console.log(error)
             return res.status(500).json(error);
+
         }
     },
+};
 
-}
-
-module.exports = ProdutoController
+module.exports = FindAllProdutoController
