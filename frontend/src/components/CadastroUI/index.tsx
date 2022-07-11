@@ -34,7 +34,7 @@ const FormCadastro: React.FC = () => {
                             nome: Yup.string().required('Campo E-mail é obrigatório'),
                             email: Yup.string().email('E-mail não é válido').required('Campo E-mail é obrigatório'),
                             password: Yup.string().required('Campo Senha é obrigatório').min(6, 'Senha deve ter pelo menos 6 caracteres.'),
-                            confirmaSenha: Yup.string().required('Campo Confirmar Senha é obrigatório').oneOf([Yup.ref('password'), null], 'As senhas digitadas devem ser idênticas.')
+                            confirmaSenha: Yup.string().required('Campo Confirmar Senha é obrigatório').oneOf([Yup.ref('senha'), null], 'As senhas digitadas devem ser idênticas.')
                         })}
                         >
                         <div style={{display: 'flex', flexFlow: 'column nowrap',width: '100%'}}>
