@@ -4,35 +4,19 @@ const routes = express.Router()
 
 const UsuarioValidation = require('../../domain/usuarios/validations');
 const UsuarioController = require('../../domain/usuarios/controllers/usuariosControler');
-
-const CondicaoController = require('../../domain/condicao/controllers/condicaoController');
-const CondicaoValidation = require('../../domain/condicao/validations');
-const CategoriaValidation = require('../../domain/categoria/validations');
-const categoriaController = require('../../domain/categoria/controllers')
-const EnderecoController = require('../../domain/endereco/controllers/enderecoController')
-const EnderecoValidation = require('../../domain/endereco/validations');
-const ProdutoController = require('../../domain/produto/controllers/FindAllProdutoController');
-const FindOneProdutosController = require('../../domain/produto/controllers/FindOneProdutoController');
-const DestroyProdutoController = require('../../domain/produto/controllers/DestroyProdutoController');
-const updateProdutoController = require('../../domain/produto/controllers/UpdateProdutoController');
-const CreateProdutoController = require('../../domain/produto/controllers/CreateProdutoController')
-const loginValidation = require('../../domain/usuarios/validations/usuarios/login')
-
-
-// const { CondicaoController } = require('../../domain/condicao/controllers/condicaoController');
-// const { CondicaoValidation } = require('../../domain/condicao/validations');
-// const { CategoriaValidation } = require('../../domain/categoria/validations');
-// const  CategoriaController  = require('../../domain/categoria/controllers')
-// const { EnderecoController } = require('../../domain/endereco/controllers/enderecoController')
-// const { EnderecoValidation } = require('../../domain/endereco/validations');
-// const { FindAllProdutoController } = require('../../domain/produto/controllers/FindAllProdutoController');
-// const { FindOneProdutosController } = require('../../domain/produto/controllers/FindOneProdutoController');
-// const { DestroyProdutoController } = require('../../domain/produto/controllers/DestroyProdutoController');
-// const { updateProdutoController } = require('../../domain/produto/controllers/UpdateProdutoController');
-// const { CreateProdutoController } = require('../../domain/produto/controllers/CreateProdutoController')
-// const { loginValidation } = require('../../domain/usuarios/validations/usuarios/login')
-
-// const auth = require('../middlewares/auth')
+const CondicaoController  = require('../../domain/condicao/controllers/condicaoController');
+const CondicaoValidation  = require('../../domain/condicao/validations');
+const CategoriaValidation  = require('../../domain/categoria/validations');
+const CategoriaController  = require('../../domain/categoria/controllers')
+const EnderecoController  = require('../../domain/endereco/controllers/enderecoController')
+const EnderecoValidation  = require('../../domain/endereco/validations');
+const  FindAllProdutoController  = require('../../domain/produto/controllers/FindAllProdutoController');
+const FindOneProdutosController  = require('../../domain/produto/controllers/FindOneProdutoController');
+const DestroyProdutoController  = require('../../domain/produto/controllers/DestroyProdutoController');
+const updateProdutoController  = require('../../domain/produto/controllers/UpdateProdutoController');
+const CreateProdutoController  = require('../../domain/produto/controllers/CreateProdutoController')
+const loginValidation  = require('../../domain/usuarios/validations/usuarios/login')
+const auth = require('../middlewares/auth')
 
 //interface  ProdutoController {} ('../../domain/produto/Create/ProdutoController')
 //import ProdutoCreateController from '../../domain/produto/controllers/ProdutoCreateController'
@@ -74,7 +58,7 @@ routes.put("/endereco/:id", EnderecoController.update)
 
 //produtos
 
-routes.get("/produtos", ProdutoController.getAll);
+routes.get("/produtos", FindAllProdutoController.getAll);
 routes.get("/produto/:id", FindOneProdutosController.getOne);
 routes.delete("/produto/:id", DestroyProdutoController.delete);
 routes.put("/produto/:id", updateProdutoController.update);

@@ -41,6 +41,5 @@ const Produtos = db.define(
     }, {
         tablename: "produtos",
     }
-);
-
+)
 module.exports = Produtos

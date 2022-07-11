@@ -3,11 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "api": "json-server --watch api.json --port 3333",
+    "dev": "vite",    
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "start": "node src/App.tsx"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
