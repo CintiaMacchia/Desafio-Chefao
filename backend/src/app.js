@@ -3,14 +3,14 @@ const db = require('../src/shared/infrastructure/database')
 const handleMiddleware = require('./shared/middlewares/hendleMiddleware')
 const routes = require('./shared/routes/index')
 const upload = require('./config/upload')
-
+const cors = require('cors')
 
 
 
 const app = express();
 
 
-
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(upload.any());
