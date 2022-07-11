@@ -15,11 +15,10 @@ const PageFaboritos: React.FC = () => {
     return (
     <>
         <Header />
-       < Breadcrumbs
-       firstPage=''
-       secondPage='Favoritos'
-    />
-      <BreadcrumbSecundario text={categoria} />
+        <Breadcrumbs
+            firstPage='Favoritos'
+        />
+        <BreadcrumbSecundario text={categoria} />
         <ContentList />
         
         <div className="d-flex justify-content-center mt-5 mb-5"><IoIosArrowBack/><span> Página 1 de 3</span><IoIosArrowForward/></div> 

@@ -1,5 +1,4 @@
-import { Routes as Wrapper, BrowserRouter, Route } from "react-router-dom"
-import { useSelector } from "react-redux"
+import { Routes as Wrapper, BrowserRouter, Route } from "react-router-dom";
 
 import Cadastro from "../pages/Cadastro"
 import ConfirmaAnuncio from "../pages/ConfirmaAnuncio"
@@ -43,10 +42,8 @@ function AppRoutes(): JSX.Element {
         />
         <Route path="/produtos" element={<Produtos />}>
            {/* <Route path=":id" element={<ProdutosDetail />} /> */}
-           </Route>
+        </Route>
         <Route path="/faboritos" element={<PageFaboritos />}/>
-         
-       
         <Route path="/d-produto" element={<ProdutosDetail />} />
         <Route
           path="/contato:id"

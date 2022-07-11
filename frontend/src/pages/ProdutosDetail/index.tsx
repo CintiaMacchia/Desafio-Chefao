@@ -1,84 +1,52 @@
-import React, { useState } from "react";
-import Container from "../../components/Container";
-import { Footer } from "../../components/Footer";
 
-import Mochila2 from "../../components/assets/images/images-details/MochilaBatmanSmall2.png";
-import Mochila3 from "../../components/assets/images/images-details/MochilaBatmanSmall3.png";
-import Mochila1 from "../../components/assets/images/images-details/MochilaBatmanSmall1.png";
-import Mochila from "../../components/assets/images/images-details/MochilaBatman.png";
-
-import Header from "../../components/Header";
-import ProdutosCarrossel from "../../components/ProdutosCarrossel";
+import React from "react";
+import ImageGallery from 'react-image-gallery';
+import Menu from "../../components/Header";
 import ButtonBorda from "../../components/ButtonBorda";
+import ProdutosCarrossel from "../../components/ProdutosCarrossel";
+import { Footer } from "../../components/Footer";
+import Mochila1 from "../../components/assets/images/images-details/MochilaBatman.png";
+import Mochila2 from "../../components/assets/images/images-details/MochilaBatman2.png";
+import Mochila3 from "../../components/assets/images/images-details/MochilaBatman3.png";
 import { AiOutlineHeart } from "react-icons/ai";
 
-
 import "./style.css";
-import { Carousel } from "react-bootstrap";
+import "react-image-gallery/styles/css/image-gallery.css";
+
 const ProdutosDetail: React.FC = () => {
-  const [index, setIndex] = useState(0);
-  const handleSelect = (selectedIndex: React.SetStateAction<number>, e: any) => {
-    setIndex(selectedIndex);
-  };
-  ;
-  return (
-    <>
-      <Header />
-      <section className="container-fluid mt-5 mb-5 ">
+
+  const images = [
+    {
+      original: Mochila1,
+      thumbnail: Mochila1,
+    },
+    {
+      original: Mochila2,
+      thumbnail: Mochila2,
+    },
+    {
+      original: Mochila3,
+      thumbnail: Mochila3,
+    },
+  ];
+
+return (
+    <> 
+      <Menu />
+      <section className="container-fluid" style={{margin: '6.25rem 0'}}>
         <div className="row">
-          <div className="d-flex justify-content-center">
-            <div className="">
-              <div className="row">
-                <div className="p-1 m-1">
-                  <img className="img-Preview " src={Mochila1} alt="logo" title="" />
-                </div>
-              </div>
-              <div className="row">
-                <div className=" p-1 m-1">
-                  <img className="img-Preview " src={Mochila2} alt="logo" title="" />
-                </div>
-              </div>
-              <div className="row">
-                <div className=" p-1 ">
-                  <img className="img-Preview " src={Mochila} alt="Mochila-Batman" title="MochilaBatman" />
-                </div>
-              </div>
-            </div>
+          <div className="d-flex justify-content-center">    
+              <ImageGallery
+                items={images} 
+                thumbnailPosition='left'
+                showBullets={false}
+                showPlayButton={false}
+                showNav={false}
+                disableThumbnailScroll={true}
+              />
 
-            <div className="img-Produto-principal">
-
-              <Carousel activeIndex={index} variant="dark" interval={null}  onSelect={handleSelect}>
-                <Carousel.Item>
-                  <img
-                    className="d-block position-relative"
-                    src={Mochila}
-                    alt="First slide"
-                  />
-
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block positon-relative "
-                    src={Mochila2}
-                    alt="Second slide"
-                  />
-
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block position-relative"
-                    src={Mochila1}
-                    alt="Third slide"
-                  />
-
-                </Carousel.Item>
-              </Carousel>
-
-
-            </div>
-            <div className="w-25">
-              <div className="">
-                <div className=" mt-4 ">
+            <div style={{width: '32rem', paddingLeft: '1.688rem'}}>
+                <div>
                   <p>Categoria : Mochila / Estado : SP</p>
 
                   <span className=" fs-5">Mochila do Batman</span> <br />
@@ -90,16 +58,12 @@ const ProdutosDetail: React.FC = () => {
                     uso. Envio por correio ou para retirada em São Paulo.
                   </p>
                   <div className="d-flex justify-content-start ">
-
-                    <ButtonBorda text="contacto" />
+                    <ButtonBorda text="Contato" />
                     <div className="p-1 px-3 mx-2 border faboritar-button ">
                       <AiOutlineHeart className="" />
                     </div>
-
                   </div>
                 </div>
-              </div>
-
             </div>
           </div>
         </div>
@@ -111,11 +75,11 @@ const ProdutosDetail: React.FC = () => {
       </div>
 
 
-      <div className="d-flex justify-content-center fs-1 pt-5 w-100 buttton-mais-items" >
+      <div className="d-flex justify-content-center fs-1 pt-5 w-100 buttton-mais-items" style={{marginBottom: '6.25rem'}} >
         <ButtonBorda text="Veja todos os itens" />
       </div>
 
-      <Footer />
+      <Footer /> 
     </>
   );
 };

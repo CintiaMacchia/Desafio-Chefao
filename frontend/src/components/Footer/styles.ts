@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const StyledFooter = styled.footer`
     width: 100%;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: flex-start;
     background-color: rgba(53, 53, 53, 0.05);
     padding: 4rem 0;
 
@@ -31,13 +31,18 @@ export const StyledFooter = styled.footer`
 export const FirstHalfContainer = styled.div`
     display:flex;
     flex-flow: row nowrap;
+    padding-left: 8rem;
+
+    @media (min-width: 1500px) {
+        padding-left: 10rem;
+    }
 `
 
 export const SecondHalfContainer = styled.div`
     position: relative;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: flex-start;
     margin-left: 3.25rem;
 `
 
@@ -70,6 +75,7 @@ export const SocialMediaContainer = styled.div`
 `
 
 export const CompanyInfoContainer = styled.div`
+    padding-top: 2.313rem;
     width: 19.188rem;
     height: 100%;
     
@@ -131,4 +137,10 @@ export const FooterMailingContainer = styled.div`
 export const MailingListForm = styled.form`
     display: flex;
     flex-flow: row nowrap;
+`
+
+export const StyledCopyright = styled.div`
+    margin-top: 2rem;
+    font-size: 0.75rem;
+    font-weight: 400;
 `

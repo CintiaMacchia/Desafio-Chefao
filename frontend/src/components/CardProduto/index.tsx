@@ -1,6 +1,6 @@
 import * as S from './styles'
 import mochilaImg from '../../components/assets/images/mochila.png';
-import FavoriteIcon from '../Favoritos';
+import FavoriteIcon from './IconeFavorito';
 
 interface CardProdutoProps {
     titulo: string,

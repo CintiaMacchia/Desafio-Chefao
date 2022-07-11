@@ -6,7 +6,7 @@ import * as S from './styles'
 
 export function Footer() {
   return (
-
+  <>
     <S.StyledFooter>
       <S.FirstHalfContainer>
         <S.FooterInfoContainer>
@@ -26,6 +26,7 @@ export function Footer() {
               <AiFillInstagram size={20} className='company-info__social-icons'/>
               <FaTwitter size={20} color='#56CCF2' className='company-info__social-icons'/>
             </div>
+            <S.StyledCopyright>© PassoRepasso - Todos os direitos reservados</S.StyledCopyright>
           </S.SocialMediaContainer>
         </S.FooterInfoContainer>
 
@@ -66,6 +67,7 @@ export function Footer() {
 
       </S.SecondHalfContainer>
     </S.StyledFooter>
+  </>
   );
 };
 
