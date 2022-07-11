@@ -30,39 +30,3 @@ export const SvgContainer = styled.div `
         stroke-dasharray: 1550;
     }
 `
-
-
-/* .heart-background {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    stroke: none;
-}
-
-.heart-main:hover ~ .heart-background path {
-    animation: fade-animation 2s ease-in-out forwards;
-}
-
-@keyframes fade-animation {
-    10% {
-        fill: transparent;
-        transform: scale(1);
-    }
-    20% {
-        fill: red;
-        transform: scale(1.1);
-        opacity: 1;
-    }
-    30% {
-        opacity: 1;
-    }
-    40% {
-        transform: scale(2.5);
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-} */
-

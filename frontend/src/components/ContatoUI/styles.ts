@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
 
 export const StyledContainer = styled.div`
     width: 100%;
@@ -84,14 +84,23 @@ export const StyledButtonOrange = styled(Button)`
     cursor: pointer;
 
     &:hover {
-        background-color: #E46D00;
-        color: #FFF;
-        border: 1px solid #E46D00;
+        background-color: #FFF;
+        color: #FF8B20;
+        border: 1px solid #FF8B20;
     }
 
     &:focus {
-        background-color: #E46D00;
-        color: #FFF;
-        border: 1px solid #E46D00;
+        background-color: #FFF;
+        color: #FF8B20;
+        border: 1px solid #FF8B20;
+    }
+`
+export const CheckBox = styled(Form.Check.Input)`
+    border-radius: 0% !important;
+    border: 1px solid #C9C9C9;
+    margin-right: 0.5rem;
+    :checked {
+        background-color: #FF8B20;
+        border: 1px solid #FF8B20;
     }
 `

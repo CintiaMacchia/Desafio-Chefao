@@ -206,7 +206,20 @@
       "complemento": "csa",
       "termos": true,
       "id": 2
+    },
+    {
+      "email": "alogalera@teste.com.br",
+      "password": "$2a$10$mGeyEaje.LAM8lOqjykg6.NLZuSKyufzd6x7qwP2SnBajRxWWI50W",
+      "confirmaSenha": "123456",
+      "estado": "AC",
+      "cidade": "Cidade",
+      "endereco": "rua logo ali",
+      "numero": "123",
+      "cep": "000000000",
+      "bairro": "123456",
+      "complemento": "",
+      "termos": true,
+      "id": 3
     }
-  
   ]
 }

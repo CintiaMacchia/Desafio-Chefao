@@ -1,17 +1,15 @@
 import * as S from './styles';
 
 interface BreadcrumbsProps {
-    firstPage: string,
-    secondPage?: string
+    firstPage: string
 }
 
 const Breadcrumbs = (props:BreadcrumbsProps) => {
     return (
         <S.StyledBar>
             <S.StyledText>
-                <p>{`Pagina Principal > `}
-                    <span className={!props.secondPage ? 'highlight' : ''}>{`${props.firstPage}`}</span>
-                    <span className={props.secondPage && 'highlight'}>{props.secondPage && ` > ${props.secondPage}`}</span>
+                <p className='breadcrumb'>{`Pagina Principal > `}
+                    <span className='highlight'>{`${props.firstPage}`}</span>
                 </p>
             </S.StyledText>
         </S.StyledBar>

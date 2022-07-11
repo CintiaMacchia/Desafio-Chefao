@@ -95,8 +95,7 @@ export const StyledFormGroup = styled(Form.Group)`
 `
 
 export const StyledLabel = styled(Form.Label)`
-    font-family: Poppins;
-    font-size: 0.688rem;
+    font-size: 0.8rem;
     font-weight: 500;
     line-height: 1rem;
 `

@@ -9,7 +9,7 @@ interface CadastroButtonProps {
 const CadastroButton: React.FC<CadastroButtonProps> = (props) => {
     return (
         <>
-            <S.StyledButtonOrange type='submit'>{props.isLastStep ? 'Cadastrar' : 'Continuar '}<BsChevronRight size={25} /></S.StyledButtonOrange>
+            <S.StyledButtonOrange type='submit'>{props.isLastStep ? 'Cadastrar' : 'Continuar '}</S.StyledButtonOrange>
         </>
     )
 }

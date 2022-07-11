@@ -33,7 +33,9 @@ function Menu() {
           <div className="d-flex justify-content-center gap-4 align-items-center">
             <div>
               <div>
+                <a href='/'>
                 <img src={logo} alt="logo" title="logo-do-site" />
+                </a>
               </div>
             </div>
             <div>
@@ -48,7 +50,9 @@ function Menu() {
               </div>
             </div>
             <div>
-              <ButonCheio typeButton="button" text={"Favoritos"} />
+            <Link to="/faboritos">
+            <ButonCheio typeButton="button" text={"Favoritos"} />
+              </Link>
             </div>
             <div>
               <Link to="/anuncio">

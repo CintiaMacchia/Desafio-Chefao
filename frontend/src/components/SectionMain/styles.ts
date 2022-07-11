@@ -9,6 +9,7 @@ export const Container = styled.section`
     font-family: Quicksand;
 
     .section-title {
+        font-family: 'Quicksand', sans-serif;
         font-size: 2.625rem;
         font-weight: 700;
         text-align: center;
@@ -20,7 +21,6 @@ export const Container = styled.section`
         width: 14.563rem;
         text-decoration: none;
         border-radius: 8px;
-        font-family: Poppins, sans-serif;
         font-size: 1rem;
         font-weight: 600;
         color: #FFF;

@@ -23,7 +23,6 @@ export const Container = styled.div`
     text-align: left;
     
     .login-h2 {
-        font-family: Poppins;
         font-size: 1rem;
         font-weight: 600;
         padding: 0;
@@ -39,7 +38,6 @@ export const Container = styled.div`
     }
 
     .link {
-        font-family: Poppins;
         color: #161616;
         font-size: 1rem;
         font-weight: 500;
@@ -50,7 +48,6 @@ export const StyledFormGroup = styled(Form.Group)`
 `
 
 export const StyledLabel = styled(Form.Label)`
-    font-family: Poppins;
     font-size: 1rem;
     font-weight: 400;
 `
@@ -93,20 +90,25 @@ export const StyledButtonOrange = styled(Button)`
     border: 1px solid #FF8B20;
     border-radius: 8px;
     color: #FFF;
-    font-family: Poppins;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
 
     &:hover {
-        background-color: #E46D00;
-        color: #FFF;
-        border: 1px solid #E46D00;
+        background-color: #FFF;
+        color: #FF8B20;
+        border: 1px solid #FF8B20;
     }
 
     &:focus {
-        background-color: #E46D00;
-        color: #FFF;
-        border: 1px solid #E46D00;
+        background-color: #FFF;
+        color: #FF8B20;
+        border: 1px solid #FF8B20;
     }
+`
+
+export const StyledError = styled.div`
+    padding-left: 0.5rem;
+    color: #FF3333;
+    font-size: 0.8rem;
 `

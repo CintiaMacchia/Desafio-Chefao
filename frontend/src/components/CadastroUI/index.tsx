@@ -5,9 +5,11 @@ import { CadastroLoginInput, CheckBoxInput } from "./CadastroInput";
 import MultiStepForm, { FormStep } from "./MultiStepForm";
 import CadastroSelect from "./CadastroSelectEstados";
 import { createUser } from "../../services/MainApi/users";
+import { useNavigate } from "react-router-dom";
 
 const FormCadastro: React.FC = () => {
     
+    const navigate = useNavigate();
 
     return (
         <S.Body>
@@ -30,6 +32,7 @@ const FormCadastro: React.FC = () => {
                     onSubmit={async (values: any) => {
                         const user = await createUser(values);
                         alert(JSON.stringify(user, null, 2))
+                        navigate('/confirma-cadastro')
                     }}
                 >
                     <FormStep 
