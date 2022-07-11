@@ -19,7 +19,15 @@ const FormCadastro: React.FC = () => {
                         nome: '',
                         email: '',
                         senha: '',
-                        confirmaSenha: ''
+                        confirmaSenha: '',
+                        estado: '',
+                        cidade: '',
+                        endereco: '',
+                        numero: '',
+                        cep: '',
+                        bairro: '',
+                        complemento: '',
+                        termos: false
                     }}
                     onSubmit={async (values: any) => {
                         const user = await createUser(values);
@@ -65,7 +73,7 @@ const FormCadastro: React.FC = () => {
                             <ErrorMessage name='confirmaSenha' component={S.StyledError} />
                         </S.StyledFormGroup>
                     </FormStep>
-                    {/* <FormStep
+                    <FormStep
                         stepName='Endereço'
                         onSubmit={() => console.log('Segundo Passo')}
                         validationSchema={Yup.object({
@@ -128,7 +136,7 @@ const FormCadastro: React.FC = () => {
                             <CheckBoxInput className='checkbox-tos' type='checkbox' name='termos' /> <span className='checkbox-tos__text'>Eu li e os Termos de Serviço e as Políticas de Privacidade</span>
                         </div>
                             <ErrorMessage name='termos' component={S.StyledError} />
-                    </FormStep> */}
+                    </FormStep>
                 </MultiStepForm>
             </S.Container>
         </S.Body>

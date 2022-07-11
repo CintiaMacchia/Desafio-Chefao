@@ -60,8 +60,6 @@ const LoginForm: React.FC = () => {
                             id='senha'
                             name='senha'
                             type='password'
-                            aria-label="Username"
-                            aria-describedby="basic-addon1"
                             value={values.senha}
                             onChange={handleChange}
                             isValid={touched.senha && !errors.senha}

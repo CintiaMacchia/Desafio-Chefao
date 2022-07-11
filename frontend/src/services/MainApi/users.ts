@@ -21,7 +21,7 @@ export const renderUsers = async () => {
 
 export const loginUser = async (payload: Login) => {
     try {
-        const response = await baseApi.post("/signin", payload);
+        const response = await baseApi.post("/login", payload);
         return response.data; 
     } catch (error: any) {
         alert (`Error: ${error.response.data}`)
