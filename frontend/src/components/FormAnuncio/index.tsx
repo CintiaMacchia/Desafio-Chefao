@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link } from "react-router-dom"
 import "./style.css"
 
 const FormAnuncio: React.FC = () => {
+  const [displayFileUploader, setDisplayFileUploader] = useState(false);
   const [file, setFile] = useState("")
   const [name, setName] = useState("")
   const [price, setPrice] = useState("")
@@ -40,14 +41,14 @@ const FormAnuncio: React.FC = () => {
       <div className="box">
         <div className="guide col-sm-6">
           <h4 className="anuncio-h4">Título</h4>
-          <p>
+          <p className="anuncio-texto">
             Escreva um título claro e que chame a atenção. Não é permitido
             colocar no título letras maiusculas, números de telefone, e-mails e
             links.
           </p>
 
           <h4 className="anuncio-h4">Imagens</h4>
-          <p>
+          <p className="anuncio-texto">
             Prefira adicionar imagens reais do produto em vez de imagens
             retiradas de catálogos da internet. Isso dá credibilidade ao seu
             anúncio. Aceitamos arquivos nos formatos jpg, jpeg, png e gif de até
@@ -55,7 +56,7 @@ const FormAnuncio: React.FC = () => {
           </p>
 
           <h4 className="anuncio-h4">Descrição</h4>
-          <p>
+          <p className="anuncio-texto">
             Escreva de forma clara, assim receberá menos perguntas dos
             compradores. Inclua detalhes sobre o produto para encontraram o seu
             anúncio mais facilmente. Seja sincero e os compradores terão a
@@ -64,45 +65,53 @@ const FormAnuncio: React.FC = () => {
         </div>
         <div className="form col-sm-6">
           <h2 className="anuncio-h2">Preencha aqui os dados do seu anúncio</h2>
-          <input
+          <div>•
+            <a 
+              className='show-image-input'
+              onClick={() => {setDisplayFileUploader(!displayFileUploader)}}
+            >
+              Clique aqui para carregar as suas fotos.
+            </a>
+          </div>
+          {displayFileUploader && <input
             type="file"
-            className="form-control"
+            className="form-control file-input"
             onChange={(e: any) => setFile(e.target.files[0])}
             placeholder="File"
-          ></input>
+          ></input>}
           <h6 className="anuncio-obrigatorio">* Obrigatório</h6>
           <h3 className="anuncio-h3">Título *</h3>
           <input
             type="text"
-            className="form-control"
+            className="form-control input-text"
             onChange={(e) => setName(e.target.value)}
             placeholder=""
           ></input>
           <h3 className="anuncio-h3">Valor</h3>
           <input
             type="text"
-            className="form-control"
+            className="form-control input-text"
             onChange={(e) => setPrice(e.target.value)}
             placeholder=""
           ></input>
           <h3 className="anuncio-h3">Estado *</h3>
           <input
             type="text"
-            className="form-control"
+            className="form-control input-text"
             onChange={(e) => setState(e.target.value)}
             placeholder=""
           ></input>
           <h3 className="anuncio-h3">Cidade *</h3>
           <input
             type="text"
-            className="form-control"
+            className="form-control input-text"
             onChange={(e) => setCity(e.target.value)}
             placeholder=""
           ></input>
           <h3 className="anuncio-h3">Celular</h3>
           <input
             type="text"
-            className="form-control"
+            className="form-control input-text"
             onChange={(e) => setCell(e.target.value)}
             placeholder=""
           ></input>
@@ -113,26 +122,26 @@ const FormAnuncio: React.FC = () => {
           <h3 className="anuncio-h3">Categoria *</h3>
           <input
             type="text"
-            className="form-control"
+            className="form-control input-text"
             placeholder=""
             onChange={(e) => setCategory(e.target.value)}
           ></input>
           <h3 className="anuncio-h3">Descrição *</h3>
-          <input
-            type="text"
-            className="description form-control"
+          <textarea
+            rows={4}
+            className="anuncio-text-area"
             onChange={(e) => setDescription(e.target.value)}
             placeholder=""
-          ></input>
+          />
           <div>
             <div className="termos-servico">
-              <input type="checkbox"></input>
+              <input type="checkbox" className="anuncio-checkbox" />
               <p className="texto-termos">
                 Eu li os Termos de Serviço e as Políticas de Privacidade
               </p>
             </div>
           </div>
-          <Link to="/confirma-anuncio">
+          <Link to="/confirma-anuncio" className="anuncio-submit">
             <button onClick={addProduct} className="btn btn-primary">
               Publicar
             </button>

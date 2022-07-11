@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
 
-* {
-  font-family: "Quicksand";
-  font-weight: 700;
-}
-
 .box {
   margin-left: 200px;
   display: flex;
@@ -27,7 +22,7 @@
 
 .form {
   background: #f0f0f0;
-  padding: 30px;
+  padding: 49px 32px;
 }
 
 .anuncio-h1 {
@@ -51,24 +46,29 @@
 }
 
 .anuncio-h2 {
-  padding-bottom: 20px;
-  font-size: 22px;
-  font-weight: bold;
+  margin-bottom: 41px;
+  font-family: Quicksand;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .anuncio-obrigatorio {
-  padding-top: 20px;
+  margin-top: 41px;
+  margin-bottom: 35px;
   font-size: 13px;
+  font-weight: 400;
 }
 
 .anuncio-h3 {
-  font-size: 17px;
+  font-size: 14px;
+  font-weight: 500;
   margin-top: 10px;
 }
 
 .anuncio-h4 {
+  font-family: Quicksand;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .anuncio-h6 {
@@ -76,23 +76,25 @@
   font-size: 15px;
 }
 
-p {
+.anuncio-texto {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
+  margin-bottom: 3.063rem;
 }
 
 .confirmacao-cadastro {
-  font-size: 12px;
+  font-size: 11px;
+  font-weight: 500;
 }
 
 .btn {
   display: flex;
   width: 490px;
-  margin-top: 20px;
+  height: 50px;
   align-items: center;
   align-content: center;
   justify-content: center;
-  border-radius: 4px;
+  border-radius: 5px;
   background-color: #ff8b20;
   border: solid 1px transparent;
   font-weight: 400;
@@ -104,15 +106,35 @@ p {
   color: #ff8b20;
 }
 
-.form-control::-webkit-file-upload-button {
+.show-image-input{
+  text-decoration: underline;
+  color: #161616;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.show-image-input:hover, .show-image-input:focus{
+  color: #161616;
+}
+
+.file-input::-webkit-file-upload-button {
   visibility: hidden;
 }
-.form-control::before {
+
+.form-control {
+  padding-left: 0;
+}
+
+.file-input::before {
   content: "Escolha uma imagem";
   background-color: #ff8b20;
   border: 1px solid #ff8b20;
-  border-radius: 5px;
-  padding: 5px;
+  color: #FFF;
+  border-radius: 8px;
+  padding: 10px 6px;
+  margin: 0;  
 }
 
 .form-control:hover {
@@ -120,18 +142,37 @@ p {
   border: solid 1px #ff8b20;
 }
 
-.description {
-  height: 120px;
+.input-text {
+  height: 50px;
 }
 
 .termos-servico {
-  padding-top: 20px;
+  margin: 35px 0;
   display: flex;
-  align-items: baseline;
+  align-items: center;
 }
 
 .texto-termos {
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+.anuncio-text-area {
+  width: 100%;
+  border: 1px solid #C9C9C9;
+  border-radius: 5px;
+  resize: none;
+}
+
+.anuncio-checkbox {
+  width: 15px;
+  height: 15px;
+}
+
+.anuncio-submit{
+  text-decoration: none;
 }
 
 @media screen and (max-width: 600px) {
