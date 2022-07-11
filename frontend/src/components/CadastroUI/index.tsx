@@ -110,12 +110,12 @@ const FormCadastro: React.FC = () => {
                         </S.StyledFormGroup>
                         <S.StyledFormGroup>
                             <S.TwoInputsContainer>
-                                    <div >
+                                    <div className="large-input">
                                         <S.StyledLabel>CEP *</S.StyledLabel>
                                         <CadastroLoginInput name='cep' type='text'/>
                                         <ErrorMessage name='cep' component={S.StyledError} />
                                     </div>
-                                    <div className="large-input">
+                                    <div className="sm-input">
                                         <S.StyledLabel>Bairro *</S.StyledLabel>
                                         <CadastroLoginInput name='bairro' type='text'/>
                                         <ErrorMessage name='bairro' component={S.StyledError} />
