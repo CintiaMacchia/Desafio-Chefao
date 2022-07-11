@@ -1,4 +1,4 @@
-const { Produtos } = require('../models/produto')
+const Produtos = require('../models/produto')
 require('dotenv').config();
 
 const FindAllProdutosUseCase = {

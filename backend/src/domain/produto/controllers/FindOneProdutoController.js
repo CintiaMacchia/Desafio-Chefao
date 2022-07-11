@@ -1,5 +1,5 @@
 //const FindOneProdutosUseCase = ('../useCase/findOneProdutoUseCase')
-const { Produtos } = require('../models/produto')
+const Produtos = require('../models/produto')
     //import { Request, Response } from "express";
 const FindOneProdutosController = {
     async getOne(req, res) {

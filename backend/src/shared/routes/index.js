@@ -10,7 +10,7 @@ const CategoriaValidation = require('../../domain/categoria/validations');
 const categoriaController = require('../../domain/categoria/controllers')
 const EnderecoController = require('../../domain/endereco/controllers/enderecoController')
 const EnderecoValidation = require('../../domain/endereco/validations');
-const FindAllProdutoController = require('../../domain/produto/controllers/FindAllProdutoController');
+const ProdutoController = require('../../domain/produto/controllers/FindAllProdutoController');
 const FindOneProdutosController = require('../../domain/produto/controllers/FindOneProdutoController');
 const DestroyProdutoController = require('../../domain/produto/controllers/DestroyProdutoController');
 const updateProdutoController = require('../../domain/produto/controllers/UpdateProdutoController');
@@ -42,9 +42,9 @@ routes.delete("/categoria/:id", categoriaController.delete);
 
 
 // //Condicao
-// routes.get("/condicao", CondicaoController.getAll)
+routes.get("/condicao", CondicaoController.getAll)
 routes.post("/condicao", CondicaoController.create)
-    // routes.get("/condicao/:id", CondicaoController.getOne)
+routes.get("/condicao/:id", CondicaoController.getOne)
     // routes.delete("/condicao/:id", CondicaoValidation.destroy, CondicaoController.delete)
 routes.put("/condicao/:id", CondicaoController.update)
 
@@ -57,10 +57,10 @@ routes.put("/condicao/:id", CondicaoController.update)
 
 //produtos
 
-routes.get("/produtos", FindAllProdutoController.getAll);
+routes.get("/produtos", ProdutoController.getAll);
 routes.get("/produto/:id", FindOneProdutosController.getOne);
 routes.delete("/produto/:id", DestroyProdutoController.delete);
-// routes.put("/produto/:id", updateProdutoController.update);
+routes.put("/produto/:id", updateProdutoController.update);
 routes.post("/produto", CreateProdutoController.create)
 
 

@@ -1,7 +1,7 @@
 const db = require("../../../shared/infrastructure/database")
 const { DataTypes } = require("sequelize")
 
-module.exports = Produtos = db.define(
+const Produtos = db.define(
     "produtos", {
         id: {
             type: DataTypes.INTEGER,
@@ -42,3 +42,5 @@ module.exports = Produtos = db.define(
         tablename: "produtos",
     }
 );
+
+module.exports = Produtos

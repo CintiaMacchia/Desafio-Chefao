@@ -1,84 +1,37 @@
-const { Produtos } = require('../models/produto')
+const Produtos = require('../models/produto')
 const cloudinary = require('../../../config/cloudinary')
 const fs = require('fs');
 const db = require('../../../shared/infrastructure/database');
+const { fstat } = require('fs');
 //const { CreateProdutoUseCase } = require('../useCase/createProdutoUseCase')
 //const imagemFolder = 'images/';
 
 const CreateProdutoController = {
     async create(req, res) {
         try {
-            const file = req.files[0]
-            const uploadPath = await cloudinary.uploads(file.path, 'foto') //2 parametros - arquivo - pasta
-            fs.unlinkSync(file.path)
-            console.log(req.files[0].path)
+            const { nome, descricao, valor, foto, categoria_id, usuario_id, condicao_id } = req.body;
+            const file = req.files[0];
 
-            //console.log(uploadPath.imageUrl)
+            const uploadPath = await cloudinary.uploads(file.path, "fotoAnuncio")
+            fs.unlinkSync(file.path)
+                //console.log(uploadPath)
             const novoProduto = await Produtos.create({
                 ...req.body,
-                //forma de upload na aplicação
-                //image: imageFolder + file.filename,
-                //com cloudinary
                 foto: uploadPath.imageUrl
-            })
-            return res.status(201).json({ dadosfinais: novoProduto })
+            });
+            console.log(req.files[0])
+            return res.json(novoProduto)
+
+            //res.json({ message: 'Dados atualizados com sucesso' }).status(201);
         } catch (error) {
-            return res.status(500).json(error)
-            console.log(error)
-        }
-
-
-
-
+            res.status(404).json('Verfique os dados e tente novamente');
+            console.error(error);
+        };
     },
 
-
-
 }
+
+
+
+
 module.exports = CreateProdutoController
-
-// try {
-//   const novoProduto = await CreateProdutoUseCase.createProduto(req.body);
-//   return res.status(201).json(novoProduto);
-// } catch (error) {
-//   return res.status(500).json("Algo deu errado, tente de novo mais tarde!");
-// }
-// }
-
-// const novoProduto = await CreateProdutoUseCase.createProduto(req.body);
-// return res.status(201).json(novoProduto);
-
-// fotos: uploadPath.imageUrl
-
-//return res.status(201).json("Produto Cadastrado!")
-// }
-// catch (error) {
-
-// }
-// // const file = req.files[0]
-// const uploadPath = await cloudinary.uploads(file.path, 'fotos')
-// fs.unlinkSync(file.path)
-
-// console.log(req.files[0])
-// console.log(req.)
-// return res.status(201).json({ dadosfinais: novoProduto })
-
-//////////////////////////////////
-
-// async create(req: Request, res: Response) {
-//  const file = req.originalUrl[0];
-//   const uploadPath = await cloudinary.uploads(file.path, 'images')  //2 parametros - arquivo - pasta
-//  fs.unlinkSync(file.path)
-//       console.log(uploadPath.imageUrl)
-//   const novoProduto = await Produtos.create({
-//       ...req.body,
-//       //forma de upload na aplicação
-//       //image: imageFolder + file.filename,
-
-//       //com cloudinary
-//       image: uploadPath.imageUrl
-//   })
-
-//   //console.log(file);
-
-//   return res.status(201).json({novoProduto})
