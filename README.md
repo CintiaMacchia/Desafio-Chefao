@@ -23,8 +23,68 @@ interativo de um novo empreendimento pensado pela equipe.
 ![1657575028354](https://user-images.githubusercontent.com/89550095/178362338-173f0565-bd07-4289-9ce1-5aadf24132ac.png)
 ![1657575080327](https://user-images.githubusercontent.com/89550095/178362435-330115a4-cf07-4cd6-82b1-6ae6cc1e01ed.png)
 ![1657575111223](https://user-images.githubusercontent.com/89550095/178362462-1c1bf76e-1a7e-49bb-a04b-cf8481fd52d8.png)
+<div> 
+  <h1>O Projeto</h1>
 
+### Problema
 
+Como os pais de crianças e adolescentes em idade escolar compram e consomem produtos escolares?
+
+### Objetivo principal
+
+Criar uma plataforma de compra, venda, troca e doação de produtos ligados ao universo escolar como: livros, material escolar, material didático, brinquedos, jogos e uniformes. De forma a centralizar, formalizar e aumentar o alcance de produtos de consumo escolares em um só site de nicho específico.
+
+### Objetivos específicos
+
+1) Aumentar o alcance entre pessoas que querem comprar/trocar/vender/doar objetos escolares.
+
+2) Oferecer objetos escolares a um preço melhor ou mesmo de graça por meio de trocas, doações e vendas entre os usuários da plataforma.
+
+3) Criar kits de produtos de acordo com as necessidades da faixa escolar de estudo de criança e dos adolescentes.
+
+### Hipóteses
+
+1) Já ocorre de forma informal entre familiares e conhecidos.
+
+2) Problemas como inflação e desemprego no Brasil estimularam esse tipo de atividade.
+
+3) Os pais muitas vezes tem que procurar objetos escolares em lugares diferentes, causando aumento de preço e perda de tempo durante a busca.
+
+### Público-Alvo
+
+Pais de crianças e adolescentes em idade escolar.
+  <h1>Equipe</h1>
+  
+### **Product Designer:**
+
+Ana Claudia Gütschow 
+
+Ayrton Bagni
+
+Gustavo Assis
+
+Vagner Sanches Vasconcelos Filho
+
+### **Front-End:**
+
+Daniel Rocha
+
+Mateus Jorge Renhe
+
+Paulo Sabanae
+
+Zaida Cueto
+
+### **Back-End:**
+
+Cintia de Paola Macchia Parussolo
+
+Hanna Lobenwein Machado
+
+Isabela Caldeira
+
+Julio Moura
+</div>
 <h2>Linguagens e ferramentas utilizadas nesse desafio:</h2>
   <div>
     <h2>FRONT-END</h2>
