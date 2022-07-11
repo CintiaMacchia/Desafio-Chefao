@@ -16,17 +16,9 @@ const FormCadastro: React.FC = () => {
             <S.Container>
                 <MultiStepForm
                     initialValues={{
+                        nome: '',
                         email: '',
-                        password: '',
-                        confirmaSenha: '',
-                        estado: '',
-                        cidade: '',
-                        endereco: '',
-                        numero: '',
-                        cep: '',
-                        bairro: '',
-                        complemento: '',
-                        termos: false
+                        password: ''
 
                     }}
                     onSubmit={async (values: any) => {
@@ -39,6 +31,7 @@ const FormCadastro: React.FC = () => {
                         stepName='Usuário'
                         onSubmit={() => console.log('Primeiro Passo')}
                         validationSchema={Yup.object({
+                            nome: Yup.string().required('Campo E-mail é obrigatório'),
                             email: Yup.string().email('E-mail não é válido').required('Campo E-mail é obrigatório'),
                             password: Yup.string().required('Campo Senha é obrigatório').min(6, 'Senha deve ter pelo menos 6 caracteres.'),
                             confirmaSenha: Yup.string().required('Campo Confirmar Senha é obrigatório').oneOf([Yup.ref('password'), null], 'As senhas digitadas devem ser idênticas.')
@@ -51,6 +44,11 @@ const FormCadastro: React.FC = () => {
                         <h2 className='signup__text'>É novo por aqui? Cadastre-se!</h2>
                         <h4 className='signup__pointer'>* Obrigatório</h4>
                         </div>
+                        <S.StyledFormGroup>
+                            <S.StyledLabel>Nome Completo *</S.StyledLabel>
+                            <CadastroLoginInput name='nome' type='nome'/>
+                            <ErrorMessage name='nome' component={S.StyledError} />
+                        </S.StyledFormGroup>
                         <S.StyledFormGroup>
                             <S.StyledLabel>E-mail *</S.StyledLabel>
                             <CadastroLoginInput name='email' type='email'/>
@@ -67,7 +65,7 @@ const FormCadastro: React.FC = () => {
                             <ErrorMessage name='confirmaSenha' component={S.StyledError} />
                         </S.StyledFormGroup>
                     </FormStep>
-                    <FormStep
+                    {/* <FormStep
                         stepName='Endereço'
                         onSubmit={() => console.log('Segundo Passo')}
                         validationSchema={Yup.object({
@@ -130,7 +128,7 @@ const FormCadastro: React.FC = () => {
                             <CheckBoxInput className='checkbox-tos' type='checkbox' name='termos' /> <span className='checkbox-tos__text'>Eu li e os Termos de Serviço e as Políticas de Privacidade</span>
                         </div>
                             <ErrorMessage name='termos' component={S.StyledError} />
-                    </FormStep>
+                    </FormStep> */}
                 </MultiStepForm>
             </S.Container>
         </S.Body>

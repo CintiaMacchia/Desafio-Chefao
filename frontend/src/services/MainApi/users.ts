@@ -1,7 +1,7 @@
 import baseApi from './config';
 import { User, Login } from '../../@types';
 
-export const createUser = async (user: Omit<User, 'id' | 'confirmaSenha' | 'termos'>) => {
+export const createUser = async (user: Omit<User, 'id' | 'confirmaSenha'>) => {
     try{
         const response = await baseApi.post('/users', user)
         return response.data;

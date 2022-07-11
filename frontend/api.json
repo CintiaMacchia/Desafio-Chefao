@@ -1,5 +1,5 @@
 {
-  "categorias":[
+  "categorias": [
     {
       "id": 1,
       "categoria": "Livros"
@@ -234,6 +234,56 @@
       "complemento": "",
       "termos": true,
       "id": 3
+    },
+    {
+      "email": "emailemail@email.com",
+      "password": "$2a$10$RV/h6.QlnEG2Z92upj5TMesnqX0tUeBafVhXj9ILm9evytgiC0D02",
+      "nome": "Usuário",
+      "confirmaSenha": "123456",
+      "estado": "AC",
+      "cidade": "Cidade",
+      "endereco": "logo ali",
+      "numero": "123",
+      "cep": "00000-000",
+      "bairro": "bairro",
+      "complemento": "",
+      "termos": true,
+      "id": 4
+    },
+    {
+      "email": "email222@email.com",
+      "password": "$2a$10$WZoQL4EUyii/fBwx/tMRfOpzMatn2WGNIsBHklFllFVjWyOY8mDBi",
+      "nome": "Usuário Senha",
+      "confirmaSenha": "123456",
+      "estado": "AL",
+      "cidade": "Cidade",
+      "endereco": "Endereco",
+      "numero": "123",
+      "cep": "00000-000",
+      "bairro": "bairro",
+      "termos": true,
+      "id": 5
+    },
+    {
+      "email": "email4444@email.com",
+      "password": "$2a$10$hbwSD6aZc2/Jhbh3C/4P0uWRXMdewdZiNgovx3Ae7TpFXMGKY.TqG",
+      "nome": "Usuario",
+      "confirmaSenha": "123456",
+      "estado": "AC",
+      "cidade": "Cidade",
+      "endereco": "Endereco",
+      "numero": "123",
+      "cep": "00000000",
+      "bairro": "bairro",
+      "termos": true,
+      "id": 6
+    },
+    {
+      "email": "email5555@gmail.com",
+      "password": "$2a$10$8Ph0x3rVEX1Q4Yai/.suYe7pajd0hi0TwNKfrNoTWFEPria//3ZpO",
+      "nome": "Usuario",
+      "confirmaSenha": "123456",
+      "id": 7
     }
   ]
 }

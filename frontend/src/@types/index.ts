@@ -5,12 +5,7 @@ export interface Login {
 
 export interface User extends Login {
     id: number,
-    endereco: string,
-    numero: number,
-    cep: string,
-    cidade: string,
-    estado: string,
-    completemento?: string
+    nome: string,
 }
 
 export interface Endereco {

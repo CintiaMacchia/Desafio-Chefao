@@ -139,7 +139,7 @@ const FormAnuncio: React.FC = () => {
             cadastradas.
           </p>
           <h3 className="anuncio-h3">Categoria *</h3>
-          <select>
+          <select className='select-categoria' onChange={(e) => setCategory(e.target.value)}>
             {categoriasList.map(categoria => (
               <option value={categoria.categoria} key={categoria.id}>{categoria.categoria}</option>
             ))}
