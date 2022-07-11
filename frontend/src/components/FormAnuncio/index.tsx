@@ -28,8 +28,11 @@ const FormAnuncio: React.FC = () => {
     let result = await fetch("localhost:3550/produtos", {
       method: "POST",
       body: formData,
+    }).then((resp) => {
+      resp.json().then((result) => {
+        console.warn(result)
+      })
     })
-    alert("Teste deu certo!")
   }
 
   return (
