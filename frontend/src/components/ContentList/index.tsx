@@ -72,8 +72,9 @@ export default function Produtos() {
         <div className="col-md-12">
           
         <div className="grid-container">
-            {/* {produtos.map(produto=>( */}
-              {/* <div className="grid-item" key={produto.id}> //para ativa depois */}
+            {/* {produtos.map(produto=>(  */}
+              {/* <div className="grid-item" key={produto.id}>  */}
+          
             
                 <div className="card-container mt-4">
                  
@@ -86,8 +87,8 @@ export default function Produtos() {
              foto={Mochila}
                   />
                       </div>
-                      {/* </div> */}
-            {/* ))} */}
+                     {/* </div> 
+            ))}  */}
              
                 <div className="card-container mt-4">
                  
@@ -113,7 +114,7 @@ export default function Produtos() {
                   />
                 {/* </div> */}
               </div>
-            {/* ))} */}
+            
 
                 <div className="card-container mt-4">
                  

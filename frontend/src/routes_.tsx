@@ -7,6 +7,7 @@ import ConfirmaMensagem from "./pages/ConfirmaMensagem"
 import Anuncio from "./pages/CriarAnuncios"
 import Home from "./pages/Home"
 import LoginPage from "./pages/Login"
+import PageFaboritos from "./pages/PageFavoritos"
 import Produtos from "./pages/Produtos"
 import ProdutosDetail from "./pages/ProdutosDetail"
 
@@ -26,7 +27,8 @@ const AppRoutes: React.FC = () => {
         <Route path="/produtos" element={<Produtos/>}>
           {/* <Route path=":id" element={<ProdutosDetail />} /> */}
         </Route>
-        <Route path="/d-produto" element={<ProdutosDetail/>}/>
+        <Route path="/id" element={<ProdutosDetail/>}/>
+        <Route path="/faboritos" element={<PageFaboritos />} />
       </Routes>
     </BrowserRouter>
   )
