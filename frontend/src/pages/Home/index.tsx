@@ -2,7 +2,7 @@ import SectionMain from '../../components/SectionMain';
 import { Footer } from '../../components/Footer';
 import Header from '../../components/Header';
 import HeroBanner from '../../components/HeroBanner';
-import ProdutosCarrossel from '../../components/ProdutosCarrossel';
+import ProdutosCarrossel, { ProdutosCarrosselRecentes } from '../../components/ProdutosCarrossel';
 import Vantagens from '../../components/Vantagens';
 import AvaliacaoContainer from '../../components/AvaliacoesUI/AvaliacoesContainer';
 
@@ -16,12 +16,12 @@ const Home = () => {
         <SectionMain>
           <h2 className='section-title'>Encontre seu Material</h2>
           <ProdutosCarrossel />
-          <a className='button-orange' href='#'>Veja todos os itens</a>
+          <a className='button-orange' href='/produtos'>Veja todos os itens</a>
         </SectionMain>
         <SectionMain>
           <h2 className='section-title'>Anúncios Recentes</h2>
-          <ProdutosCarrossel />
-          <a className='button-orange' href='#'>Veja todos os itens</a>
+          <ProdutosCarrosselRecentes />
+          <a className='button-orange' href='/produtos'>Veja todos os itens</a>
         </SectionMain>
         <Vantagens />
         <SectionMain>

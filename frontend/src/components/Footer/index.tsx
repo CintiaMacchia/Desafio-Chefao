@@ -46,8 +46,8 @@ export function Footer() {
       <S.SecondHalfContainer>
         <S.FooterMenuContainer>
           <h5 className='footer__title'>Menu</h5>
-          <a className='footer__link'>Minha Conta</a>
-          <a className='footer__link'>Favoritos</a>
+          <a className='footer__link' href='/perfil'>Minha Conta</a>
+          <a className='footer__link' href='/favoritos'>Favoritos</a>
           <a className='footer__link'>Chat</a>
         </S.FooterMenuContainer>
 

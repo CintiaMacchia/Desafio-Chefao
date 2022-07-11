@@ -1,4 +1,4 @@
-import { Form } from 'react-bootstrap';
+import { Form, InputGroup, FormControl } from 'react-bootstrap';
 import { ErrorMessage, Formik } from 'formik';
 import baseApi from '../../services/MainApi/config';
 import { loginUser } from '../../services/MainApi/users';
@@ -60,6 +60,8 @@ const LoginForm: React.FC = () => {
                             id='password'
                             name='password'
                             type='password'
+                            aria-label="Username"
+                            aria-describedby="basic-addon1"
                             value={values.password}
                             onChange={handleChange}
                             isValid={touched.password && !errors.password}
@@ -78,7 +80,9 @@ const LoginForm: React.FC = () => {
             </S.Container>
             )}
             </Formik>
+
         </S.Body>
+        
     )
 }
 
