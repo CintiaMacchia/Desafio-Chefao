@@ -1,8 +1,14 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { BrowserRouter as Router, Link } from "react-router-dom"
+import { renderCategorias } from "../../services/MainApi/categorias";
+import { Categorias } from "../../@types";
+
 import "./style.css"
 
 const FormAnuncio: React.FC = () => {
+  
+  const [categoriasList, setCategoriasList] = useState<Categorias[]>([] as Categorias[]);
+
   const [displayFileUploader, setDisplayFileUploader] = useState(false);
   const [file, setFile] = useState("")
   const [name, setName] = useState("")
@@ -35,6 +41,16 @@ const FormAnuncio: React.FC = () => {
       })
     })
   }
+
+  useEffect(() => {
+
+    const getCategorias = async () => {
+        const posts = await renderCategorias()
+        setCategoriasList(posts)
+    }
+    getCategorias();
+}, [])
+
 
   return (
     <div>
@@ -123,12 +139,17 @@ const FormAnuncio: React.FC = () => {
             cadastradas.
           </p>
           <h3 className="anuncio-h3">Categoria *</h3>
-          <input
+          <select>
+            {categoriasList.map(categoria => (
+              <option value={categoria.categoria} key={categoria.id}>{categoria.categoria}</option>
+            ))}
+          </select>
+          {/* <input
             type="text"
             className="form-control-anuncio input-text"
             placeholder=""
             onChange={(e) => setCategory(e.target.value)}
-          ></input>
+          ></input> */}
           <h3 className="anuncio-h3">Descrição *</h3>
           <textarea
             rows={4}

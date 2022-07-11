@@ -22,6 +22,11 @@ export interface Endereco {
     completemento?: string,
 }
 
+export interface Categorias {
+    id: number,
+    categoria: string
+}
+
 export interface UserState {
     isLogged: boolean,
     accessToken: string,

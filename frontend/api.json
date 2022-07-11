@@ -1,4 +1,18 @@
 {
+  "categorias":[
+    {
+      "id": 1,
+      "categoria": "Livros"
+    },
+    {
+      "id": 2,
+      "categoria": "Uniformes"
+    },
+    {
+      "id": 3,
+      "categoria": "Lápis"
+    }
+  ],
   "produtos": [
     {
       "id": 1,

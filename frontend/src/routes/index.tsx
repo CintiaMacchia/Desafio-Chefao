@@ -27,9 +27,7 @@ function AppRoutes(): JSX.Element {
         <Route
           path="/anuncio"
           element={
-            <RequireAuth>
             <Anuncio />
-            </RequireAuth>
           }
         />
         <Route
