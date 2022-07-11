@@ -18,8 +18,8 @@ const FormCadastro: React.FC = () => {
                     initialValues={{
                         nome: '',
                         email: '',
-                        senha: ''
-
+                        senha: '',
+                        confirmaSenha: ''
                     }}
                     onSubmit={async (values: any) => {
                         const user = await createUser(values);
