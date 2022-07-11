@@ -1,1 +1,1 @@
-web: tsc && vite build
+web:tsc && vite build
