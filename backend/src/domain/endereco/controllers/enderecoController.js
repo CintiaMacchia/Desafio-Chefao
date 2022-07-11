@@ -1,5 +1,5 @@
 const { enderecoService } = require('../services');
-const { endereco } = require('../models/endereco');
+const endereco = require('../models/endereco');
 
 
 module.exports = EnderecoController = {
@@ -44,7 +44,7 @@ module.exports = EnderecoController = {
                 }
             });
 
-            if (!existId) {
+            if (!existId === id) {
                 return res.status(400).json('Usuário não encontrado');
             }
 
@@ -71,7 +71,7 @@ module.exports = EnderecoController = {
 
                 }
             });
-            if (!existeId) {
+            if (!existeId === id) {
                 return res.status(400).json({ message: 'Endereco não encontrado' })
             }
 

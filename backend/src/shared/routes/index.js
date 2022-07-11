@@ -50,27 +50,27 @@ routes.post("/login", UsuarioController.login);
 
 // // routes.post("/login", loginValidation, auth, UsuarioValidation.create);
 
-// //categoria
-// routes.post("/categoria", CategoriaValidation.create, CategoriaController.create);
-// routes.get("/categoria/:id", CategoriaController.getOne);
-routes.get("/categorias", CategoriaController.getAll)
-    // routes.put("/categoria/:id", CategoriaValidation.update, CategoriaController.update);
-    // routes.delete("/categoria/:id", CategoriaController.delete);
+//categoria
+routes.post("/categoria", categoriaController.create);
+routes.get("/categoria/:id", categoriaController.getOne);
+routes.get("/categorias", categoriaController.getAll)
+routes.put("/categoria/:id", categoriaController.update);
+routes.delete("/categoria/:id", categoriaController.delete);
 
 
 // //Condicao
 routes.get("/condicao", CondicaoController.getAll)
 routes.post("/condicao", CondicaoController.create)
 routes.get("/condicao/:id", CondicaoController.getOne)
-    // routes.delete("/condicao/:id", CondicaoValidation.destroy, CondicaoController.delete)
+routes.delete("/condicao/:id", CondicaoController.delete)
 routes.put("/condicao/:id", CondicaoController.update)
 
 // //Endereço
-// routes.get("/endereco", EnderecoController.getAll);
-// routes.get("/endereco/:id", EnderecoController.getOne);
+routes.get("/endereco", EnderecoController.getAll);
+routes.get("/endereco/:id", EnderecoController.getOne);
 // routes.post("/endereco", EnderecoController.create)
-// routes.put("/endereco/:id", EnderecoController.update)
-// routes.delete("/endereco/:id", EnderecoValidation.destroy, EnderecoController.delete);
+routes.put("/endereco/:id", EnderecoController.update)
+    // routes.delete("/endereco/:id", EnderecoValidation.destroy, EnderecoController.delete);
 
 //produtos
 
