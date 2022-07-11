@@ -1,6 +1,6 @@
 const Produtos = require("../models/produto")
 
-module.exports = DestroyProdutoController = {
+const DestroyProdutoController = {
     //   async destroy(req: Request, res: Response) {
     //     try {
     //       await DestroyProdutosUseCase.deleteProduto(req.params);
@@ -22,7 +22,7 @@ module.exports = DestroyProdutoController = {
                 }
             });
             if (!existeId) {
-                return res.status(400).json({ message: 'Endereco não encontrado' })
+                return res.status(400).json({ message: 'Produto não encontrado' })
             }
 
             await Produtos.destroy({
@@ -31,9 +31,10 @@ module.exports = DestroyProdutoController = {
                 }
             });
 
-            return res.status(204).json({ message: 'Endereco deletado' });
+            return res.status(204).json({ message: 'Produto deletado' });
         } catch (error) {
             return res.status(500).json(error);
         }
     },
 }
+module.exports = DestroyProdutoController

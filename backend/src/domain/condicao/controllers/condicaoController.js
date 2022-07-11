@@ -1,14 +1,22 @@
 const { condicaoService } = require('../services')
 const { Condicao } = require('../models/condicao')
 
-module.exports = CondicaoController = {
+const CondicaoController = {
     async create(req, res) {
         try {
-            const novaCondicao = await condicaoService.cadastrarCondicao(req.body);
-            return res.status(201).json(novaCondicao);
+            const { condicao } = req.body;
+            if (!condicao)
+                return res.status(400).json("Todas as informações são obrigatórias")
+
+            const novaCondicao = await Condicao.create({
+                condicao
+            })
+            res.json(novaCondicao)
         } catch (error) {
             return res.status(500).json(error);
+            console.log(error)
         }
+
     },
 
 
@@ -99,3 +107,5 @@ module.exports = CondicaoController = {
         }
     }
 };
+
+module.exports = CondicaoController

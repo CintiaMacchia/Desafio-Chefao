@@ -1,13 +1,18 @@
-const FindAllProdutosUseCase = ("../useCase/findAllProdutoUseCase")
+//const FindAllProdutosUseCase = ("../useCase/findAllProdutoUseCase")
+const { Produtos } = require('../models/produto')
+const FindAllProdutosUseCase = require('../useCase/findAllProdutoUseCase')
 
-module.exports = FindAllProdutoController = {
-    async listarTodos(req, res) {
+const FindAllProdutoController = {
+    async getAll(req, res) {
         try {
-            const produtos = await FindAllProdutosUseCase.ListarProdutos();
-            return res.json(produtos);
+            const ListarProdutos = await Produtos.FindAllProdutosUseCase()
+            return res.json(ListarProdutos);
         } catch (error) {
-            console.log(error);
+            console.log(error)
             return res.status(500).json(error);
+
         }
     },
 };
+
+module.exports = FindAllProdutoController

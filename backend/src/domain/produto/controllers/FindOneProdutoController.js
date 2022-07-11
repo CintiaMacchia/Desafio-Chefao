@@ -1,13 +1,20 @@
-const FindOneProdutosUseCase = ('../useCase/findOneProdutoUseCase')
+//const FindOneProdutosUseCase = ('../useCase/findOneProdutoUseCase')
+const { Produtos } = require('../models/produto')
     //import { Request, Response } from "express";
-module.exports = FindOneProdutosController = {
-    async umProduto(req, res) {
+const FindOneProdutosController = {
+    async getOne(req, res) {
         try {
-            const umProduto = await FindOneProdutosUseCase.umProduto(req.params);
-            return res.json(umProduto);
+            const { id } = req.params;
+
+
+            const umProduto = await Produtos.findByPk(id);
+
+
+            return res.json(umProduto)
         } catch (error) {
-            console.log(error)
-            return res.status(500).json(error);
+            return res.status(500).json('Produto não encontrado!')
         }
     }
 }
+
+module.exports = FindOneProdutosController

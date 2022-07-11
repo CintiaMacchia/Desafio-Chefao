@@ -1,7 +1,7 @@
 const db = require('../../../shared/infrastructure/database')
 const { DataTypes } = require('sequelize')
 
-module.exports = Condicao = db.define(
+const Condicao = db.define(
     "condicoes", {
         id: {
             type: DataTypes.INTEGER,
@@ -21,3 +21,5 @@ module.exports = Condicao = db.define(
         tablename: 'condicoes'
     }
 )
+
+module.exports = Condicao

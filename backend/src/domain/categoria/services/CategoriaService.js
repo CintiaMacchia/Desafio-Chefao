@@ -3,10 +3,10 @@ const { Categoria } = require('../models/categoria')
     //import jwt from 'jsonwebtoken';
 require('dotenv').config();
 
-module.exports = CategoriaService = {
-    async cadatrarCategoria(data) {
+const CategoriaService = {
+    async cadatrarCategoria(req) {
         const novaCategoria = await Categoria.create({
-            ...data
+            ...req.body
         });
         return novaCategoria;
     },
@@ -52,3 +52,5 @@ module.exports = CategoriaService = {
         return umaCategoria;
     }
 }
+
+module.exports = CategoriaService
