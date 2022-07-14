@@ -21,6 +21,12 @@ export const StyledContainer = styled.div`
         line-height: 24px;
         margin-bottom: 2.563rem;
     }
+
+    .contact-link {
+        text-decoration: underline;
+        color: #161616;
+        font-weight: 500;
+    }
 `
 export const StyledLabelsGroup = styled.div`
     display: flex;

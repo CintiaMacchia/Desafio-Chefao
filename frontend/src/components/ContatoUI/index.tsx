@@ -7,6 +7,9 @@ import * as Yup from 'yup';
 
 const ContactUser: React.FC = () => {
 
+    const itemName = 'Mochila Infantil do Batman';
+    const message =  `Olá, vi seu anúncio no PassoRepasso da ${itemName} e gostaria de conversar.`;
+
     const navigate = useNavigate();
     const [charCount, setCharCount] = useState(0);
 
@@ -20,7 +23,7 @@ const ContactUser: React.FC = () => {
         <S.StyledContainer>
             <S.StyledContactInfo>
                 <h2 className='contact-title'>Whatsapp</h2>
-                <p className='contact-text'>(11) 99999-9999</p>
+                <p className='contact-text'><a className='contact-link' href={`https://api.whatsapp.com/send?phone=5567998765432&text=${message}`} target='_blank'>(11) 99876-5432</a></p>
             </S.StyledContactInfo>
             <S.StyledContactContainer>
                 <h2 className='contact-title'>Envio de E-mail</h2>
@@ -50,7 +53,7 @@ const ContactUser: React.FC = () => {
                             className='message-area'
                             rows={5}
                             maxLength={240}
-                            onChange={handleChange}
+                            onChange={e=> {handleChange(e); setCharCount(e.target.value.length)}}
                             value={values.mensagemContato}
                             isValid={touched.mensagemContato && !errors.mensagemContato}
                             isInvalid={touched.mensagemContato && !!errors.mensagemContato}
