@@ -58,7 +58,7 @@ return (
                     uso. Envio por correio ou para retirada em São Paulo.
                   </p>
                   <div className="d-flex justify-content-start ">
-                    <ButtonBorda text="Contato" />
+                    <a href='/contato'><ButtonBorda text="Contato" /></a>
                     <div className="p-1 px-3 mx-2 border faboritar-button ">
                       <AiOutlineHeart className="" />
                     </div>
