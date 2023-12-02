@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-  <img alt="Grama XP 41" src="https://img.shields.io/static/v1?label=XP&message=41&color=success&labelColor=grey">
-  
+  <img alt="Grama XP 41" src="https://img.shields.io/static/v1?label=XP&message=41&color=success&labelColor=grey" width= "50%">
+</p>
   
  
 **Descrição do Projeto:** Projeto final do XP 41 da Gama Academy.
